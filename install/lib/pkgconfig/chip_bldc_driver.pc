@@ -1,0 +1,8 @@
+prefix=/home/nvidia/projects/rosproject/install
+
+Name: chip_bldc_driver
+Description: Description of chip_bldc_driver
+Version: 1.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: 

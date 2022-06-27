@@ -1,0 +1,87 @@
+[  0%] Built target _first_generate_messages_check_deps_AddTwoInts
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target _first_generate_messages_check_deps_Num
+[ 30%] Built target first_generate_messages_py
+[ 30%] Built target std_msgs_generate_messages_cpp
+[ 46%] Built target first_generate_messages_cpp
+[ 46%] Built target std_msgs_generate_messages_lisp
+[ 61%] Built target first_generate_messages_lisp
+[ 61%] Built target std_msgs_generate_messages_nodejs
+[ 76%] Built target first_generate_messages_nodejs
+[ 76%] Built target std_msgs_generate_messages_eus
+[100%] Built target first_generate_messages_eus
+[100%] Built target first_generate_messages
+[36mInstall the project...[0m
+-- Install configuration: ""
+-- Installing: /home/nvidia/projects/rosproject/install/_setup_util.py
+-- Installing: /home/nvidia/projects/rosproject/install/env.sh
+-- Installing: /home/nvidia/projects/rosproject/install/setup.bash
+-- Installing: /home/nvidia/projects/rosproject/install/local_setup.bash
+-- Installing: /home/nvidia/projects/rosproject/install/setup.sh
+-- Installing: /home/nvidia/projects/rosproject/install/local_setup.sh
+-- Installing: /home/nvidia/projects/rosproject/install/setup.zsh
+-- Installing: /home/nvidia/projects/rosproject/install/local_setup.zsh
+-- Installing: /home/nvidia/projects/rosproject/install/.rosinstall
+-- Installing: /home/nvidia/projects/rosproject/install/share/first/msg/Num.msg
+-- Installing: /home/nvidia/projects/rosproject/install/share/first/srv/AddTwoInts.srv
+-- Installing: /home/nvidia/projects/rosproject/install/share/first/cmake/first-msg-paths.cmake
+-- Installing: /home/nvidia/projects/rosproject/install/include/first
+-- Installing: /home/nvidia/projects/rosproject/install/include/first/AddTwoInts.h
+-- Installing: /home/nvidia/projects/rosproject/install/include/first/AddTwoIntsRequest.h
+-- Installing: /home/nvidia/projects/rosproject/install/include/first/AddTwoIntsResponse.h
+-- Installing: /home/nvidia/projects/rosproject/install/include/first/Num.h
+-- Installing: /home/nvidia/projects/rosproject/install/share/roseus/ros/first
+-- Installing: /home/nvidia/projects/rosproject/install/share/roseus/ros/first/manifest.l
+-- Installing: /home/nvidia/projects/rosproject/install/share/roseus/ros/first/msg
+-- Installing: /home/nvidia/projects/rosproject/install/share/roseus/ros/first/msg/Num.l
+-- Installing: /home/nvidia/projects/rosproject/install/share/roseus/ros/first/srv
+-- Installing: /home/nvidia/projects/rosproject/install/share/roseus/ros/first/srv/AddTwoInts.l
+-- Installing: /home/nvidia/projects/rosproject/install/share/common-lisp/ros/first
+-- Installing: /home/nvidia/projects/rosproject/install/share/common-lisp/ros/first/msg
+-- Installing: /home/nvidia/projects/rosproject/install/share/common-lisp/ros/first/msg/_package_Num.lisp
+-- Installing: /home/nvidia/projects/rosproject/install/share/common-lisp/ros/first/msg/Num.lisp
+-- Installing: /home/nvidia/projects/rosproject/install/share/common-lisp/ros/first/msg/first-msg.asd
+-- Installing: /home/nvidia/projects/rosproject/install/share/common-lisp/ros/first/msg/_package.lisp
+-- Installing: /home/nvidia/projects/rosproject/install/share/common-lisp/ros/first/srv
+-- Installing: /home/nvidia/projects/rosproject/install/share/common-lisp/ros/first/srv/_package_AddTwoInts.lisp
+-- Installing: /home/nvidia/projects/rosproject/install/share/common-lisp/ros/first/srv/first-srv.asd
+-- Installing: /home/nvidia/projects/rosproject/install/share/common-lisp/ros/first/srv/AddTwoInts.lisp
+-- Installing: /home/nvidia/projects/rosproject/install/share/common-lisp/ros/first/srv/_package.lisp
+-- Installing: /home/nvidia/projects/rosproject/install/share/gennodejs/ros/first
+-- Installing: /home/nvidia/projects/rosproject/install/share/gennodejs/ros/first/_index.js
+-- Installing: /home/nvidia/projects/rosproject/install/share/gennodejs/ros/first/msg
+-- Installing: /home/nvidia/projects/rosproject/install/share/gennodejs/ros/first/msg/_index.js
+-- Installing: /home/nvidia/projects/rosproject/install/share/gennodejs/ros/first/msg/Num.js
+-- Installing: /home/nvidia/projects/rosproject/install/share/gennodejs/ros/first/srv
+-- Installing: /home/nvidia/projects/rosproject/install/share/gennodejs/ros/first/srv/AddTwoInts.js
+-- Installing: /home/nvidia/projects/rosproject/install/share/gennodejs/ros/first/srv/_index.js
+Listing /home/nvidia/projects/rosproject/devel/.private/first/lib/python2.7/dist-packages/first ...
+Compiling /home/nvidia/projects/rosproject/devel/.private/first/lib/python2.7/dist-packages/first/__init__.py ...
+Listing /home/nvidia/projects/rosproject/devel/.private/first/lib/python2.7/dist-packages/first/msg ...
+Compiling /home/nvidia/projects/rosproject/devel/.private/first/lib/python2.7/dist-packages/first/msg/_Num.py ...
+Compiling /home/nvidia/projects/rosproject/devel/.private/first/lib/python2.7/dist-packages/first/msg/__init__.py ...
+Listing /home/nvidia/projects/rosproject/devel/.private/first/lib/python2.7/dist-packages/first/srv ...
+Compiling /home/nvidia/projects/rosproject/devel/.private/first/lib/python2.7/dist-packages/first/srv/_AddTwoInts.py ...
+Compiling /home/nvidia/projects/rosproject/devel/.private/first/lib/python2.7/dist-packages/first/srv/__init__.py ...
+-- Installing: /home/nvidia/projects/rosproject/install/lib/python2.7/dist-packages/first
+-- Installing: /home/nvidia/projects/rosproject/install/lib/python2.7/dist-packages/first/__init__.py
+-- Installing: /home/nvidia/projects/rosproject/install/lib/python2.7/dist-packages/first/__init__.pyc
+-- Installing: /home/nvidia/projects/rosproject/install/lib/python2.7/dist-packages/first/msg
+-- Installing: /home/nvidia/projects/rosproject/install/lib/python2.7/dist-packages/first/msg/__init__.py
+-- Installing: /home/nvidia/projects/rosproject/install/lib/python2.7/dist-packages/first/msg/_Num.pyc
+-- Installing: /home/nvidia/projects/rosproject/install/lib/python2.7/dist-packages/first/msg/__init__.pyc
+-- Installing: /home/nvidia/projects/rosproject/install/lib/python2.7/dist-packages/first/msg/_Num.py
+-- Installing: /home/nvidia/projects/rosproject/install/lib/python2.7/dist-packages/first/srv
+-- Installing: /home/nvidia/projects/rosproject/install/lib/python2.7/dist-packages/first/srv/_AddTwoInts.pyc
+-- Installing: /home/nvidia/projects/rosproject/install/lib/python2.7/dist-packages/first/srv/_AddTwoInts.py
+-- Installing: /home/nvidia/projects/rosproject/install/lib/python2.7/dist-packages/first/srv/__init__.py
+-- Installing: /home/nvidia/projects/rosproject/install/lib/python2.7/dist-packages/first/srv/__init__.pyc
+-- Installing: /home/nvidia/projects/rosproject/install/lib/pkgconfig/first.pc
+-- Installing: /home/nvidia/projects/rosproject/install/share/first/cmake/first-msg-extras.cmake
+-- Installing: /home/nvidia/projects/rosproject/install/share/first/cmake/firstConfig.cmake
+-- Installing: /home/nvidia/projects/rosproject/install/share/first/cmake/firstConfig-version.cmake
+-- Installing: /home/nvidia/projects/rosproject/install/share/first/package.xml
+-- Installing: /home/nvidia/projects/rosproject/install/lib/first/talker.py
+-- Installing: /home/nvidia/projects/rosproject/install/lib/first/listener.py
+-- Installing: /home/nvidia/projects/rosproject/install/lib/first/adder_server.py
+-- Installing: /home/nvidia/projects/rosproject/install/lib/first/client.py

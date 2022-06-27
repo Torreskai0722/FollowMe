@@ -1,0 +1,4 @@
+Symlinking /home/nvidia/projects/rosproject/devel/lib/multi_object_tracking_lidar/kf_tracker
+Symlinking /home/nvidia/projects/rosproject/devel/lib/pkgconfig/multi_object_tracking_lidar.pc
+Symlinking /home/nvidia/projects/rosproject/devel/share/multi_object_tracking_lidar/cmake/multi_object_tracking_lidarConfig-version.cmake
+Symlinking /home/nvidia/projects/rosproject/devel/share/multi_object_tracking_lidar/cmake/multi_object_tracking_lidarConfig.cmake

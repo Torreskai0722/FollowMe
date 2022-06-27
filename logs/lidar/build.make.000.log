@@ -1,0 +1,39 @@
+[35m[1mScanning dependencies of target _lidar_generate_messages_check_deps_RandomNumber[0m
+[  0%] Built target _lidar_generate_messages_check_deps_RandomNumber
+[35m[1mScanning dependencies of target std_msgs_generate_messages_py[0m
+[  0%] Built target std_msgs_generate_messages_py
+[35m[1mScanning dependencies of target _lidar_generate_messages_check_deps_SentMessage[0m
+[  0%] Built target _lidar_generate_messages_check_deps_SentMessage
+[35m[1mScanning dependencies of target std_msgs_generate_messages_nodejs[0m
+[  0%] Built target std_msgs_generate_messages_nodejs
+[35m[1mScanning dependencies of target std_msgs_generate_messages_cpp[0m
+[  0%] Built target std_msgs_generate_messages_cpp
+[35m[1mScanning dependencies of target std_msgs_generate_messages_lisp[0m
+[  0%] Built target std_msgs_generate_messages_lisp
+[35m[1mScanning dependencies of target std_msgs_generate_messages_eus[0m
+[  0%] Built target std_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target lidar_generate_messages_py[0m
+[  7%] [34m[1mGenerating Python from MSG lidar/SentMessage[0m
+[ 15%] [34m[1mGenerating Python code from SRV lidar/RandomNumber[0m
+[ 23%] [34m[1mGenerating Python msg __init__.py for lidar[0m
+[ 30%] [34m[1mGenerating Python srv __init__.py for lidar[0m
+[ 30%] Built target lidar_generate_messages_py
+[35m[1mScanning dependencies of target lidar_generate_messages_nodejs[0m
+[ 38%] [34m[1mGenerating Javascript code from lidar/SentMessage.msg[0m
+[ 46%] [34m[1mGenerating Javascript code from lidar/RandomNumber.srv[0m
+[ 46%] Built target lidar_generate_messages_nodejs
+[35m[1mScanning dependencies of target lidar_generate_messages_cpp[0m
+[ 53%] [34m[1mGenerating C++ code from lidar/SentMessage.msg[0m
+[ 61%] [34m[1mGenerating C++ code from lidar/RandomNumber.srv[0m
+[ 61%] Built target lidar_generate_messages_cpp
+[35m[1mScanning dependencies of target lidar_generate_messages_lisp[0m
+[ 69%] [34m[1mGenerating Lisp code from lidar/SentMessage.msg[0m
+[ 76%] [34m[1mGenerating Lisp code from lidar/RandomNumber.srv[0m
+[ 76%] Built target lidar_generate_messages_lisp
+[35m[1mScanning dependencies of target lidar_generate_messages_eus[0m
+[ 84%] [34m[1mGenerating EusLisp code from lidar/SentMessage.msg[0m
+[ 92%] [34m[1mGenerating EusLisp code from lidar/RandomNumber.srv[0m
+[100%] [34m[1mGenerating EusLisp manifest code for lidar[0m
+[100%] Built target lidar_generate_messages_eus
+[35m[1mScanning dependencies of target lidar_generate_messages[0m
+[100%] Built target lidar_generate_messages

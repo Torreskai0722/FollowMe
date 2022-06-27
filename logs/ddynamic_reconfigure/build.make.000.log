@@ -1,0 +1,16 @@
+[35m[1mScanning dependencies of target ddynamic_reconfigure[0m
+[ 12%] [32mBuilding CXX object CMakeFiles/ddynamic_reconfigure.dir/src/ddynamic_reconfigure.cpp.o[0m
+[ 25%] [32m[1mLinking CXX shared library /home/nvidia/projects/rosproject/devel/.private/ddynamic_reconfigure/lib/libddynamic_reconfigure.so[0m
+[ 25%] Built target ddynamic_reconfigure
+[35m[1mScanning dependencies of target ddynamic_reconfigure_auto_update_test[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/ddynamic_reconfigure_auto_update_test.dir/test/ddynamic_reconfigure_auto_update_test.cpp.o[0m
+[ 50%] [32m[1mLinking CXX executable /home/nvidia/projects/rosproject/devel/.private/ddynamic_reconfigure/lib/ddynamic_reconfigure/ddynamic_reconfigure_auto_update_test[0m
+[ 50%] Built target ddynamic_reconfigure_auto_update_test
+[35m[1mScanning dependencies of target fake_dynamic_reconfigure_server[0m
+[ 62%] [32mBuilding CXX object CMakeFiles/fake_dynamic_reconfigure_server.dir/test/fake_dynamic_reconfigure_server.cpp.o[0m
+[ 75%] [32m[1mLinking CXX executable /home/nvidia/projects/rosproject/devel/.private/ddynamic_reconfigure/lib/ddynamic_reconfigure/fake_dynamic_reconfigure_server[0m
+[ 75%] Built target fake_dynamic_reconfigure_server
+[35m[1mScanning dependencies of target test_bool_dynamic_reconfigure_server[0m
+[ 87%] [32mBuilding CXX object CMakeFiles/test_bool_dynamic_reconfigure_server.dir/test/test_bool_dynamic_reconfigure_server.cpp.o[0m
+[100%] [32m[1mLinking CXX executable /home/nvidia/projects/rosproject/devel/.private/ddynamic_reconfigure/lib/ddynamic_reconfigure/test_bool_dynamic_reconfigure_server[0m
+[100%] Built target test_bool_dynamic_reconfigure_server

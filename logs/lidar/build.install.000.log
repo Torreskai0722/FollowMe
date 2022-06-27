@@ -1,0 +1,85 @@
+[  0%] Built target _lidar_generate_messages_check_deps_RandomNumber
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target _lidar_generate_messages_check_deps_SentMessage
+[ 30%] Built target lidar_generate_messages_py
+[ 30%] Built target std_msgs_generate_messages_nodejs
+[ 46%] Built target lidar_generate_messages_nodejs
+[ 46%] Built target std_msgs_generate_messages_cpp
+[ 61%] Built target lidar_generate_messages_cpp
+[ 61%] Built target std_msgs_generate_messages_lisp
+[ 76%] Built target lidar_generate_messages_lisp
+[ 76%] Built target std_msgs_generate_messages_eus
+[100%] Built target lidar_generate_messages_eus
+[100%] Built target lidar_generate_messages
+[36mInstall the project...[0m
+-- Install configuration: ""
+-- Installing: /home/nvidia/projects/rosproject/install/_setup_util.py
+-- Installing: /home/nvidia/projects/rosproject/install/env.sh
+-- Installing: /home/nvidia/projects/rosproject/install/setup.bash
+-- Installing: /home/nvidia/projects/rosproject/install/local_setup.bash
+-- Installing: /home/nvidia/projects/rosproject/install/setup.sh
+-- Installing: /home/nvidia/projects/rosproject/install/local_setup.sh
+-- Installing: /home/nvidia/projects/rosproject/install/setup.zsh
+-- Installing: /home/nvidia/projects/rosproject/install/local_setup.zsh
+-- Installing: /home/nvidia/projects/rosproject/install/.rosinstall
+-- Installing: /home/nvidia/projects/rosproject/install/share/lidar/msg/SentMessage.msg
+-- Installing: /home/nvidia/projects/rosproject/install/share/lidar/srv/RandomNumber.srv
+-- Installing: /home/nvidia/projects/rosproject/install/share/lidar/cmake/lidar-msg-paths.cmake
+-- Installing: /home/nvidia/projects/rosproject/install/include/lidar
+-- Installing: /home/nvidia/projects/rosproject/install/include/lidar/RandomNumberRequest.h
+-- Installing: /home/nvidia/projects/rosproject/install/include/lidar/SentMessage.h
+-- Installing: /home/nvidia/projects/rosproject/install/include/lidar/RandomNumber.h
+-- Installing: /home/nvidia/projects/rosproject/install/include/lidar/RandomNumberResponse.h
+-- Installing: /home/nvidia/projects/rosproject/install/share/roseus/ros/lidar
+-- Installing: /home/nvidia/projects/rosproject/install/share/roseus/ros/lidar/manifest.l
+-- Installing: /home/nvidia/projects/rosproject/install/share/roseus/ros/lidar/msg
+-- Installing: /home/nvidia/projects/rosproject/install/share/roseus/ros/lidar/msg/SentMessage.l
+-- Installing: /home/nvidia/projects/rosproject/install/share/roseus/ros/lidar/srv
+-- Installing: /home/nvidia/projects/rosproject/install/share/roseus/ros/lidar/srv/RandomNumber.l
+-- Installing: /home/nvidia/projects/rosproject/install/share/common-lisp/ros/lidar
+-- Installing: /home/nvidia/projects/rosproject/install/share/common-lisp/ros/lidar/msg
+-- Installing: /home/nvidia/projects/rosproject/install/share/common-lisp/ros/lidar/msg/lidar-msg.asd
+-- Installing: /home/nvidia/projects/rosproject/install/share/common-lisp/ros/lidar/msg/SentMessage.lisp
+-- Installing: /home/nvidia/projects/rosproject/install/share/common-lisp/ros/lidar/msg/_package_SentMessage.lisp
+-- Installing: /home/nvidia/projects/rosproject/install/share/common-lisp/ros/lidar/msg/_package.lisp
+-- Installing: /home/nvidia/projects/rosproject/install/share/common-lisp/ros/lidar/srv
+-- Installing: /home/nvidia/projects/rosproject/install/share/common-lisp/ros/lidar/srv/_package_RandomNumber.lisp
+-- Installing: /home/nvidia/projects/rosproject/install/share/common-lisp/ros/lidar/srv/lidar-srv.asd
+-- Installing: /home/nvidia/projects/rosproject/install/share/common-lisp/ros/lidar/srv/RandomNumber.lisp
+-- Installing: /home/nvidia/projects/rosproject/install/share/common-lisp/ros/lidar/srv/_package.lisp
+-- Installing: /home/nvidia/projects/rosproject/install/share/gennodejs/ros/lidar
+-- Installing: /home/nvidia/projects/rosproject/install/share/gennodejs/ros/lidar/_index.js
+-- Installing: /home/nvidia/projects/rosproject/install/share/gennodejs/ros/lidar/msg
+-- Installing: /home/nvidia/projects/rosproject/install/share/gennodejs/ros/lidar/msg/SentMessage.js
+-- Installing: /home/nvidia/projects/rosproject/install/share/gennodejs/ros/lidar/msg/_index.js
+-- Installing: /home/nvidia/projects/rosproject/install/share/gennodejs/ros/lidar/srv
+-- Installing: /home/nvidia/projects/rosproject/install/share/gennodejs/ros/lidar/srv/RandomNumber.js
+-- Installing: /home/nvidia/projects/rosproject/install/share/gennodejs/ros/lidar/srv/_index.js
+Listing /home/nvidia/projects/rosproject/devel/.private/lidar/lib/python2.7/dist-packages/lidar ...
+Compiling /home/nvidia/projects/rosproject/devel/.private/lidar/lib/python2.7/dist-packages/lidar/__init__.py ...
+Listing /home/nvidia/projects/rosproject/devel/.private/lidar/lib/python2.7/dist-packages/lidar/msg ...
+Compiling /home/nvidia/projects/rosproject/devel/.private/lidar/lib/python2.7/dist-packages/lidar/msg/_SentMessage.py ...
+Compiling /home/nvidia/projects/rosproject/devel/.private/lidar/lib/python2.7/dist-packages/lidar/msg/__init__.py ...
+Listing /home/nvidia/projects/rosproject/devel/.private/lidar/lib/python2.7/dist-packages/lidar/srv ...
+Compiling /home/nvidia/projects/rosproject/devel/.private/lidar/lib/python2.7/dist-packages/lidar/srv/_RandomNumber.py ...
+Compiling /home/nvidia/projects/rosproject/devel/.private/lidar/lib/python2.7/dist-packages/lidar/srv/__init__.py ...
+-- Installing: /home/nvidia/projects/rosproject/install/lib/python2.7/dist-packages/lidar
+-- Installing: /home/nvidia/projects/rosproject/install/lib/python2.7/dist-packages/lidar/__init__.py
+-- Installing: /home/nvidia/projects/rosproject/install/lib/python2.7/dist-packages/lidar/__init__.pyc
+-- Installing: /home/nvidia/projects/rosproject/install/lib/python2.7/dist-packages/lidar/msg
+-- Installing: /home/nvidia/projects/rosproject/install/lib/python2.7/dist-packages/lidar/msg/__init__.py
+-- Installing: /home/nvidia/projects/rosproject/install/lib/python2.7/dist-packages/lidar/msg/__init__.pyc
+-- Installing: /home/nvidia/projects/rosproject/install/lib/python2.7/dist-packages/lidar/msg/_SentMessage.pyc
+-- Installing: /home/nvidia/projects/rosproject/install/lib/python2.7/dist-packages/lidar/msg/_SentMessage.py
+-- Installing: /home/nvidia/projects/rosproject/install/lib/python2.7/dist-packages/lidar/srv
+-- Installing: /home/nvidia/projects/rosproject/install/lib/python2.7/dist-packages/lidar/srv/__init__.py
+-- Installing: /home/nvidia/projects/rosproject/install/lib/python2.7/dist-packages/lidar/srv/_RandomNumber.py
+-- Installing: /home/nvidia/projects/rosproject/install/lib/python2.7/dist-packages/lidar/srv/_RandomNumber.pyc
+-- Installing: /home/nvidia/projects/rosproject/install/lib/python2.7/dist-packages/lidar/srv/__init__.pyc
+-- Installing: /home/nvidia/projects/rosproject/install/lib/pkgconfig/lidar.pc
+-- Installing: /home/nvidia/projects/rosproject/install/share/lidar/cmake/lidar-msg-extras.cmake
+-- Installing: /home/nvidia/projects/rosproject/install/share/lidar/cmake/lidarConfig.cmake
+-- Installing: /home/nvidia/projects/rosproject/install/share/lidar/cmake/lidarConfig-version.cmake
+-- Installing: /home/nvidia/projects/rosproject/install/share/lidar/package.xml
+-- Installing: /home/nvidia/projects/rosproject/install/lib/lidar/single_map.py
+-- Installing: /home/nvidia/projects/rosproject/install/lib/lidar/pointcloud.py

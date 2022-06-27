@@ -1,0 +1,13 @@
+/home/nvidia/projects/rosproject/install/_setup_util.py
+/home/nvidia/projects/rosproject/install/env.sh
+/home/nvidia/projects/rosproject/install/setup.bash
+/home/nvidia/projects/rosproject/install/local_setup.bash
+/home/nvidia/projects/rosproject/install/setup.sh
+/home/nvidia/projects/rosproject/install/local_setup.sh
+/home/nvidia/projects/rosproject/install/setup.zsh
+/home/nvidia/projects/rosproject/install/local_setup.zsh
+/home/nvidia/projects/rosproject/install/.rosinstall
+/home/nvidia/projects/rosproject/install/lib/pkgconfig/catkin_tools_prebuild.pc
+/home/nvidia/projects/rosproject/install/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig.cmake
+/home/nvidia/projects/rosproject/install/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig-version.cmake
+/home/nvidia/projects/rosproject/install/share/catkin_tools_prebuild/package.xml

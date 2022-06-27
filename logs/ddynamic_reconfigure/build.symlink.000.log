@@ -1,0 +1,7 @@
+Symlinking /home/nvidia/projects/rosproject/devel/lib/libddynamic_reconfigure.so
+Symlinking /home/nvidia/projects/rosproject/devel/lib/pkgconfig/ddynamic_reconfigure.pc
+Symlinking /home/nvidia/projects/rosproject/devel/lib/ddynamic_reconfigure/ddynamic_reconfigure_auto_update_test
+Symlinking /home/nvidia/projects/rosproject/devel/lib/ddynamic_reconfigure/fake_dynamic_reconfigure_server
+Symlinking /home/nvidia/projects/rosproject/devel/lib/ddynamic_reconfigure/test_bool_dynamic_reconfigure_server
+Symlinking /home/nvidia/projects/rosproject/devel/share/ddynamic_reconfigure/cmake/ddynamic_reconfigureConfig.cmake
+Symlinking /home/nvidia/projects/rosproject/devel/share/ddynamic_reconfigure/cmake/ddynamic_reconfigureConfig-version.cmake

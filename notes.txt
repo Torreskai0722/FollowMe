@@ -1,0 +1,11 @@
+// setup for lidar:
+
+sudo chmod 666 /dev/ttyUSB0
+
+roslaunch rplidar_ros rplidar_s1.launch
+
+// setup for motor
+
+sudo chmod 777 /dev/ttyUSB0
+roslaunch chip_bldc_driver example.launch
+

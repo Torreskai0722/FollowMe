@@ -1,0 +1,12 @@
+Symlinking /home/nvidia/projects/rosproject/devel/./local_setup.zsh
+Symlinking /home/nvidia/projects/rosproject/devel/./local_setup.sh
+Symlinking /home/nvidia/projects/rosproject/devel/./local_setup.bash
+Symlinking /home/nvidia/projects/rosproject/devel/./_setup_util.py
+Symlinking /home/nvidia/projects/rosproject/devel/./setup.sh
+Symlinking /home/nvidia/projects/rosproject/devel/./setup.bash
+Symlinking /home/nvidia/projects/rosproject/devel/./env.sh
+Symlinking /home/nvidia/projects/rosproject/devel/./cmake.lock
+Symlinking /home/nvidia/projects/rosproject/devel/./setup.zsh
+Symlinking /home/nvidia/projects/rosproject/devel/lib/pkgconfig/catkin_tools_prebuild.pc
+Symlinking /home/nvidia/projects/rosproject/devel/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig.cmake
+Symlinking /home/nvidia/projects/rosproject/devel/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig-version.cmake

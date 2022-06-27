@@ -1,0 +1,5 @@
+realsense-ros/realsense2_description
+/home/nvidia/projects/rosproject/devel/.private/realsense2_description/cmake.lock /home/nvidia/projects/rosproject/devel/./cmake.lock
+/home/nvidia/projects/rosproject/devel/.private/realsense2_description/lib/pkgconfig/realsense2_description.pc /home/nvidia/projects/rosproject/devel/lib/pkgconfig/realsense2_description.pc
+/home/nvidia/projects/rosproject/devel/.private/realsense2_description/share/realsense2_description/cmake/realsense2_descriptionConfig-version.cmake /home/nvidia/projects/rosproject/devel/share/realsense2_description/cmake/realsense2_descriptionConfig-version.cmake
+/home/nvidia/projects/rosproject/devel/.private/realsense2_description/share/realsense2_description/cmake/realsense2_descriptionConfig.cmake /home/nvidia/projects/rosproject/devel/share/realsense2_description/cmake/realsense2_descriptionConfig.cmake

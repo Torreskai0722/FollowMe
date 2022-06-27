@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/nvidia/projects/rosproject/src/chip_bldc_driver/include/chip_bldc_driver/crc16.h
+stdint.h
+-
+
+/home/nvidia/projects/rosproject/src/chip_bldc_driver/src/crc16.cpp
+crc16.h
+/home/nvidia/projects/rosproject/src/chip_bldc_driver/src/crc16.h
+

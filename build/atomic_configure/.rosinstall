@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/nvidia/projects/rosproject/devel/setup.sh

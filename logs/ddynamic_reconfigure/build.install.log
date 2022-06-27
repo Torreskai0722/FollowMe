@@ -1,0 +1,25 @@
+[ 25%] Built target ddynamic_reconfigure
+[ 50%] Built target ddynamic_reconfigure_auto_update_test
+[ 75%] Built target fake_dynamic_reconfigure_server
+[100%] Built target test_bool_dynamic_reconfigure_server
+[36mInstall the project...[0m
+-- Install configuration: ""
+-- Installing: /home/nvidia/projects/rosproject/install/_setup_util.py
+-- Installing: /home/nvidia/projects/rosproject/install/env.sh
+-- Installing: /home/nvidia/projects/rosproject/install/setup.bash
+-- Installing: /home/nvidia/projects/rosproject/install/local_setup.bash
+-- Installing: /home/nvidia/projects/rosproject/install/setup.sh
+-- Installing: /home/nvidia/projects/rosproject/install/local_setup.sh
+-- Installing: /home/nvidia/projects/rosproject/install/setup.zsh
+-- Installing: /home/nvidia/projects/rosproject/install/local_setup.zsh
+-- Installing: /home/nvidia/projects/rosproject/install/.rosinstall
+-- Installing: /home/nvidia/projects/rosproject/install/lib/pkgconfig/ddynamic_reconfigure.pc
+-- Installing: /home/nvidia/projects/rosproject/install/share/ddynamic_reconfigure/cmake/ddynamic_reconfigureConfig.cmake
+-- Installing: /home/nvidia/projects/rosproject/install/share/ddynamic_reconfigure/cmake/ddynamic_reconfigureConfig-version.cmake
+-- Installing: /home/nvidia/projects/rosproject/install/share/ddynamic_reconfigure/package.xml
+-- Installing: /home/nvidia/projects/rosproject/install/lib/libddynamic_reconfigure.so
+-- Set runtime path of "/home/nvidia/projects/rosproject/install/lib/libddynamic_reconfigure.so" to ""
+-- Installing: /home/nvidia/projects/rosproject/install/include/ddynamic_reconfigure
+-- Installing: /home/nvidia/projects/rosproject/install/include/ddynamic_reconfigure/ddynamic_reconfigure_utils.h
+-- Installing: /home/nvidia/projects/rosproject/install/include/ddynamic_reconfigure/ddynamic_reconfigure.h
+-- Installing: /home/nvidia/projects/rosproject/install/include/ddynamic_reconfigure/registered_param.h

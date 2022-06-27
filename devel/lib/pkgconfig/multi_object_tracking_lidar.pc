@@ -1,0 +1,8 @@
+prefix=/home/nvidia/projects/rosproject/devel
+
+Name: multi_object_tracking_lidar
+Description: Description of multi_object_tracking_lidar
+Version: 1.0.4
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

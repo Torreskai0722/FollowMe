@@ -1,0 +1,11 @@
+<launch>
+
+	<group ns="listener">
+		<node pkg="first" name="listener" type="listener.py"/>
+	</group>
+
+	<group ns="talker">
+		<node pkg="first" name="talker" type="talker.py"/>
+	</group>
+
+</launch>

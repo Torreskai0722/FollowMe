@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG  -rdynamic CMakeFiles/serial_example.dir/examples/serial_example.cc.o  -o /home/nvidia/projects/rosproject/devel/lib/serial/serial_example -Wl,-rpath,/home/nvidia/projects/rosproject/devel/lib /home/nvidia/projects/rosproject/devel/lib/libserial.so -lrt -lpthread 
