@@ -1,0 +1,8 @@
+prefix=/home/nvidia/projects/rosproject/devel
+
+Name: ros_deep_learning
+Description: Description of ros_deep_learning
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib -lros_deep_learning_nodelets
+Requires: nodelet roscpp image_transport sensor_msgs
