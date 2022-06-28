@@ -5,7 +5,5 @@
    "EXTRINSICS"
    "<IMUINFO>"
    "IMUINFO"
-   "<METADATA>"
-   "METADATA"
   ))
 

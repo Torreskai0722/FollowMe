@@ -80,17 +80,6 @@ install/local/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -101,6 +90,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # Special rule for the target list_install_components
 list_install_components:
@@ -157,19 +157,64 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-rplidar_ros/CMakeFiles/rplidarNodeClient.dir/rule:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_ros/CMakeFiles/rplidarNodeClient.dir/rule
-.PHONY : rplidar_ros/CMakeFiles/rplidarNodeClient.dir/rule
+rplidar_ros/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_ros/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+.PHONY : rplidar_ros/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
-rplidarNodeClient: rplidar_ros/CMakeFiles/rplidarNodeClient.dir/rule
+sensor_msgs_generate_messages_py: rplidar_ros/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
 
-.PHONY : rplidarNodeClient
+.PHONY : sensor_msgs_generate_messages_py
 
 # fast build rule for target.
-rplidarNodeClient/fast:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f rplidar_ros/CMakeFiles/rplidarNodeClient.dir/build.make rplidar_ros/CMakeFiles/rplidarNodeClient.dir/build
-.PHONY : rplidarNodeClient/fast
+sensor_msgs_generate_messages_py/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f rplidar_ros/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make rplidar_ros/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
+.PHONY : sensor_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+rplidar_ros/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_ros/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+.PHONY : rplidar_ros/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_lisp: rplidar_ros/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_lisp
+
+# fast build rule for target.
+geometry_msgs_generate_messages_lisp/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f rplidar_ros/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make rplidar_ros/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
+.PHONY : geometry_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+rplidar_ros/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_ros/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+.PHONY : rplidar_ros/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_nodejs: rplidar_ros/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+sensor_msgs_generate_messages_nodejs/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f rplidar_ros/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make rplidar_ros/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
+.PHONY : sensor_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+rplidar_ros/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_ros/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+.PHONY : rplidar_ros/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_cpp: rplidar_ros/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_cpp
+
+# fast build rule for target.
+geometry_msgs_generate_messages_cpp/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f rplidar_ros/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make rplidar_ros/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+.PHONY : geometry_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 rplidar_ros/CMakeFiles/rplidarNode.dir/rule:
@@ -185,6 +230,111 @@ rplidarNode: rplidar_ros/CMakeFiles/rplidarNode.dir/rule
 rplidarNode/fast:
 	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f rplidar_ros/CMakeFiles/rplidarNode.dir/build.make rplidar_ros/CMakeFiles/rplidarNode.dir/build
 .PHONY : rplidarNode/fast
+
+# Convenience name for target.
+rplidar_ros/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_ros/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+.PHONY : rplidar_ros/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_cpp: rplidar_ros/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_cpp
+
+# fast build rule for target.
+sensor_msgs_generate_messages_cpp/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f rplidar_ros/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make rplidar_ros/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
+.PHONY : sensor_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+rplidar_ros/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_ros/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+.PHONY : rplidar_ros/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_eus: rplidar_ros/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_eus
+
+# fast build rule for target.
+sensor_msgs_generate_messages_eus/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f rplidar_ros/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make rplidar_ros/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
+.PHONY : sensor_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+rplidar_ros/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_ros/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+.PHONY : rplidar_ros/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_lisp: rplidar_ros/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_lisp
+
+# fast build rule for target.
+sensor_msgs_generate_messages_lisp/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f rplidar_ros/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make rplidar_ros/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
+.PHONY : sensor_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+rplidar_ros/CMakeFiles/rplidarNodeClient.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_ros/CMakeFiles/rplidarNodeClient.dir/rule
+.PHONY : rplidar_ros/CMakeFiles/rplidarNodeClient.dir/rule
+
+# Convenience name for target.
+rplidarNodeClient: rplidar_ros/CMakeFiles/rplidarNodeClient.dir/rule
+
+.PHONY : rplidarNodeClient
+
+# fast build rule for target.
+rplidarNodeClient/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f rplidar_ros/CMakeFiles/rplidarNodeClient.dir/build.make rplidar_ros/CMakeFiles/rplidarNodeClient.dir/build
+.PHONY : rplidarNodeClient/fast
+
+# Convenience name for target.
+rplidar_ros/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_ros/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+.PHONY : rplidar_ros/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_py: rplidar_ros/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_py
+
+# fast build rule for target.
+geometry_msgs_generate_messages_py/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f rplidar_ros/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make rplidar_ros/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+.PHONY : geometry_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+rplidar_ros/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_ros/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+.PHONY : rplidar_ros/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_nodejs: rplidar_ros/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+geometry_msgs_generate_messages_nodejs/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f rplidar_ros/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make rplidar_ros/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
+.PHONY : geometry_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+rplidar_ros/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_ros/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+.PHONY : rplidar_ros/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_eus: rplidar_ros/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_eus
+
+# fast build rule for target.
+geometry_msgs_generate_messages_eus/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f rplidar_ros/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make rplidar_ros/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
+.PHONY : geometry_msgs_generate_messages_eus/fast
 
 sdk/src/arch/linux/net_serial.o: sdk/src/arch/linux/net_serial.cpp.o
 
@@ -518,10 +668,20 @@ help:
 	@echo "... depend"
 	@echo "... install/strip"
 	@echo "... install/local"
-	@echo "... rplidarNodeClient"
+	@echo "... sensor_msgs_generate_messages_py"
+	@echo "... geometry_msgs_generate_messages_lisp"
+	@echo "... sensor_msgs_generate_messages_nodejs"
+	@echo "... geometry_msgs_generate_messages_cpp"
 	@echo "... rplidarNode"
-	@echo "... edit_cache"
+	@echo "... sensor_msgs_generate_messages_cpp"
+	@echo "... sensor_msgs_generate_messages_eus"
+	@echo "... sensor_msgs_generate_messages_lisp"
 	@echo "... rebuild_cache"
+	@echo "... rplidarNodeClient"
+	@echo "... geometry_msgs_generate_messages_py"
+	@echo "... geometry_msgs_generate_messages_nodejs"
+	@echo "... edit_cache"
+	@echo "... geometry_msgs_generate_messages_eus"
 	@echo "... list_install_components"
 	@echo "... install"
 	@echo "... sdk/src/arch/linux/net_serial.o"

@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "realsense2_camera: 3 messages, 1 services")
+message(STATUS "realsense2_camera: 2 messages, 0 services")
 
 set(MSG_I_FLAGS "-Irealsense2_camera:/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/msg;-Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg;-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg")
 
@@ -22,19 +22,9 @@ add_custom_target(_realsense2_camera_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "realsense2_camera" "/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/msg/Extrinsics.msg" "std_msgs/Header"
 )
 
-get_filename_component(_filename "/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/srv/DeviceInfo.srv" NAME_WE)
-add_custom_target(_realsense2_camera_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "realsense2_camera" "/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/srv/DeviceInfo.srv" ""
-)
-
 get_filename_component(_filename "/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/msg/IMUInfo.msg" NAME_WE)
 add_custom_target(_realsense2_camera_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "realsense2_camera" "/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/msg/IMUInfo.msg" ""
-)
-
-get_filename_component(_filename "/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/msg/Metadata.msg" NAME_WE)
-add_custom_target(_realsense2_camera_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "realsense2_camera" "/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/msg/Metadata.msg" "std_msgs/Header"
 )
 
 #
@@ -55,20 +45,8 @@ _generate_msg_cpp(realsense2_camera
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/realsense2_camera
 )
-_generate_msg_cpp(realsense2_camera
-  "/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/msg/Metadata.msg"
-  "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
-  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/realsense2_camera
-)
 
 ### Generating Services
-_generate_srv_cpp(realsense2_camera
-  "/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/srv/DeviceInfo.srv"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/realsense2_camera
-)
 
 ### Generating Module File
 _generate_module_cpp(realsense2_camera
@@ -84,11 +62,7 @@ add_dependencies(realsense2_camera_generate_messages realsense2_camera_generate_
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/msg/Extrinsics.msg" NAME_WE)
 add_dependencies(realsense2_camera_generate_messages_cpp _realsense2_camera_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/srv/DeviceInfo.srv" NAME_WE)
-add_dependencies(realsense2_camera_generate_messages_cpp _realsense2_camera_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/msg/IMUInfo.msg" NAME_WE)
-add_dependencies(realsense2_camera_generate_messages_cpp _realsense2_camera_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/msg/Metadata.msg" NAME_WE)
 add_dependencies(realsense2_camera_generate_messages_cpp _realsense2_camera_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -112,20 +86,8 @@ _generate_msg_eus(realsense2_camera
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/realsense2_camera
 )
-_generate_msg_eus(realsense2_camera
-  "/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/msg/Metadata.msg"
-  "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
-  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/realsense2_camera
-)
 
 ### Generating Services
-_generate_srv_eus(realsense2_camera
-  "/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/srv/DeviceInfo.srv"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/realsense2_camera
-)
 
 ### Generating Module File
 _generate_module_eus(realsense2_camera
@@ -141,11 +103,7 @@ add_dependencies(realsense2_camera_generate_messages realsense2_camera_generate_
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/msg/Extrinsics.msg" NAME_WE)
 add_dependencies(realsense2_camera_generate_messages_eus _realsense2_camera_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/srv/DeviceInfo.srv" NAME_WE)
-add_dependencies(realsense2_camera_generate_messages_eus _realsense2_camera_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/msg/IMUInfo.msg" NAME_WE)
-add_dependencies(realsense2_camera_generate_messages_eus _realsense2_camera_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/msg/Metadata.msg" NAME_WE)
 add_dependencies(realsense2_camera_generate_messages_eus _realsense2_camera_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -169,20 +127,8 @@ _generate_msg_lisp(realsense2_camera
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/realsense2_camera
 )
-_generate_msg_lisp(realsense2_camera
-  "/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/msg/Metadata.msg"
-  "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
-  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/realsense2_camera
-)
 
 ### Generating Services
-_generate_srv_lisp(realsense2_camera
-  "/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/srv/DeviceInfo.srv"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/realsense2_camera
-)
 
 ### Generating Module File
 _generate_module_lisp(realsense2_camera
@@ -198,11 +144,7 @@ add_dependencies(realsense2_camera_generate_messages realsense2_camera_generate_
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/msg/Extrinsics.msg" NAME_WE)
 add_dependencies(realsense2_camera_generate_messages_lisp _realsense2_camera_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/srv/DeviceInfo.srv" NAME_WE)
-add_dependencies(realsense2_camera_generate_messages_lisp _realsense2_camera_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/msg/IMUInfo.msg" NAME_WE)
-add_dependencies(realsense2_camera_generate_messages_lisp _realsense2_camera_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/msg/Metadata.msg" NAME_WE)
 add_dependencies(realsense2_camera_generate_messages_lisp _realsense2_camera_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -226,20 +168,8 @@ _generate_msg_nodejs(realsense2_camera
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/realsense2_camera
 )
-_generate_msg_nodejs(realsense2_camera
-  "/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/msg/Metadata.msg"
-  "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
-  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/realsense2_camera
-)
 
 ### Generating Services
-_generate_srv_nodejs(realsense2_camera
-  "/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/srv/DeviceInfo.srv"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/realsense2_camera
-)
 
 ### Generating Module File
 _generate_module_nodejs(realsense2_camera
@@ -255,11 +185,7 @@ add_dependencies(realsense2_camera_generate_messages realsense2_camera_generate_
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/msg/Extrinsics.msg" NAME_WE)
 add_dependencies(realsense2_camera_generate_messages_nodejs _realsense2_camera_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/srv/DeviceInfo.srv" NAME_WE)
-add_dependencies(realsense2_camera_generate_messages_nodejs _realsense2_camera_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/msg/IMUInfo.msg" NAME_WE)
-add_dependencies(realsense2_camera_generate_messages_nodejs _realsense2_camera_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/msg/Metadata.msg" NAME_WE)
 add_dependencies(realsense2_camera_generate_messages_nodejs _realsense2_camera_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -283,20 +209,8 @@ _generate_msg_py(realsense2_camera
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/realsense2_camera
 )
-_generate_msg_py(realsense2_camera
-  "/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/msg/Metadata.msg"
-  "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
-  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/realsense2_camera
-)
 
 ### Generating Services
-_generate_srv_py(realsense2_camera
-  "/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/srv/DeviceInfo.srv"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/realsense2_camera
-)
 
 ### Generating Module File
 _generate_module_py(realsense2_camera
@@ -312,11 +226,7 @@ add_dependencies(realsense2_camera_generate_messages realsense2_camera_generate_
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/msg/Extrinsics.msg" NAME_WE)
 add_dependencies(realsense2_camera_generate_messages_py _realsense2_camera_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/srv/DeviceInfo.srv" NAME_WE)
-add_dependencies(realsense2_camera_generate_messages_py _realsense2_camera_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/msg/IMUInfo.msg" NAME_WE)
-add_dependencies(realsense2_camera_generate_messages_py _realsense2_camera_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/msg/Metadata.msg" NAME_WE)
 add_dependencies(realsense2_camera_generate_messages_py _realsense2_camera_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

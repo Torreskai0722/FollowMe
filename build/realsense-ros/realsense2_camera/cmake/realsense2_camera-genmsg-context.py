@@ -1,7 +1,7 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = "/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/msg/IMUInfo.msg;/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/msg/Extrinsics.msg;/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/msg/Metadata.msg"
-services_str = "/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/srv/DeviceInfo.srv"
+messages_str = "/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/msg/IMUInfo.msg;/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/msg/Extrinsics.msg"
+services_str = ""
 pkg_name = "realsense2_camera"
 dependencies_str = "sensor_msgs;std_msgs"
 langs = "gencpp;geneus;genlisp;gennodejs;genpy"

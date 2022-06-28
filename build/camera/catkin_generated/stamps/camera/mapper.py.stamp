@@ -7,25 +7,16 @@ from math import pi, ceil
 import rospy
 
 from geometry_msgs.msg import Vector3, Point32
-from sensor_msgs.msg import PointCloud, Image, ChannelFloat32
+from sensor_msgs.msg import PointCloud2, Image, ChannelFloat32
 
 heading = Vector3()
-mapCloud = PointCloud()
+mapCloud = PointCloud2()
+lastCamPoints = []
 
-def onCameraUpdate(image):
-    s = set()
-    for i in range(0, len(image.data), 2):
-        x = i % (image.width)
-        y = ceil(i / (2 * image.height))
-
-        s.add(image.data[i])
-        #pt = Point32()
-        #pt.x = x
-        #pt.y = y
-        #latestPointList.append(
-        # print("X: " + str(x) + ", Y: " + str(y))
-    print(s)
-
+def onCameraUpdate(cloud):
+    global lastCamPointCloud
+    print(cloud.fields)
+    lastCamPointCloud = cloud.data
 
 def onHeadingUpdate(update):
     global heading
@@ -46,9 +37,9 @@ if __name__ == "__main__":
     rospy.init_node("mapper")
 
     rospy.Subscriber("/heading", Vector3, onHeadingUpdate)
-    rospy.Subscriber("/camera/depth/image_rect_raw", Image, onCameraUpdate)
+    rospy.Subscriber("/camera/depth/color/points", PointCloud2, onCameraUpdate)
 
-    pub = rospy.Publisher("/mapcloud", PointCloud, queue_size=1)
+    pub = rospy.Publisher("/mapcloud", PointCloud2, queue_size=1)
     
     r = rospy.Rate(30)
     while not rospy.is_shutdown():

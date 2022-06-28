@@ -2,8 +2,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/realsense2_camera_generate_messages_lisp"
   "/home/nvidia/projects/rosproject/devel/share/common-lisp/ros/realsense2_camera/msg/Extrinsics.lisp"
   "/home/nvidia/projects/rosproject/devel/share/common-lisp/ros/realsense2_camera/msg/IMUInfo.lisp"
-  "/home/nvidia/projects/rosproject/devel/share/common-lisp/ros/realsense2_camera/msg/Metadata.lisp"
-  "/home/nvidia/projects/rosproject/devel/share/common-lisp/ros/realsense2_camera/srv/DeviceInfo.lisp"
 )
 
 # Per-language clean rules from dependency scanning.

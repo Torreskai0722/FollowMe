@@ -5,4 +5,4 @@ PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "realsense2_description"
 PROJECT_SPACE_DIR = "/home/nvidia/projects/rosproject/install"
-PROJECT_VERSION = "2.3.2"
+PROJECT_VERSION = "2.3.1"

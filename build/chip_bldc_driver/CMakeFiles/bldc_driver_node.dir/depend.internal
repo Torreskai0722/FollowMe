@@ -5,11 +5,11 @@ chip_bldc_driver/CMakeFiles/bldc_driver_node.dir/src/bldc_driver_node.cpp.o
  /home/nvidia/projects/rosproject/devel/include/chip_bldc_driver/Command.h
  /home/nvidia/projects/rosproject/devel/include/chip_bldc_driver/Feedback.h
  /home/nvidia/projects/rosproject/devel/include/chip_bldc_driver/Status.h
+ /home/nvidia/projects/rosproject/install/include/serial/serial.h
+ /home/nvidia/projects/rosproject/install/include/serial/v8stdint.h
  /home/nvidia/projects/rosproject/src/chip_bldc_driver/include/chip_bldc_driver/bldc_controller.h
  /home/nvidia/projects/rosproject/src/chip_bldc_driver/include/chip_bldc_driver/bldc_serial.h
  /home/nvidia/projects/rosproject/src/chip_bldc_driver/src/bldc_driver_node.cpp
- /home/nvidia/projects/rosproject/src/serial/include/serial/serial.h
- /home/nvidia/projects/rosproject/src/serial/include/serial/v8stdint.h
  /opt/ros/melodic/include/ros/advertise_options.h
  /opt/ros/melodic/include/ros/advertise_service_options.h
  /opt/ros/melodic/include/ros/assert.h

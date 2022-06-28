@@ -55,8 +55,6 @@ include realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_me
 
 realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_cpp: /home/nvidia/projects/rosproject/devel/include/realsense2_camera/Extrinsics.h
 realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_cpp: /home/nvidia/projects/rosproject/devel/include/realsense2_camera/IMUInfo.h
-realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_cpp: /home/nvidia/projects/rosproject/devel/include/realsense2_camera/Metadata.h
-realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_cpp: /home/nvidia/projects/rosproject/devel/include/realsense2_camera/DeviceInfo.h
 
 
 /home/nvidia/projects/rosproject/devel/include/realsense2_camera/Extrinsics.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
@@ -72,25 +70,9 @@ realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/nvidia/projects/rosproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from realsense2_camera/IMUInfo.msg"
 	cd /home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera && /home/nvidia/projects/rosproject/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/msg/IMUInfo.msg -Irealsense2_camera:/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/msg -Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -p realsense2_camera -o /home/nvidia/projects/rosproject/devel/include/realsense2_camera -e /opt/ros/melodic/share/gencpp/cmake/..
 
-/home/nvidia/projects/rosproject/devel/include/realsense2_camera/Metadata.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
-/home/nvidia/projects/rosproject/devel/include/realsense2_camera/Metadata.h: /home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/msg/Metadata.msg
-/home/nvidia/projects/rosproject/devel/include/realsense2_camera/Metadata.h: /opt/ros/melodic/share/std_msgs/msg/Header.msg
-/home/nvidia/projects/rosproject/devel/include/realsense2_camera/Metadata.h: /opt/ros/melodic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/nvidia/projects/rosproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from realsense2_camera/Metadata.msg"
-	cd /home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera && /home/nvidia/projects/rosproject/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/msg/Metadata.msg -Irealsense2_camera:/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/msg -Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -p realsense2_camera -o /home/nvidia/projects/rosproject/devel/include/realsense2_camera -e /opt/ros/melodic/share/gencpp/cmake/..
-
-/home/nvidia/projects/rosproject/devel/include/realsense2_camera/DeviceInfo.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
-/home/nvidia/projects/rosproject/devel/include/realsense2_camera/DeviceInfo.h: /home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/srv/DeviceInfo.srv
-/home/nvidia/projects/rosproject/devel/include/realsense2_camera/DeviceInfo.h: /opt/ros/melodic/share/gencpp/msg.h.template
-/home/nvidia/projects/rosproject/devel/include/realsense2_camera/DeviceInfo.h: /opt/ros/melodic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/nvidia/projects/rosproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating C++ code from realsense2_camera/DeviceInfo.srv"
-	cd /home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera && /home/nvidia/projects/rosproject/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/srv/DeviceInfo.srv -Irealsense2_camera:/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/msg -Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -p realsense2_camera -o /home/nvidia/projects/rosproject/devel/include/realsense2_camera -e /opt/ros/melodic/share/gencpp/cmake/..
-
 realsense2_camera_generate_messages_cpp: realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_cpp
 realsense2_camera_generate_messages_cpp: /home/nvidia/projects/rosproject/devel/include/realsense2_camera/Extrinsics.h
 realsense2_camera_generate_messages_cpp: /home/nvidia/projects/rosproject/devel/include/realsense2_camera/IMUInfo.h
-realsense2_camera_generate_messages_cpp: /home/nvidia/projects/rosproject/devel/include/realsense2_camera/Metadata.h
-realsense2_camera_generate_messages_cpp: /home/nvidia/projects/rosproject/devel/include/realsense2_camera/DeviceInfo.h
 realsense2_camera_generate_messages_cpp: realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_cpp.dir/build.make
 
 .PHONY : realsense2_camera_generate_messages_cpp

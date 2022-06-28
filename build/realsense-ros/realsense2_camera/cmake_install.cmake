@@ -41,12 +41,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/realsense2_camera/msg" TYPE FILE FILES
     "/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/msg/IMUInfo.msg"
     "/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/msg/Extrinsics.msg"
-    "/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/msg/Metadata.msg"
     )
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/realsense2_camera/srv" TYPE FILE FILES "/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/srv/DeviceInfo.srv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

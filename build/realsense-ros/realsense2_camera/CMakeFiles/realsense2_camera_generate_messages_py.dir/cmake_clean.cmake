@@ -2,8 +2,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/realsense2_camera_generate_messages_py"
   "/home/nvidia/projects/rosproject/devel/lib/python2.7/dist-packages/realsense2_camera/msg/_Extrinsics.py"
   "/home/nvidia/projects/rosproject/devel/lib/python2.7/dist-packages/realsense2_camera/msg/_IMUInfo.py"
-  "/home/nvidia/projects/rosproject/devel/lib/python2.7/dist-packages/realsense2_camera/msg/_Metadata.py"
-  "/home/nvidia/projects/rosproject/devel/lib/python2.7/dist-packages/realsense2_camera/srv/_DeviceInfo.py"
   "/home/nvidia/projects/rosproject/devel/lib/python2.7/dist-packages/realsense2_camera/msg/__init__.py"
   "/home/nvidia/projects/rosproject/devel/lib/python2.7/dist-packages/realsense2_camera/srv/__init__.py"
 )
