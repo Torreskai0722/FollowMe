@@ -14,6 +14,9 @@
 # EXTERNAL cache entries
 ########################
 
+//The threading library used by boost-thread
+BOOST_THREAD_LIBRARY:FILEPATH=/usr/lib/aarch64-linux-gnu/libpthread.so
+
 //Builds the googlemock subproject
 BUILD_GMOCK:BOOL=ON
 
@@ -25,6 +28,48 @@ BUILD_SHARED_LIBS:BOOL=ON
 
 //Use OpenMP
 BUILD_WITH_OPENMP:BOOL=OFF
+
+//Boost atomic library (debug)
+Boost_ATOMIC_LIBRARY_DEBUG:FILEPATH=/usr/lib/aarch64-linux-gnu/libboost_atomic.so
+
+//Boost atomic library (release)
+Boost_ATOMIC_LIBRARY_RELEASE:FILEPATH=/usr/lib/aarch64-linux-gnu/libboost_atomic.so
+
+//Boost chrono library (debug)
+Boost_CHRONO_LIBRARY_DEBUG:FILEPATH=/usr/lib/aarch64-linux-gnu/libboost_chrono.so
+
+//Boost chrono library (release)
+Boost_CHRONO_LIBRARY_RELEASE:FILEPATH=/usr/lib/aarch64-linux-gnu/libboost_chrono.so
+
+//Boost date_time library (debug)
+Boost_DATE_TIME_LIBRARY_DEBUG:FILEPATH=/usr/lib/aarch64-linux-gnu/libboost_date_time.so
+
+//Boost date_time library (release)
+Boost_DATE_TIME_LIBRARY_RELEASE:FILEPATH=/usr/lib/aarch64-linux-gnu/libboost_date_time.so
+
+//The directory containing a CMake configuration file for Boost.
+Boost_DIR:PATH=Boost_DIR-NOTFOUND
+
+//Path to a file.
+Boost_INCLUDE_DIR:PATH=/usr/include
+
+//Boost library directory DEBUG
+Boost_LIBRARY_DIR_DEBUG:PATH=/usr/lib/aarch64-linux-gnu
+
+//Boost library directory RELEASE
+Boost_LIBRARY_DIR_RELEASE:PATH=/usr/lib/aarch64-linux-gnu
+
+//Boost system library (debug)
+Boost_SYSTEM_LIBRARY_DEBUG:FILEPATH=/usr/lib/aarch64-linux-gnu/libboost_system.so
+
+//Boost system library (release)
+Boost_SYSTEM_LIBRARY_RELEASE:FILEPATH=/usr/lib/aarch64-linux-gnu/libboost_system.so
+
+//Boost thread library (debug)
+Boost_THREAD_LIBRARY_DEBUG:FILEPATH=/usr/lib/aarch64-linux-gnu/libboost_thread.so
+
+//Boost thread library (release)
+Boost_THREAD_LIBRARY_RELEASE:FILEPATH=/usr/lib/aarch64-linux-gnu/libboost_thread.so
 
 //List of ';' separated packages to exclude
 CATKIN_BLACKLIST_PACKAGES:STRING=
@@ -221,6 +266,9 @@ EMPY_EXECUTABLE:FILEPATH=/usr/bin/empy
 //Empy script
 EMPY_SCRIPT:STRING=/usr/bin/empy
 
+//The directory containing a CMake configuration file for Eigen3.
+Eigen3_DIR:PATH=/usr/lib/cmake/eigen3
+
 //The directory containing a CMake configuration file for GMock.
 GMock_DIR:PATH=GMock_DIR-NOTFOUND
 
@@ -317,6 +365,24 @@ bond_DIR:PATH=/opt/ros/melodic/share/bond/cmake
 //The directory containing a CMake configuration file for bondcpp.
 bondcpp_DIR:PATH=/opt/ros/melodic/share/bondcpp/cmake
 
+//Value Computed by CMake
+camera_BINARY_DIR:STATIC=/home/nvidia/projects/rosproject/build/camera
+
+//Value Computed by CMake
+camera_SOURCE_DIR:STATIC=/home/nvidia/projects/rosproject/src/camera
+
+//Value Computed by CMake
+camera_calibration_BINARY_DIR:STATIC=/home/nvidia/projects/rosproject/build/image_pipeline/camera_calibration
+
+//Value Computed by CMake
+camera_calibration_SOURCE_DIR:STATIC=/home/nvidia/projects/rosproject/src/image_pipeline/camera_calibration
+
+//The directory containing a CMake configuration file for camera_calibration_parsers.
+camera_calibration_parsers_DIR:PATH=/opt/ros/melodic/share/camera_calibration_parsers/cmake
+
+//The directory containing a CMake configuration file for camera_info_manager.
+camera_info_manager_DIR:PATH=/opt/ros/melodic/share/camera_info_manager/cmake
+
 //The directory containing a CMake configuration file for catkin.
 catkin_DIR:PATH=/opt/ros/melodic/share/catkin/cmake
 
@@ -328,6 +394,9 @@ chip_bldc_driver_SOURCE_DIR:STATIC=/home/nvidia/projects/rosproject/src/chip_bld
 
 //The directory containing a CMake configuration file for class_loader.
 class_loader_DIR:PATH=/opt/ros/melodic/share/class_loader/cmake
+
+//The directory containing a CMake configuration file for cmake_modules.
+cmake_modules_DIR:PATH=/opt/ros/melodic/share/cmake_modules/cmake
 
 //The directory containing a CMake configuration file for cpp_common.
 cpp_common_DIR:PATH=/opt/ros/melodic/share/cpp_common/cmake
@@ -350,6 +419,15 @@ ddynamic_reconfigure_LIB_DEPENDS:STATIC=general;/opt/ros/melodic/lib/libdynamic_
 //Value Computed by CMake
 ddynamic_reconfigure_SOURCE_DIR:STATIC=/home/nvidia/projects/rosproject/src/ddynamic_reconfigure
 
+//Value Computed by CMake
+depth_image_proc_BINARY_DIR:STATIC=/home/nvidia/projects/rosproject/build/image_pipeline/depth_image_proc
+
+//Dependencies for the target
+depth_image_proc_LIB_DEPENDS:STATIC=general;/opt/ros/melodic/lib/libcv_bridge.so;general;/opt/ros/melodic/lib/libeigen_conversions.so;general;/opt/ros/melodic/lib/liborocos-kdl.so.1.4.0;general;/opt/ros/melodic/lib/libimage_geometry.so;general;/usr/lib/aarch64-linux-gnu/libopencv_calib3d.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_core.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_features2d.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_flann.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_highgui.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_imgcodecs.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_imgproc.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_ml.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_objdetect.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_photo.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_shape.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_stitching.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_superres.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_video.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_videoio.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_videostab.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_viz.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_aruco.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_bgsegm.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_bioinspired.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_ccalib.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_datasets.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_dpm.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_face.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_freetype.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_fuzzy.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_hdf.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_line_descriptor.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_optflow.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_phase_unwrapping.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_plot.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_reg.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_rgbd.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_saliency.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_stereo.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_structured_light.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_surface_matching.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_text.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_ximgproc.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_xobjdetect.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_xphoto.so.3.2.0;general;/opt/ros/melodic/lib/libimage_transport.so;general;/opt/ros/melodic/lib/libnodeletlib.so;general;/opt/ros/melodic/lib/libbondcpp.so;general;/usr/lib/aarch64-linux-gnu/libuuid.so;general;/opt/ros/melodic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/aarch64-linux-gnu/libdl.so;general;/opt/ros/melodic/lib/libroslib.so;general;/opt/ros/melodic/lib/librospack.so;general;/usr/lib/aarch64-linux-gnu/libpython2.7.so;general;/usr/lib/aarch64-linux-gnu/libboost_program_options.so;general;/usr/lib/aarch64-linux-gnu/libtinyxml2.so;general;/opt/ros/melodic/lib/libtf2_ros.so;general;/opt/ros/melodic/lib/libactionlib.so;general;/opt/ros/melodic/lib/libmessage_filters.so;general;/opt/ros/melodic/lib/libroscpp.so;general;/usr/lib/aarch64-linux-gnu/libboost_filesystem.so;general;/opt/ros/melodic/lib/librosconsole.so;general;/opt/ros/melodic/lib/librosconsole_log4cxx.so;general;/opt/ros/melodic/lib/librosconsole_backend_interface.so;general;/usr/lib/aarch64-linux-gnu/liblog4cxx.so;general;/usr/lib/aarch64-linux-gnu/libboost_regex.so;general;/opt/ros/melodic/lib/libxmlrpcpp.so;general;/opt/ros/melodic/lib/libtf2.so;general;/opt/ros/melodic/lib/libroscpp_serialization.so;general;/opt/ros/melodic/lib/librostime.so;general;/opt/ros/melodic/lib/libcpp_common.so;general;/usr/lib/aarch64-linux-gnu/libboost_system.so;general;/usr/lib/aarch64-linux-gnu/libboost_thread.so;general;/usr/lib/aarch64-linux-gnu/libboost_chrono.so;general;/usr/lib/aarch64-linux-gnu/libboost_date_time.so;general;/usr/lib/aarch64-linux-gnu/libboost_atomic.so;general;/usr/lib/aarch64-linux-gnu/libpthread.so;general;/usr/lib/aarch64-linux-gnu/libconsole_bridge.so.0.4;general;opencv_calib3d;general;opencv_core;general;opencv_dnn;general;opencv_features2d;general;opencv_flann;general;opencv_gapi;general;opencv_highgui;general;opencv_imgcodecs;general;opencv_imgproc;general;opencv_ml;general;opencv_objdetect;general;opencv_photo;general;opencv_stitching;general;opencv_video;general;opencv_videoio;
+
+//Value Computed by CMake
+depth_image_proc_SOURCE_DIR:STATIC=/home/nvidia/projects/rosproject/src/image_pipeline/depth_image_proc
+
 //The directory containing a CMake configuration file for diagnostic_msgs.
 diagnostic_msgs_DIR:PATH=/opt/ros/melodic/share/diagnostic_msgs/cmake
 
@@ -358,6 +436,9 @@ diagnostic_updater_DIR:PATH=/opt/ros/melodic/share/diagnostic_updater/cmake
 
 //The directory containing a CMake configuration file for dynamic_reconfigure.
 dynamic_reconfigure_DIR:PATH=/opt/ros/melodic/share/dynamic_reconfigure/cmake
+
+//The directory containing a CMake configuration file for eigen_conversions.
+eigen_conversions_DIR:PATH=/opt/ros/melodic/share/eigen_conversions/cmake
 
 //Value Computed by CMake
 first_BINARY_DIR:STATIC=/home/nvidia/projects/rosproject/build/first
@@ -435,11 +516,59 @@ gtest_hide_internal_symbols:BOOL=OFF
 //Dependencies for the target
 gtest_main_LIB_DEPENDS:STATIC=general;-lpthread;general;gtest;
 
+//The directory containing a CMake configuration file for image_geometry.
+image_geometry_DIR:PATH=/opt/ros/melodic/share/image_geometry/cmake
+
+//Value Computed by CMake
+image_pipeline_BINARY_DIR:STATIC=/home/nvidia/projects/rosproject/build/image_pipeline/image_pipeline
+
+//Value Computed by CMake
+image_pipeline_SOURCE_DIR:STATIC=/home/nvidia/projects/rosproject/src/image_pipeline/image_pipeline
+
+//Value Computed by CMake
+image_proc_BINARY_DIR:STATIC=/home/nvidia/projects/rosproject/build/image_pipeline/image_proc
+
+//The directory containing a CMake configuration file for image_proc.
+image_proc_DIR:PATH=/opt/ros/melodic/share/image_proc/cmake
+
+//Dependencies for the target
+image_proc_LIB_DEPENDS:STATIC=general;/opt/ros/melodic/lib/libcv_bridge.so;general;/opt/ros/melodic/lib/libimage_geometry.so;general;/usr/lib/aarch64-linux-gnu/libopencv_calib3d.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_core.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_features2d.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_flann.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_highgui.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_imgcodecs.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_imgproc.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_ml.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_objdetect.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_photo.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_shape.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_stitching.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_superres.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_video.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_videoio.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_videostab.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_viz.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_aruco.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_bgsegm.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_bioinspired.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_ccalib.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_datasets.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_dpm.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_face.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_freetype.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_fuzzy.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_hdf.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_line_descriptor.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_optflow.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_phase_unwrapping.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_plot.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_reg.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_rgbd.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_saliency.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_stereo.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_structured_light.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_surface_matching.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_text.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_ximgproc.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_xobjdetect.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_xphoto.so.3.2.0;general;/opt/ros/melodic/lib/libimage_transport.so;general;/opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/melodic/lib/libmessage_filters.so;general;/opt/ros/melodic/lib/libnodeletlib.so;general;/opt/ros/melodic/lib/libbondcpp.so;general;/usr/lib/aarch64-linux-gnu/libuuid.so;general;/opt/ros/melodic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/aarch64-linux-gnu/libdl.so;general;/opt/ros/melodic/lib/libroslib.so;general;/opt/ros/melodic/lib/librospack.so;general;/usr/lib/aarch64-linux-gnu/libpython2.7.so;general;/usr/lib/aarch64-linux-gnu/libboost_program_options.so;general;/usr/lib/aarch64-linux-gnu/libtinyxml2.so;general;/opt/ros/melodic/lib/libroscpp.so;general;/usr/lib/aarch64-linux-gnu/libboost_filesystem.so;general;/opt/ros/melodic/lib/librosconsole.so;general;/opt/ros/melodic/lib/librosconsole_log4cxx.so;general;/opt/ros/melodic/lib/librosconsole_backend_interface.so;general;/usr/lib/aarch64-linux-gnu/liblog4cxx.so;general;/usr/lib/aarch64-linux-gnu/libboost_regex.so;general;/opt/ros/melodic/lib/libxmlrpcpp.so;general;/opt/ros/melodic/lib/libroscpp_serialization.so;general;/opt/ros/melodic/lib/librostime.so;general;/opt/ros/melodic/lib/libcpp_common.so;general;/usr/lib/aarch64-linux-gnu/libboost_system.so;general;/usr/lib/aarch64-linux-gnu/libboost_thread.so;general;/usr/lib/aarch64-linux-gnu/libboost_chrono.so;general;/usr/lib/aarch64-linux-gnu/libboost_date_time.so;general;/usr/lib/aarch64-linux-gnu/libboost_atomic.so;general;/usr/lib/aarch64-linux-gnu/libpthread.so;general;/usr/lib/aarch64-linux-gnu/libconsole_bridge.so.0.4;general;/usr/lib/aarch64-linux-gnu/libboost_thread.so;general;/usr/lib/aarch64-linux-gnu/libboost_chrono.so;general;/usr/lib/aarch64-linux-gnu/libboost_system.so;general;/usr/lib/aarch64-linux-gnu/libboost_date_time.so;general;/usr/lib/aarch64-linux-gnu/libboost_atomic.so;general;/usr/lib/aarch64-linux-gnu/libpthread.so;general;opencv_calib3d;general;opencv_core;general;opencv_dnn;general;opencv_features2d;general;opencv_flann;general;opencv_gapi;general;opencv_highgui;general;opencv_imgcodecs;general;opencv_imgproc;general;opencv_ml;general;opencv_objdetect;general;opencv_photo;general;opencv_stitching;general;opencv_video;general;opencv_videoio;
+
+//Value Computed by CMake
+image_proc_SOURCE_DIR:STATIC=/home/nvidia/projects/rosproject/src/image_pipeline/image_proc
+
+//Value Computed by CMake
+image_publisher_BINARY_DIR:STATIC=/home/nvidia/projects/rosproject/build/image_pipeline/image_publisher
+
+//Dependencies for the target
+image_publisher_LIB_DEPENDS:STATIC=general;/opt/ros/melodic/lib/libcv_bridge.so;general;/usr/lib/aarch64-linux-gnu/libopencv_core.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_imgproc.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_imgcodecs.so.3.2.0;general;/opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/melodic/lib/libcamera_info_manager.so;general;/opt/ros/melodic/lib/libcamera_calibration_parsers.so;general;/opt/ros/melodic/lib/libimage_transport.so;general;/opt/ros/melodic/lib/libmessage_filters.so;general;/opt/ros/melodic/lib/libnodeletlib.so;general;/opt/ros/melodic/lib/libbondcpp.so;general;/usr/lib/aarch64-linux-gnu/libuuid.so;general;/opt/ros/melodic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/aarch64-linux-gnu/libdl.so;general;/opt/ros/melodic/lib/libroslib.so;general;/opt/ros/melodic/lib/librospack.so;general;/usr/lib/aarch64-linux-gnu/libpython2.7.so;general;/usr/lib/aarch64-linux-gnu/libboost_program_options.so;general;/usr/lib/aarch64-linux-gnu/libtinyxml2.so;general;/opt/ros/melodic/lib/libroscpp.so;general;/usr/lib/aarch64-linux-gnu/libboost_filesystem.so;general;/opt/ros/melodic/lib/librosconsole.so;general;/opt/ros/melodic/lib/librosconsole_log4cxx.so;general;/opt/ros/melodic/lib/librosconsole_backend_interface.so;general;/usr/lib/aarch64-linux-gnu/liblog4cxx.so;general;/usr/lib/aarch64-linux-gnu/libboost_regex.so;general;/opt/ros/melodic/lib/libroscpp_serialization.so;general;/opt/ros/melodic/lib/libxmlrpcpp.so;general;/opt/ros/melodic/lib/librostime.so;general;/opt/ros/melodic/lib/libcpp_common.so;general;/usr/lib/aarch64-linux-gnu/libboost_system.so;general;/usr/lib/aarch64-linux-gnu/libboost_thread.so;general;/usr/lib/aarch64-linux-gnu/libboost_chrono.so;general;/usr/lib/aarch64-linux-gnu/libboost_date_time.so;general;/usr/lib/aarch64-linux-gnu/libboost_atomic.so;general;/usr/lib/aarch64-linux-gnu/libpthread.so;general;/usr/lib/aarch64-linux-gnu/libconsole_bridge.so.0.4;general;opencv_core;general;opencv_core;general;opencv_imgcodecs;general;opencv_videoio;
+
+//Value Computed by CMake
+image_publisher_SOURCE_DIR:STATIC=/home/nvidia/projects/rosproject/src/image_pipeline/image_publisher
+
+//Value Computed by CMake
+image_rotate_BINARY_DIR:STATIC=/home/nvidia/projects/rosproject/build/image_pipeline/image_rotate
+
+//Dependencies for the target
+image_rotate_LIB_DEPENDS:STATIC=general;/opt/ros/melodic/lib/libcv_bridge.so;general;/usr/lib/aarch64-linux-gnu/libopencv_core.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_imgproc.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_imgcodecs.so.3.2.0;general;/opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/melodic/lib/libimage_transport.so;general;/opt/ros/melodic/lib/libnodeletlib.so;general;/opt/ros/melodic/lib/libbondcpp.so;general;/usr/lib/aarch64-linux-gnu/libuuid.so;general;/opt/ros/melodic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/aarch64-linux-gnu/libdl.so;general;/opt/ros/melodic/lib/libroslib.so;general;/opt/ros/melodic/lib/librospack.so;general;/usr/lib/aarch64-linux-gnu/libpython2.7.so;general;/usr/lib/aarch64-linux-gnu/libboost_program_options.so;general;/usr/lib/aarch64-linux-gnu/libtinyxml2.so;general;/opt/ros/melodic/lib/liborocos-kdl.so;general;/opt/ros/melodic/lib/liborocos-kdl.so.1.4.0;general;/opt/ros/melodic/lib/libtf2_ros.so;general;/opt/ros/melodic/lib/libactionlib.so;general;/opt/ros/melodic/lib/libmessage_filters.so;general;/opt/ros/melodic/lib/libroscpp.so;general;/usr/lib/aarch64-linux-gnu/libboost_filesystem.so;general;/opt/ros/melodic/lib/librosconsole.so;general;/opt/ros/melodic/lib/librosconsole_log4cxx.so;general;/opt/ros/melodic/lib/librosconsole_backend_interface.so;general;/usr/lib/aarch64-linux-gnu/liblog4cxx.so;general;/usr/lib/aarch64-linux-gnu/libboost_regex.so;general;/opt/ros/melodic/lib/libxmlrpcpp.so;general;/opt/ros/melodic/lib/libtf2.so;general;/opt/ros/melodic/lib/libroscpp_serialization.so;general;/opt/ros/melodic/lib/librostime.so;general;/opt/ros/melodic/lib/libcpp_common.so;general;/usr/lib/aarch64-linux-gnu/libboost_system.so;general;/usr/lib/aarch64-linux-gnu/libboost_thread.so;general;/usr/lib/aarch64-linux-gnu/libboost_chrono.so;general;/usr/lib/aarch64-linux-gnu/libboost_date_time.so;general;/usr/lib/aarch64-linux-gnu/libboost_atomic.so;general;/usr/lib/aarch64-linux-gnu/libpthread.so;general;/usr/lib/aarch64-linux-gnu/libconsole_bridge.so.0.4;general;opencv_core;general;opencv_imgproc;
+
+//Value Computed by CMake
+image_rotate_SOURCE_DIR:STATIC=/home/nvidia/projects/rosproject/src/image_pipeline/image_rotate
+
 //The directory containing a CMake configuration file for image_transport.
 image_transport_DIR:PATH=/opt/ros/melodic/share/image_transport/cmake
 
+//Value Computed by CMake
+image_view_BINARY_DIR:STATIC=/home/nvidia/projects/rosproject/build/image_pipeline/image_view
+
+//Dependencies for the target
+image_view_LIB_DEPENDS:STATIC=general;/opt/ros/melodic/lib/libcamera_calibration_parsers.so;general;/opt/ros/melodic/lib/libcv_bridge.so;general;/usr/lib/aarch64-linux-gnu/libopencv_core.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_imgproc.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_imgcodecs.so.3.2.0;general;/opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/melodic/lib/libimage_transport.so;general;/opt/ros/melodic/lib/libmessage_filters.so;general;/opt/ros/melodic/lib/libnodeletlib.so;general;/opt/ros/melodic/lib/libbondcpp.so;general;/usr/lib/aarch64-linux-gnu/libuuid.so;general;/opt/ros/melodic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/aarch64-linux-gnu/libdl.so;general;/opt/ros/melodic/lib/libroslib.so;general;/opt/ros/melodic/lib/librospack.so;general;/usr/lib/aarch64-linux-gnu/libpython2.7.so;general;/usr/lib/aarch64-linux-gnu/libboost_program_options.so;general;/usr/lib/aarch64-linux-gnu/libtinyxml2.so;general;/opt/ros/melodic/lib/libroscpp.so;general;/usr/lib/aarch64-linux-gnu/libboost_filesystem.so;general;/opt/ros/melodic/lib/librosconsole.so;general;/opt/ros/melodic/lib/librosconsole_log4cxx.so;general;/opt/ros/melodic/lib/librosconsole_backend_interface.so;general;/usr/lib/aarch64-linux-gnu/liblog4cxx.so;general;/usr/lib/aarch64-linux-gnu/libboost_regex.so;general;/opt/ros/melodic/lib/libxmlrpcpp.so;general;/opt/ros/melodic/lib/libroscpp_serialization.so;general;/opt/ros/melodic/lib/librostime.so;general;/opt/ros/melodic/lib/libcpp_common.so;general;/usr/lib/aarch64-linux-gnu/libboost_system.so;general;/usr/lib/aarch64-linux-gnu/libboost_thread.so;general;/usr/lib/aarch64-linux-gnu/libboost_chrono.so;general;/usr/lib/aarch64-linux-gnu/libboost_date_time.so;general;/usr/lib/aarch64-linux-gnu/libboost_atomic.so;general;/usr/lib/aarch64-linux-gnu/libpthread.so;general;/usr/lib/aarch64-linux-gnu/libconsole_bridge.so.0.4;general;opencv_calib3d;general;opencv_core;general;opencv_dnn;general;opencv_features2d;general;opencv_flann;general;opencv_gapi;general;opencv_highgui;general;opencv_imgcodecs;general;opencv_imgproc;general;opencv_ml;general;opencv_objdetect;general;opencv_photo;general;opencv_stitching;general;opencv_video;general;opencv_videoio;general;/usr/lib/aarch64-linux-gnu/libboost_thread.so;general;/usr/lib/aarch64-linux-gnu/libboost_chrono.so;general;/usr/lib/aarch64-linux-gnu/libboost_system.so;general;/usr/lib/aarch64-linux-gnu/libboost_date_time.so;general;/usr/lib/aarch64-linux-gnu/libboost_atomic.so;general;/usr/lib/aarch64-linux-gnu/libpthread.so;
+
+//Value Computed by CMake
+image_view_SOURCE_DIR:STATIC=/home/nvidia/projects/rosproject/src/image_pipeline/image_view
+
 //Path to a library.
-lib:FILEPATH=/opt/ros/melodic/lib/libdiagnostic_updater.so
+lib:FILEPATH=/opt/ros/melodic/lib/libtf2.so
 
 //Value Computed by CMake
 lidar_BINARY_DIR:STATIC=/home/nvidia/projects/rosproject/build/lidar
@@ -562,7 +691,7 @@ sensor_msgs_DIR:PATH=/opt/ros/melodic/share/sensor_msgs/cmake
 serial_BINARY_DIR:STATIC=/home/nvidia/projects/rosproject/build/serial
 
 //The directory containing a CMake configuration file for serial.
-serial_DIR:PATH=/home/nvidia/projects/rosproject/devel/share/serial/cmake
+serial_DIR:PATH=/home/nvidia/projects/rosproject/install/share/serial/cmake
 
 //Dependencies for the target
 serial_LIB_DEPENDS:STATIC=general;rt;general;pthread;
@@ -580,6 +709,18 @@ std_msgs_DIR:PATH=/opt/ros/melodic/share/std_msgs/cmake
 std_srvs_DIR:PATH=/opt/ros/melodic/share/std_srvs/cmake
 
 //Value Computed by CMake
+stereo_image_proc_BINARY_DIR:STATIC=/home/nvidia/projects/rosproject/build/image_pipeline/stereo_image_proc
+
+//Dependencies for the target
+stereo_image_proc_LIB_DEPENDS:STATIC=general;/opt/ros/melodic/lib/libcv_bridge.so;general;/opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so;general;image_proc;general;/opt/ros/melodic/lib/libimage_geometry.so;general;/usr/lib/aarch64-linux-gnu/libopencv_calib3d.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_core.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_features2d.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_flann.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_highgui.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_imgcodecs.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_imgproc.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_ml.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_objdetect.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_photo.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_shape.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_stitching.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_superres.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_video.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_videoio.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_videostab.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_viz.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_aruco.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_bgsegm.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_bioinspired.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_ccalib.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_datasets.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_dpm.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_face.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_freetype.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_fuzzy.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_hdf.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_line_descriptor.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_optflow.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_phase_unwrapping.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_plot.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_reg.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_rgbd.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_saliency.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_stereo.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_structured_light.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_surface_matching.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_text.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_ximgproc.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_xobjdetect.so.3.2.0;general;/usr/lib/aarch64-linux-gnu/libopencv_xphoto.so.3.2.0;general;/opt/ros/melodic/lib/libimage_transport.so;general;/opt/ros/melodic/lib/libmessage_filters.so;general;/opt/ros/melodic/lib/libnodeletlib.so;general;/opt/ros/melodic/lib/libbondcpp.so;general;/usr/lib/aarch64-linux-gnu/libuuid.so;general;/opt/ros/melodic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/aarch64-linux-gnu/libdl.so;general;/opt/ros/melodic/lib/libroslib.so;general;/opt/ros/melodic/lib/librospack.so;general;/usr/lib/aarch64-linux-gnu/libpython2.7.so;general;/usr/lib/aarch64-linux-gnu/libboost_program_options.so;general;/usr/lib/aarch64-linux-gnu/libtinyxml2.so;general;/opt/ros/melodic/lib/libroscpp.so;general;/usr/lib/aarch64-linux-gnu/libboost_filesystem.so;general;/opt/ros/melodic/lib/librosconsole.so;general;/opt/ros/melodic/lib/librosconsole_log4cxx.so;general;/opt/ros/melodic/lib/librosconsole_backend_interface.so;general;/usr/lib/aarch64-linux-gnu/liblog4cxx.so;general;/usr/lib/aarch64-linux-gnu/libboost_regex.so;general;/opt/ros/melodic/lib/libxmlrpcpp.so;general;/opt/ros/melodic/lib/libroscpp_serialization.so;general;/opt/ros/melodic/lib/librostime.so;general;/opt/ros/melodic/lib/libcpp_common.so;general;/usr/lib/aarch64-linux-gnu/libboost_system.so;general;/usr/lib/aarch64-linux-gnu/libboost_thread.so;general;/usr/lib/aarch64-linux-gnu/libboost_chrono.so;general;/usr/lib/aarch64-linux-gnu/libboost_date_time.so;general;/usr/lib/aarch64-linux-gnu/libboost_atomic.so;general;/usr/lib/aarch64-linux-gnu/libpthread.so;general;/usr/lib/aarch64-linux-gnu/libconsole_bridge.so.0.4;general;opencv_calib3d;general;opencv_core;general;opencv_dnn;general;opencv_features2d;general;opencv_flann;general;opencv_gapi;general;opencv_highgui;general;opencv_imgcodecs;general;opencv_imgproc;general;opencv_ml;general;opencv_objdetect;general;opencv_photo;general;opencv_stitching;general;opencv_video;general;opencv_videoio;
+
+//Value Computed by CMake
+stereo_image_proc_SOURCE_DIR:STATIC=/home/nvidia/projects/rosproject/src/image_pipeline/stereo_image_proc
+
+//The directory containing a CMake configuration file for stereo_msgs.
+stereo_msgs_DIR:PATH=/opt/ros/melodic/share/stereo_msgs/cmake
+
+//Value Computed by CMake
 test_BINARY_DIR:STATIC=/home/nvidia/projects/rosproject/build/test
 
 //Value Computed by CMake
@@ -590,6 +731,9 @@ tf2_DIR:PATH=/opt/ros/melodic/share/tf2/cmake
 
 //The directory containing a CMake configuration file for tf2_eigen.
 tf2_eigen_DIR:PATH=/opt/ros/melodic/share/tf2_eigen/cmake
+
+//The directory containing a CMake configuration file for tf2_geometry_msgs.
+tf2_geometry_msgs_DIR:PATH=/opt/ros/melodic/share/tf2_geometry_msgs/cmake
 
 //The directory containing a CMake configuration file for tf2_msgs.
 tf2_msgs_DIR:PATH=/opt/ros/melodic/share/tf2_msgs/cmake
@@ -614,6 +758,34 @@ xmlrpcpp_DIR:PATH=/opt/ros/melodic/share/xmlrpcpp/cmake
 # INTERNAL cache entries
 ########################
 
+//ADVANCED property for variable: Boost_ATOMIC_LIBRARY_DEBUG
+Boost_ATOMIC_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_ATOMIC_LIBRARY_RELEASE
+Boost_ATOMIC_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_CHRONO_LIBRARY_DEBUG
+Boost_CHRONO_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_CHRONO_LIBRARY_RELEASE
+Boost_CHRONO_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_DATE_TIME_LIBRARY_DEBUG
+Boost_DATE_TIME_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_DATE_TIME_LIBRARY_RELEASE
+Boost_DATE_TIME_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_DIR
+Boost_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_INCLUDE_DIR
+Boost_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_LIBRARY_DIR_DEBUG
+Boost_LIBRARY_DIR_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_LIBRARY_DIR_RELEASE
+Boost_LIBRARY_DIR_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_SYSTEM_LIBRARY_DEBUG
+Boost_SYSTEM_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_SYSTEM_LIBRARY_RELEASE
+Boost_SYSTEM_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_THREAD_LIBRARY_DEBUG
+Boost_THREAD_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_THREAD_LIBRARY_RELEASE
+Boost_THREAD_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //catkin environment
 CATKIN_ENV:INTERNAL=/home/nvidia/projects/rosproject/build/catkin_generated/env_cached.sh
 CATKIN_TEST_RESULTS_DIR:INTERNAL=/home/nvidia/projects/rosproject/build/test_results
@@ -721,7 +893,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=12
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=21
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -763,9 +935,9 @@ CMAKE_UNAME:INTERNAL=/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding OpenCV
-FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[/usr][v4.1.1()]
+FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[/usr][cfound components:  core imgproc ][v4.1.1()]
 //Details about finding PythonInterp
-FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python2][v2.7.17(2)]
+FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python2][v2.7.17()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 GMOCK_FROM_SOURCE_FOUND:INTERNAL=TRUE
@@ -794,4 +966,16 @@ PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
 //  And it needs to match.  But setuptools won't tell us where
 // it will install things.
 PYTHON_INSTALL_DIR:INTERNAL=lib/python2.7/dist-packages
+//Components requested for this build tree.
+_Boost_COMPONENTS_SEARCHED:INTERNAL=atomic;chrono;date_time;system;thread
+//Last used Boost_INCLUDE_DIR value.
+_Boost_INCLUDE_DIR_LAST:INTERNAL=/usr/include
+//Last used Boost_LIBRARY_DIR_DEBUG value.
+_Boost_LIBRARY_DIR_DEBUG_LAST:INTERNAL=/usr/lib/aarch64-linux-gnu
+//Last used Boost_LIBRARY_DIR_RELEASE value.
+_Boost_LIBRARY_DIR_RELEASE_LAST:INTERNAL=/usr/lib/aarch64-linux-gnu
+//Last used Boost_NAMESPACE value.
+_Boost_NAMESPACE_LAST:INTERNAL=boost
+//Last used Boost_USE_MULTITHREADED value.
+_Boost_USE_MULTITHREADED_LAST:INTERNAL=TRUE
 

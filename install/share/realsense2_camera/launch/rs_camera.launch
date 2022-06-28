@@ -14,8 +14,8 @@
   <arg name="fisheye_height"      default="-1"/>
   <arg name="enable_fisheye"      default="false"/>
 
-  <arg name="depth_width"         default="-1"/>
-  <arg name="depth_height"        default="-1"/>
+  <arg name="depth_width"         default="640"/>
+  <arg name="depth_height"        default="480"/>
   <arg name="enable_depth"        default="true"/>
 
   <arg name="confidence_width"    default="-1"/>
@@ -28,28 +28,28 @@
   <arg name="enable_infra"        default="false"/>
   <arg name="enable_infra1"       default="false"/>
   <arg name="enable_infra2"       default="false"/>
-  <arg name="infra_rgb"           default="false"/>
+  <arg name="infra_rgb"           default="true"/>
 
-  <arg name="color_width"         default="-1"/>
-  <arg name="color_height"        default="-1"/>
+  <arg name="color_width"         default="640"/>
+  <arg name="color_height"        default="480"/>
   <arg name="enable_color"        default="true"/>
 
   <arg name="fisheye_fps"         default="-1"/>
-  <arg name="depth_fps"           default="-1"/>
+  <arg name="depth_fps"           default="30"/>
   <arg name="infra_fps"           default="30"/>
-  <arg name="color_fps"           default="-1"/>
+  <arg name="color_fps"           default="30"/>
   <arg name="gyro_fps"            default="-1"/>
   <arg name="accel_fps"           default="-1"/>
   <arg name="enable_gyro"         default="true"/>
   <arg name="enable_accel"        default="true"/>
 
-  <arg name="enable_pointcloud"         default="false"/>
+  <arg name="enable_pointcloud"         default="true"/>
   <arg name="pointcloud_texture_stream" default="RS2_STREAM_COLOR"/>
   <arg name="pointcloud_texture_index"  default="0"/>
   <arg name="allow_no_texture_points"   default="false"/>
   <arg name="ordered_pc"                default="false"/>
 
-  <arg name="enable_sync"               default="false"/>
+  <arg name="enable_sync"               default="true"/>
   <arg name="align_depth"               default="false"/>
 
   <arg name="publish_tf"                default="true"/>
@@ -104,9 +104,9 @@
       <arg name="enable_confidence"        value="$(arg enable_confidence)"/>
       <arg name="confidence_fps"           value="$(arg confidence_fps)"/>
 
-      <arg name="color_width"              value="$(arg color_width)"/>
-      <arg name="color_height"             value="$(arg color_height)"/>
-      <arg name="enable_color"             value="$(arg enable_color)"/>
+      <arg name="color_width"              value="640"/>
+      <arg name="color_height"             value="480"/>
+      <arg name="enable_color"             value="true"/>
 
       <arg name="infra_width"              value="$(arg infra_width)"/>
       <arg name="infra_height"             value="$(arg infra_height)"/>

@@ -6,5 +6,5 @@ CXX_FLAGS = -O3 -DNDEBUG -fPIC
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"chip_bldc_driver\" -Dbldc_controller_EXPORTS
 
-CXX_INCLUDES = -I/home/nvidia/projects/rosproject/devel/include -I/home/nvidia/projects/rosproject/src/chip_bldc_driver/include -I/home/nvidia/projects/rosproject/src/serial/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/nvidia/projects/rosproject/src/chip_bldc_driver/include/chip_bldc_driver 
+CXX_INCLUDES = -I/home/nvidia/projects/rosproject/devel/include -I/home/nvidia/projects/rosproject/src/chip_bldc_driver/include -I/home/nvidia/projects/rosproject/install/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/nvidia/projects/rosproject/src/chip_bldc_driver/include/chip_bldc_driver 
 

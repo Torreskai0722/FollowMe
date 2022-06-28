@@ -1,2 +1,2 @@
-chip_bldc_driver:ddynamic_reconfigure:first:lidar:motor:multiple-object-tracking-lidar:realsense-ros/realsense2_camera:realsense-ros/realsense2_description:rplidar_ros:serial:test
+camera:chip_bldc_driver:ddynamic_reconfigure:first:image_pipeline/camera_calibration:image_pipeline/depth_image_proc:image_pipeline/image_pipeline:image_pipeline/image_proc:image_pipeline/image_publisher:image_pipeline/image_rotate:image_pipeline/image_view:image_pipeline/stereo_image_proc:lidar:motor:multiple-object-tracking-lidar:realsense-ros/realsense2_camera:realsense-ros/realsense2_description:rplidar_ros:serial:test
 -DCATKIN_DEVEL_PREFIX=/home/nvidia/projects/rosproject/devel -DCMAKE_INSTALL_PREFIX=/home/nvidia/projects/rosproject/install -G Unix Makefiles
