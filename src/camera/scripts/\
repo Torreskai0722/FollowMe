@@ -9,29 +9,21 @@ import rospy
 
 from geometry_msgs.msg import Vector3, Point32
 from sensor_msgs.msg import PointCloud2, Image, ChannelFloat32
-import sensor_msgs.point_cloud2 as pc2
 
 heading = Vector3()
 mapCloud = PointCloud2()
 lastCamPoints = []
 
-def asArr(cloud):
-    if cloud.width == 0:
-        return []
-    return np.frombuffer(cloud.data, dtype=np.uint8).reshape(cloud.height, cloud.width, -1)
-
 def onCameraUpdate(cloud):
     global lastCamPoints 
-    global mapCloud
 
-    lastCamPoints = pc2.read_points_list(cloud)
-
-    if mapCloud == PointCloud2():
-        mapCloud = cloud
+    arr = np.frombuffer(cloud.data, dtype=np.uint8).reshape(data.height, data.width, -1)
+    print(arr)
+    
+    lastCamPoints = cloud.data
 
 def onHeadingUpdate(update):
     global heading
-    global mapCloud
 
     # determine if it is a decent change (10 degrees or more)
     dx = abs(update.x - heading.x)
@@ -43,19 +35,10 @@ def onHeadingUpdate(update):
         # get map and add points to the map
         print("change detected")
 
-        heading = update
-        
-        if mapCloud != PointCloud2():
-            points = pc2.read_points_list(mapCloud)
-            for p in lastCamPoints:
-                points.append(p)
-            if (len(points) > 0):
-                mapCloud = pc2.create_cloud(mapCloud.header, mapCloud.fields, points)
+        mapCloud.data.extend(lastCamPoints)
+        mapCloud.width += len(lastCamPoints)
 
-        #points = np.hstack([asArr(mapCloud), lastCamPoints]) if len(lastCamPoints) > 0 else asArr(mapCloud)
-        
-        #mapCloud.data = np.getbuffer(points)
-        #mapCloud.width += len(lastCamPoints)
+        heading = update
 
 if __name__ == "__main__":
     rospy.init_node("mapper")
