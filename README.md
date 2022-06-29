@@ -9,12 +9,14 @@ Development of an indoor autonomous mobile robots.
 ### setup for lidar:
 ```sh
 sudo chmod 666 /dev/ttyUSB0
-roslaunch rplidar_ros rplidar_s1.launch```
+roslaunch rplidar_ros rplidar_s1.launch
+```
 
 ### setup for motor
 ```sh
 sudo chmod 777 /dev/ttyUSB0
-roslaunch chip_bldc_driver example.launch```
+roslaunch chip_bldc_driver example.launch
+```
 
 
 ## Demos
@@ -27,7 +29,8 @@ Object Detection and Distance Estimation
 ```sh
 # start the inferencing node
 rosrun ros_deep_learning detectnet /dettnet/image_in:=/camera/color/image_raw
-rosrun camera detectdepth.py```
+rosrun camera detectdepth.py
+```
 
 Heading Tracking with IMU:
 `rosrun camera heading.py`
@@ -36,12 +39,13 @@ SLAM-type Mapping (doesn't work very well) using heading
 ```sh
 rosrun camera mapper.py
 rviz
-`
+```
 
 ### RPLidar Demos:
 Start with:
 ```sh
-roslaunch rplidar_ros rplidar_s1.launch```
+roslaunch rplidar_ros rplidar_s1.launch
+```
 
 Single revolution plotted as a map:
 `rosrun lidar single_map.py` 
@@ -50,12 +54,14 @@ Multi Object Detection:
 ```sh
 rosrun lidar pointcloud.py
 rosrun multi_object_tracking_lidar kf_tracker
-rviz```
+rviz
+```
 
 ### Any of the motor demos:
 ```sh
 rosrun chip_bldc_driver bldc_driver_node
-rosrun motor [stepper.py, rpm.py etc.]```
+rosrun motor [stepper.py, rpm.py etc.]
+```
 
 
 
