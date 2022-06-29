@@ -4,6 +4,7 @@
 from __future__ import print_function
 from time import time
 from math import pi
+import os
 import numpy as np
 
 import rospy
@@ -89,10 +90,11 @@ def onDetection(detection):
         cp = (int(center.x), int(center.y))
         
         cv_image = cv2.circle(cv_image, cp, 5, (0, 255, 0), -1)
+      #  if depth_info != 0:
         cv_image = cv2.putText(cv_image, str(depth_info) + " mm", cp, cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2, cv2.LINE_AA)
 
         # text
-        text = "Label #" + str(obj.results[0].id) + ", " + str(round(obj.results[0].score, 2)) + "%"
+        text = categories[obj.results[0].id] + ", " + str(round(obj.results[0].score, 2)) + "%"
         text_loc = (start_point[0], start_point[1] - 20)
 
         cv_image = cv2.putText(cv_image, text, text_loc, cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 2, cv2.LINE_AA)
@@ -103,6 +105,10 @@ def onDetection(detection):
 
 
 if __name__ == "__main__":
+
+    text_file = open(os.path.abspath(os.path.dirname(__file__)) +  "/../ssd_coco_labels.txt", "r")
+    categories = [item.replace("\n", "") for item in text_file.readlines()]
+
     rospy.init_node("depthdetector")
 
     rospy.Subscriber("/camera/color/image_raw", Image, onImage)
