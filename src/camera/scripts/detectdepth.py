@@ -18,6 +18,8 @@ bridge = CvBridge()
 lastImage = Image()
 lastDepth = Image()
 
+lastDepthReading = 0
+
 def onDepth(depth):
     global lastDepth
     lastDepth = depth
@@ -63,6 +65,8 @@ def getDepthInfoForImage(start_point, end_point, center):
     #return (center_depth, min_depth, max_depth, min_depth_point, max_depth_point)
 
 def onDetection(detection):
+    global lastDepthReading
+
     cv_image = cv2.cvtColor(bridge.imgmsg_to_cv2(lastImage, desired_encoding='passthrough'), cv2.COLOR_BGR2RGB)
     
     print('detect')
@@ -75,6 +79,8 @@ def onDetection(detection):
         end_point = (int(center.x + (bbox.size_x/2)), int(center.y + (bbox.size_y/2)))
 
         depth_info = getDepthInfoForImage(start_point, end_point, center)
+        depth_info = depth_info if depth_info != 0 else lastDepthReading
+        lastDepthReading = depth_info
 
         # bounding box
         cv_image = cv2.rectangle(cv_image, start_point, end_point, (255, 0, 0), 5)
@@ -86,7 +92,7 @@ def onDetection(detection):
         cv_image = cv2.putText(cv_image, str(depth_info) + " mm", cp, cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2, cv2.LINE_AA)
 
         # text
-        text = str(obj.results[0].id) + ", " + str(round(obj.results[0].score, 2)) + "%"
+        text = "Label #" + str(obj.results[0].id) + ", " + str(round(obj.results[0].score, 2)) + "%"
         text_loc = (start_point[0], start_point[1] - 20)
 
         cv_image = cv2.putText(cv_image, text, text_loc, cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 2, cv2.LINE_AA)
