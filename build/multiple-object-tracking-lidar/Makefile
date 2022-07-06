@@ -124,6 +124,17 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # The main all target
 all: cmake_check_build_system
 	cd /home/nvidia/projects/rosproject/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/projects/rosproject/build/CMakeFiles /home/nvidia/projects/rosproject/build/multiple-object-tracking-lidar/CMakeFiles/progress.marks
@@ -962,6 +973,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... actionlib_generate_messages_cpp"
 	@echo "... actionlib_generate_messages_eus"
+	@echo "... test"
 	@echo "... actionlib_generate_messages_nodejs"
 	@echo "... src/main.o"
 	@echo "... src/main.i"

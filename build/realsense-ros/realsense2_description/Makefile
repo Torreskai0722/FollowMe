@@ -56,6 +56,51 @@ CMAKE_BINARY_DIR = /home/nvidia/projects/rosproject/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
@@ -90,40 +135,6 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
 # The main all target
 all: cmake_check_build_system
 	cd /home/nvidia/projects/rosproject/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/projects/rosproject/build/CMakeFiles /home/nvidia/projects/rosproject/build/realsense-ros/realsense2_description/CMakeFiles/progress.marks
@@ -157,6 +168,51 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+realsense-ros/realsense2_description/CMakeFiles/_run_tests_realsense2_description_nosetests_tests.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 realsense-ros/realsense2_description/CMakeFiles/_run_tests_realsense2_description_nosetests_tests.dir/rule
+.PHONY : realsense-ros/realsense2_description/CMakeFiles/_run_tests_realsense2_description_nosetests_tests.dir/rule
+
+# Convenience name for target.
+_run_tests_realsense2_description_nosetests_tests: realsense-ros/realsense2_description/CMakeFiles/_run_tests_realsense2_description_nosetests_tests.dir/rule
+
+.PHONY : _run_tests_realsense2_description_nosetests_tests
+
+# fast build rule for target.
+_run_tests_realsense2_description_nosetests_tests/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f realsense-ros/realsense2_description/CMakeFiles/_run_tests_realsense2_description_nosetests_tests.dir/build.make realsense-ros/realsense2_description/CMakeFiles/_run_tests_realsense2_description_nosetests_tests.dir/build
+.PHONY : _run_tests_realsense2_description_nosetests_tests/fast
+
+# Convenience name for target.
+realsense-ros/realsense2_description/CMakeFiles/clean_test_results_realsense2_description.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 realsense-ros/realsense2_description/CMakeFiles/clean_test_results_realsense2_description.dir/rule
+.PHONY : realsense-ros/realsense2_description/CMakeFiles/clean_test_results_realsense2_description.dir/rule
+
+# Convenience name for target.
+clean_test_results_realsense2_description: realsense-ros/realsense2_description/CMakeFiles/clean_test_results_realsense2_description.dir/rule
+
+.PHONY : clean_test_results_realsense2_description
+
+# fast build rule for target.
+clean_test_results_realsense2_description/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f realsense-ros/realsense2_description/CMakeFiles/clean_test_results_realsense2_description.dir/build.make realsense-ros/realsense2_description/CMakeFiles/clean_test_results_realsense2_description.dir/build
+.PHONY : clean_test_results_realsense2_description/fast
+
+# Convenience name for target.
+realsense-ros/realsense2_description/CMakeFiles/run_tests_realsense2_description.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 realsense-ros/realsense2_description/CMakeFiles/run_tests_realsense2_description.dir/rule
+.PHONY : realsense-ros/realsense2_description/CMakeFiles/run_tests_realsense2_description.dir/rule
+
+# Convenience name for target.
+run_tests_realsense2_description: realsense-ros/realsense2_description/CMakeFiles/run_tests_realsense2_description.dir/rule
+
+.PHONY : run_tests_realsense2_description
+
+# fast build rule for target.
+run_tests_realsense2_description/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f realsense-ros/realsense2_description/CMakeFiles/run_tests_realsense2_description.dir/build.make realsense-ros/realsense2_description/CMakeFiles/run_tests_realsense2_description.dir/build
+.PHONY : run_tests_realsense2_description/fast
+
+# Convenience name for target.
 realsense-ros/realsense2_description/CMakeFiles/_catkin_empty_exported_target.dir/rule:
 	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 realsense-ros/realsense2_description/CMakeFiles/_catkin_empty_exported_target.dir/rule
 .PHONY : realsense-ros/realsense2_description/CMakeFiles/_catkin_empty_exported_target.dir/rule
@@ -171,19 +227,87 @@ _catkin_empty_exported_target/fast:
 	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f realsense-ros/realsense2_description/CMakeFiles/_catkin_empty_exported_target.dir/build.make realsense-ros/realsense2_description/CMakeFiles/_catkin_empty_exported_target.dir/build
 .PHONY : _catkin_empty_exported_target/fast
 
+# Convenience name for target.
+realsense-ros/realsense2_description/CMakeFiles/_run_tests_realsense2_description.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 realsense-ros/realsense2_description/CMakeFiles/_run_tests_realsense2_description.dir/rule
+.PHONY : realsense-ros/realsense2_description/CMakeFiles/_run_tests_realsense2_description.dir/rule
+
+# Convenience name for target.
+_run_tests_realsense2_description: realsense-ros/realsense2_description/CMakeFiles/_run_tests_realsense2_description.dir/rule
+
+.PHONY : _run_tests_realsense2_description
+
+# fast build rule for target.
+_run_tests_realsense2_description/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f realsense-ros/realsense2_description/CMakeFiles/_run_tests_realsense2_description.dir/build.make realsense-ros/realsense2_description/CMakeFiles/_run_tests_realsense2_description.dir/build
+.PHONY : _run_tests_realsense2_description/fast
+
+# Convenience name for target.
+realsense-ros/realsense2_description/CMakeFiles/_run_tests_realsense2_description_nosetests.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 realsense-ros/realsense2_description/CMakeFiles/_run_tests_realsense2_description_nosetests.dir/rule
+.PHONY : realsense-ros/realsense2_description/CMakeFiles/_run_tests_realsense2_description_nosetests.dir/rule
+
+# Convenience name for target.
+_run_tests_realsense2_description_nosetests: realsense-ros/realsense2_description/CMakeFiles/_run_tests_realsense2_description_nosetests.dir/rule
+
+.PHONY : _run_tests_realsense2_description_nosetests
+
+# fast build rule for target.
+_run_tests_realsense2_description_nosetests/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f realsense-ros/realsense2_description/CMakeFiles/_run_tests_realsense2_description_nosetests.dir/build.make realsense-ros/realsense2_description/CMakeFiles/_run_tests_realsense2_description_nosetests.dir/build
+.PHONY : _run_tests_realsense2_description_nosetests/fast
+
+# Convenience name for target.
+realsense-ros/realsense2_description/CMakeFiles/run_tests_realsense2_description_nosetests.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 realsense-ros/realsense2_description/CMakeFiles/run_tests_realsense2_description_nosetests.dir/rule
+.PHONY : realsense-ros/realsense2_description/CMakeFiles/run_tests_realsense2_description_nosetests.dir/rule
+
+# Convenience name for target.
+run_tests_realsense2_description_nosetests: realsense-ros/realsense2_description/CMakeFiles/run_tests_realsense2_description_nosetests.dir/rule
+
+.PHONY : run_tests_realsense2_description_nosetests
+
+# fast build rule for target.
+run_tests_realsense2_description_nosetests/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f realsense-ros/realsense2_description/CMakeFiles/run_tests_realsense2_description_nosetests.dir/build.make realsense-ros/realsense2_description/CMakeFiles/run_tests_realsense2_description_nosetests.dir/build
+.PHONY : run_tests_realsense2_description_nosetests/fast
+
+# Convenience name for target.
+realsense-ros/realsense2_description/CMakeFiles/run_tests_realsense2_description_nosetests_tests.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 realsense-ros/realsense2_description/CMakeFiles/run_tests_realsense2_description_nosetests_tests.dir/rule
+.PHONY : realsense-ros/realsense2_description/CMakeFiles/run_tests_realsense2_description_nosetests_tests.dir/rule
+
+# Convenience name for target.
+run_tests_realsense2_description_nosetests_tests: realsense-ros/realsense2_description/CMakeFiles/run_tests_realsense2_description_nosetests_tests.dir/rule
+
+.PHONY : run_tests_realsense2_description_nosetests_tests
+
+# fast build rule for target.
+run_tests_realsense2_description_nosetests_tests/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f realsense-ros/realsense2_description/CMakeFiles/run_tests_realsense2_description_nosetests_tests.dir/build.make realsense-ros/realsense2_description/CMakeFiles/run_tests_realsense2_description_nosetests_tests.dir/build
+.PHONY : run_tests_realsense2_description_nosetests_tests/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install/strip"
-	@echo "... edit_cache"
-	@echo "... _catkin_empty_exported_target"
-	@echo "... rebuild_cache"
+	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... install/local"
-	@echo "... install"
+	@echo "... test"
+	@echo "... install/strip"
+	@echo "... _run_tests_realsense2_description_nosetests_tests"
+	@echo "... edit_cache"
+	@echo "... clean_test_results_realsense2_description"
+	@echo "... run_tests_realsense2_description"
+	@echo "... rebuild_cache"
+	@echo "... _catkin_empty_exported_target"
+	@echo "... _run_tests_realsense2_description"
+	@echo "... _run_tests_realsense2_description_nosetests"
+	@echo "... run_tests_realsense2_description_nosetests"
+	@echo "... run_tests_realsense2_description_nosetests_tests"
 .PHONY : help
 
 

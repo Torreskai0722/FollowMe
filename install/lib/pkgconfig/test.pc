@@ -1,8 +1,0 @@
-prefix=/home/nvidia/projects/rosproject/install
-
-Name: test
-Description: Description of test
-Version: 0.0.0
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib 
-Requires: roscpp rospy std_msgs message_runtime

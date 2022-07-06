@@ -56,7 +56,6 @@ include realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_me
 realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_py: /home/nvidia/projects/rosproject/devel/lib/python2.7/dist-packages/realsense2_camera/msg/_Extrinsics.py
 realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_py: /home/nvidia/projects/rosproject/devel/lib/python2.7/dist-packages/realsense2_camera/msg/_IMUInfo.py
 realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_py: /home/nvidia/projects/rosproject/devel/lib/python2.7/dist-packages/realsense2_camera/msg/__init__.py
-realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_py: /home/nvidia/projects/rosproject/devel/lib/python2.7/dist-packages/realsense2_camera/srv/__init__.py
 
 
 /home/nvidia/projects/rosproject/devel/lib/python2.7/dist-packages/realsense2_camera/msg/_Extrinsics.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
@@ -76,17 +75,10 @@ realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_p
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/nvidia/projects/rosproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python msg __init__.py for realsense2_camera"
 	cd /home/nvidia/projects/rosproject/build/realsense-ros/realsense2_camera && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/nvidia/projects/rosproject/devel/lib/python2.7/dist-packages/realsense2_camera/msg --initpy
 
-/home/nvidia/projects/rosproject/devel/lib/python2.7/dist-packages/realsense2_camera/srv/__init__.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
-/home/nvidia/projects/rosproject/devel/lib/python2.7/dist-packages/realsense2_camera/srv/__init__.py: /home/nvidia/projects/rosproject/devel/lib/python2.7/dist-packages/realsense2_camera/msg/_Extrinsics.py
-/home/nvidia/projects/rosproject/devel/lib/python2.7/dist-packages/realsense2_camera/srv/__init__.py: /home/nvidia/projects/rosproject/devel/lib/python2.7/dist-packages/realsense2_camera/msg/_IMUInfo.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/nvidia/projects/rosproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python srv __init__.py for realsense2_camera"
-	cd /home/nvidia/projects/rosproject/build/realsense-ros/realsense2_camera && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/nvidia/projects/rosproject/devel/lib/python2.7/dist-packages/realsense2_camera/srv --initpy
-
 realsense2_camera_generate_messages_py: realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_py
 realsense2_camera_generate_messages_py: /home/nvidia/projects/rosproject/devel/lib/python2.7/dist-packages/realsense2_camera/msg/_Extrinsics.py
 realsense2_camera_generate_messages_py: /home/nvidia/projects/rosproject/devel/lib/python2.7/dist-packages/realsense2_camera/msg/_IMUInfo.py
 realsense2_camera_generate_messages_py: /home/nvidia/projects/rosproject/devel/lib/python2.7/dist-packages/realsense2_camera/msg/__init__.py
-realsense2_camera_generate_messages_py: /home/nvidia/projects/rosproject/devel/lib/python2.7/dist-packages/realsense2_camera/srv/__init__.py
 realsense2_camera_generate_messages_py: realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_py.dir/build.make
 
 .PHONY : realsense2_camera_generate_messages_py

@@ -90,18 +90,6 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
@@ -113,6 +101,17 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -123,6 +122,18 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -157,141 +168,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-motor/CMakeFiles/motor_gencpp.dir/rule:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 motor/CMakeFiles/motor_gencpp.dir/rule
-.PHONY : motor/CMakeFiles/motor_gencpp.dir/rule
-
-# Convenience name for target.
-motor_gencpp: motor/CMakeFiles/motor_gencpp.dir/rule
-
-.PHONY : motor_gencpp
-
-# fast build rule for target.
-motor_gencpp/fast:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f motor/CMakeFiles/motor_gencpp.dir/build.make motor/CMakeFiles/motor_gencpp.dir/build
-.PHONY : motor_gencpp/fast
-
-# Convenience name for target.
-motor/CMakeFiles/motor_generate_messages_cpp.dir/rule:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 motor/CMakeFiles/motor_generate_messages_cpp.dir/rule
-.PHONY : motor/CMakeFiles/motor_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-motor_generate_messages_cpp: motor/CMakeFiles/motor_generate_messages_cpp.dir/rule
-
-.PHONY : motor_generate_messages_cpp
-
-# fast build rule for target.
-motor_generate_messages_cpp/fast:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f motor/CMakeFiles/motor_generate_messages_cpp.dir/build.make motor/CMakeFiles/motor_generate_messages_cpp.dir/build
-.PHONY : motor_generate_messages_cpp/fast
-
-# Convenience name for target.
-motor/CMakeFiles/_motor_generate_messages_check_deps_SentMessage.dir/rule:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 motor/CMakeFiles/_motor_generate_messages_check_deps_SentMessage.dir/rule
-.PHONY : motor/CMakeFiles/_motor_generate_messages_check_deps_SentMessage.dir/rule
-
-# Convenience name for target.
-_motor_generate_messages_check_deps_SentMessage: motor/CMakeFiles/_motor_generate_messages_check_deps_SentMessage.dir/rule
-
-.PHONY : _motor_generate_messages_check_deps_SentMessage
-
-# fast build rule for target.
-_motor_generate_messages_check_deps_SentMessage/fast:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f motor/CMakeFiles/_motor_generate_messages_check_deps_SentMessage.dir/build.make motor/CMakeFiles/_motor_generate_messages_check_deps_SentMessage.dir/build
-.PHONY : _motor_generate_messages_check_deps_SentMessage/fast
-
-# Convenience name for target.
-motor/CMakeFiles/motor_genlisp.dir/rule:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 motor/CMakeFiles/motor_genlisp.dir/rule
-.PHONY : motor/CMakeFiles/motor_genlisp.dir/rule
-
-# Convenience name for target.
-motor_genlisp: motor/CMakeFiles/motor_genlisp.dir/rule
-
-.PHONY : motor_genlisp
-
-# fast build rule for target.
-motor_genlisp/fast:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f motor/CMakeFiles/motor_genlisp.dir/build.make motor/CMakeFiles/motor_genlisp.dir/build
-.PHONY : motor_genlisp/fast
-
-# Convenience name for target.
-motor/CMakeFiles/motor_generate_messages_py.dir/rule:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 motor/CMakeFiles/motor_generate_messages_py.dir/rule
-.PHONY : motor/CMakeFiles/motor_generate_messages_py.dir/rule
-
-# Convenience name for target.
-motor_generate_messages_py: motor/CMakeFiles/motor_generate_messages_py.dir/rule
-
-.PHONY : motor_generate_messages_py
-
-# fast build rule for target.
-motor_generate_messages_py/fast:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f motor/CMakeFiles/motor_generate_messages_py.dir/build.make motor/CMakeFiles/motor_generate_messages_py.dir/build
-.PHONY : motor_generate_messages_py/fast
-
-# Convenience name for target.
-motor/CMakeFiles/motor_geneus.dir/rule:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 motor/CMakeFiles/motor_geneus.dir/rule
-.PHONY : motor/CMakeFiles/motor_geneus.dir/rule
-
-# Convenience name for target.
-motor_geneus: motor/CMakeFiles/motor_geneus.dir/rule
-
-.PHONY : motor_geneus
-
-# fast build rule for target.
-motor_geneus/fast:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f motor/CMakeFiles/motor_geneus.dir/build.make motor/CMakeFiles/motor_geneus.dir/build
-.PHONY : motor_geneus/fast
-
-# Convenience name for target.
-motor/CMakeFiles/motor_generate_messages_lisp.dir/rule:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 motor/CMakeFiles/motor_generate_messages_lisp.dir/rule
-.PHONY : motor/CMakeFiles/motor_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-motor_generate_messages_lisp: motor/CMakeFiles/motor_generate_messages_lisp.dir/rule
-
-.PHONY : motor_generate_messages_lisp
-
-# fast build rule for target.
-motor_generate_messages_lisp/fast:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f motor/CMakeFiles/motor_generate_messages_lisp.dir/build.make motor/CMakeFiles/motor_generate_messages_lisp.dir/build
-.PHONY : motor_generate_messages_lisp/fast
-
-# Convenience name for target.
-motor/CMakeFiles/motor_generate_messages_eus.dir/rule:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 motor/CMakeFiles/motor_generate_messages_eus.dir/rule
-.PHONY : motor/CMakeFiles/motor_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-motor_generate_messages_eus: motor/CMakeFiles/motor_generate_messages_eus.dir/rule
-
-.PHONY : motor_generate_messages_eus
-
-# fast build rule for target.
-motor_generate_messages_eus/fast:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f motor/CMakeFiles/motor_generate_messages_eus.dir/build.make motor/CMakeFiles/motor_generate_messages_eus.dir/build
-.PHONY : motor_generate_messages_eus/fast
-
-# Convenience name for target.
-motor/CMakeFiles/_motor_generate_messages_check_deps_RandomNumber.dir/rule:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 motor/CMakeFiles/_motor_generate_messages_check_deps_RandomNumber.dir/rule
-.PHONY : motor/CMakeFiles/_motor_generate_messages_check_deps_RandomNumber.dir/rule
-
-# Convenience name for target.
-_motor_generate_messages_check_deps_RandomNumber: motor/CMakeFiles/_motor_generate_messages_check_deps_RandomNumber.dir/rule
-
-.PHONY : _motor_generate_messages_check_deps_RandomNumber
-
-# fast build rule for target.
-_motor_generate_messages_check_deps_RandomNumber/fast:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f motor/CMakeFiles/_motor_generate_messages_check_deps_RandomNumber.dir/build.make motor/CMakeFiles/_motor_generate_messages_check_deps_RandomNumber.dir/build
-.PHONY : _motor_generate_messages_check_deps_RandomNumber/fast
-
-# Convenience name for target.
 motor/CMakeFiles/motor_generate_messages_nodejs.dir/rule:
 	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 motor/CMakeFiles/motor_generate_messages_nodejs.dir/rule
 .PHONY : motor/CMakeFiles/motor_generate_messages_nodejs.dir/rule
@@ -305,6 +181,21 @@ motor_generate_messages_nodejs: motor/CMakeFiles/motor_generate_messages_nodejs.
 motor_generate_messages_nodejs/fast:
 	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f motor/CMakeFiles/motor_generate_messages_nodejs.dir/build.make motor/CMakeFiles/motor_generate_messages_nodejs.dir/build
 .PHONY : motor_generate_messages_nodejs/fast
+
+# Convenience name for target.
+motor/CMakeFiles/_run_tests_motor_roslaunch-check_launch.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 motor/CMakeFiles/_run_tests_motor_roslaunch-check_launch.dir/rule
+.PHONY : motor/CMakeFiles/_run_tests_motor_roslaunch-check_launch.dir/rule
+
+# Convenience name for target.
+_run_tests_motor_roslaunch-check_launch: motor/CMakeFiles/_run_tests_motor_roslaunch-check_launch.dir/rule
+
+.PHONY : _run_tests_motor_roslaunch-check_launch
+
+# fast build rule for target.
+_run_tests_motor_roslaunch-check_launch/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f motor/CMakeFiles/_run_tests_motor_roslaunch-check_launch.dir/build.make motor/CMakeFiles/_run_tests_motor_roslaunch-check_launch.dir/build
+.PHONY : _run_tests_motor_roslaunch-check_launch/fast
 
 # Convenience name for target.
 motor/CMakeFiles/motor_gennodejs.dir/rule:
@@ -322,19 +213,124 @@ motor_gennodejs/fast:
 .PHONY : motor_gennodejs/fast
 
 # Convenience name for target.
-motor/CMakeFiles/motor_generate_messages.dir/rule:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 motor/CMakeFiles/motor_generate_messages.dir/rule
-.PHONY : motor/CMakeFiles/motor_generate_messages.dir/rule
+motor/CMakeFiles/run_tests_motor.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 motor/CMakeFiles/run_tests_motor.dir/rule
+.PHONY : motor/CMakeFiles/run_tests_motor.dir/rule
 
 # Convenience name for target.
-motor_generate_messages: motor/CMakeFiles/motor_generate_messages.dir/rule
+run_tests_motor: motor/CMakeFiles/run_tests_motor.dir/rule
 
-.PHONY : motor_generate_messages
+.PHONY : run_tests_motor
 
 # fast build rule for target.
-motor_generate_messages/fast:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f motor/CMakeFiles/motor_generate_messages.dir/build.make motor/CMakeFiles/motor_generate_messages.dir/build
-.PHONY : motor_generate_messages/fast
+run_tests_motor/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f motor/CMakeFiles/run_tests_motor.dir/build.make motor/CMakeFiles/run_tests_motor.dir/build
+.PHONY : run_tests_motor/fast
+
+# Convenience name for target.
+motor/CMakeFiles/run_tests_motor_roslaunch-check_launch.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 motor/CMakeFiles/run_tests_motor_roslaunch-check_launch.dir/rule
+.PHONY : motor/CMakeFiles/run_tests_motor_roslaunch-check_launch.dir/rule
+
+# Convenience name for target.
+run_tests_motor_roslaunch-check_launch: motor/CMakeFiles/run_tests_motor_roslaunch-check_launch.dir/rule
+
+.PHONY : run_tests_motor_roslaunch-check_launch
+
+# fast build rule for target.
+run_tests_motor_roslaunch-check_launch/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f motor/CMakeFiles/run_tests_motor_roslaunch-check_launch.dir/build.make motor/CMakeFiles/run_tests_motor_roslaunch-check_launch.dir/build
+.PHONY : run_tests_motor_roslaunch-check_launch/fast
+
+# Convenience name for target.
+motor/CMakeFiles/_run_tests_motor_roslaunch-check.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 motor/CMakeFiles/_run_tests_motor_roslaunch-check.dir/rule
+.PHONY : motor/CMakeFiles/_run_tests_motor_roslaunch-check.dir/rule
+
+# Convenience name for target.
+_run_tests_motor_roslaunch-check: motor/CMakeFiles/_run_tests_motor_roslaunch-check.dir/rule
+
+.PHONY : _run_tests_motor_roslaunch-check
+
+# fast build rule for target.
+_run_tests_motor_roslaunch-check/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f motor/CMakeFiles/_run_tests_motor_roslaunch-check.dir/build.make motor/CMakeFiles/_run_tests_motor_roslaunch-check.dir/build
+.PHONY : _run_tests_motor_roslaunch-check/fast
+
+# Convenience name for target.
+motor/CMakeFiles/motor_generate_messages_lisp.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 motor/CMakeFiles/motor_generate_messages_lisp.dir/rule
+.PHONY : motor/CMakeFiles/motor_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+motor_generate_messages_lisp: motor/CMakeFiles/motor_generate_messages_lisp.dir/rule
+
+.PHONY : motor_generate_messages_lisp
+
+# fast build rule for target.
+motor_generate_messages_lisp/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f motor/CMakeFiles/motor_generate_messages_lisp.dir/build.make motor/CMakeFiles/motor_generate_messages_lisp.dir/build
+.PHONY : motor_generate_messages_lisp/fast
+
+# Convenience name for target.
+motor/CMakeFiles/run_tests_motor_roslaunch-check.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 motor/CMakeFiles/run_tests_motor_roslaunch-check.dir/rule
+.PHONY : motor/CMakeFiles/run_tests_motor_roslaunch-check.dir/rule
+
+# Convenience name for target.
+run_tests_motor_roslaunch-check: motor/CMakeFiles/run_tests_motor_roslaunch-check.dir/rule
+
+.PHONY : run_tests_motor_roslaunch-check
+
+# fast build rule for target.
+run_tests_motor_roslaunch-check/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f motor/CMakeFiles/run_tests_motor_roslaunch-check.dir/build.make motor/CMakeFiles/run_tests_motor_roslaunch-check.dir/build
+.PHONY : run_tests_motor_roslaunch-check/fast
+
+# Convenience name for target.
+motor/CMakeFiles/_motor_generate_messages_check_deps_SentMessage.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 motor/CMakeFiles/_motor_generate_messages_check_deps_SentMessage.dir/rule
+.PHONY : motor/CMakeFiles/_motor_generate_messages_check_deps_SentMessage.dir/rule
+
+# Convenience name for target.
+_motor_generate_messages_check_deps_SentMessage: motor/CMakeFiles/_motor_generate_messages_check_deps_SentMessage.dir/rule
+
+.PHONY : _motor_generate_messages_check_deps_SentMessage
+
+# fast build rule for target.
+_motor_generate_messages_check_deps_SentMessage/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f motor/CMakeFiles/_motor_generate_messages_check_deps_SentMessage.dir/build.make motor/CMakeFiles/_motor_generate_messages_check_deps_SentMessage.dir/build
+.PHONY : _motor_generate_messages_check_deps_SentMessage/fast
+
+# Convenience name for target.
+motor/CMakeFiles/_run_tests_motor.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 motor/CMakeFiles/_run_tests_motor.dir/rule
+.PHONY : motor/CMakeFiles/_run_tests_motor.dir/rule
+
+# Convenience name for target.
+_run_tests_motor: motor/CMakeFiles/_run_tests_motor.dir/rule
+
+.PHONY : _run_tests_motor
+
+# fast build rule for target.
+_run_tests_motor/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f motor/CMakeFiles/_run_tests_motor.dir/build.make motor/CMakeFiles/_run_tests_motor.dir/build
+.PHONY : _run_tests_motor/fast
+
+# Convenience name for target.
+motor/CMakeFiles/motor_genlisp.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 motor/CMakeFiles/motor_genlisp.dir/rule
+.PHONY : motor/CMakeFiles/motor_genlisp.dir/rule
+
+# Convenience name for target.
+motor_genlisp: motor/CMakeFiles/motor_genlisp.dir/rule
+
+.PHONY : motor_genlisp
+
+# fast build rule for target.
+motor_genlisp/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f motor/CMakeFiles/motor_genlisp.dir/build.make motor/CMakeFiles/motor_genlisp.dir/build
+.PHONY : motor_genlisp/fast
 
 # Convenience name for target.
 motor/CMakeFiles/motor_genpy.dir/rule:
@@ -351,6 +347,126 @@ motor_genpy/fast:
 	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f motor/CMakeFiles/motor_genpy.dir/build.make motor/CMakeFiles/motor_genpy.dir/build
 .PHONY : motor_genpy/fast
 
+# Convenience name for target.
+motor/CMakeFiles/motor_generate_messages.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 motor/CMakeFiles/motor_generate_messages.dir/rule
+.PHONY : motor/CMakeFiles/motor_generate_messages.dir/rule
+
+# Convenience name for target.
+motor_generate_messages: motor/CMakeFiles/motor_generate_messages.dir/rule
+
+.PHONY : motor_generate_messages
+
+# fast build rule for target.
+motor_generate_messages/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f motor/CMakeFiles/motor_generate_messages.dir/build.make motor/CMakeFiles/motor_generate_messages.dir/build
+.PHONY : motor_generate_messages/fast
+
+# Convenience name for target.
+motor/CMakeFiles/motor_generate_messages_cpp.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 motor/CMakeFiles/motor_generate_messages_cpp.dir/rule
+.PHONY : motor/CMakeFiles/motor_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+motor_generate_messages_cpp: motor/CMakeFiles/motor_generate_messages_cpp.dir/rule
+
+.PHONY : motor_generate_messages_cpp
+
+# fast build rule for target.
+motor_generate_messages_cpp/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f motor/CMakeFiles/motor_generate_messages_cpp.dir/build.make motor/CMakeFiles/motor_generate_messages_cpp.dir/build
+.PHONY : motor_generate_messages_cpp/fast
+
+# Convenience name for target.
+motor/CMakeFiles/motor_gencpp.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 motor/CMakeFiles/motor_gencpp.dir/rule
+.PHONY : motor/CMakeFiles/motor_gencpp.dir/rule
+
+# Convenience name for target.
+motor_gencpp: motor/CMakeFiles/motor_gencpp.dir/rule
+
+.PHONY : motor_gencpp
+
+# fast build rule for target.
+motor_gencpp/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f motor/CMakeFiles/motor_gencpp.dir/build.make motor/CMakeFiles/motor_gencpp.dir/build
+.PHONY : motor_gencpp/fast
+
+# Convenience name for target.
+motor/CMakeFiles/_motor_generate_messages_check_deps_RandomNumber.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 motor/CMakeFiles/_motor_generate_messages_check_deps_RandomNumber.dir/rule
+.PHONY : motor/CMakeFiles/_motor_generate_messages_check_deps_RandomNumber.dir/rule
+
+# Convenience name for target.
+_motor_generate_messages_check_deps_RandomNumber: motor/CMakeFiles/_motor_generate_messages_check_deps_RandomNumber.dir/rule
+
+.PHONY : _motor_generate_messages_check_deps_RandomNumber
+
+# fast build rule for target.
+_motor_generate_messages_check_deps_RandomNumber/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f motor/CMakeFiles/_motor_generate_messages_check_deps_RandomNumber.dir/build.make motor/CMakeFiles/_motor_generate_messages_check_deps_RandomNumber.dir/build
+.PHONY : _motor_generate_messages_check_deps_RandomNumber/fast
+
+# Convenience name for target.
+motor/CMakeFiles/motor_generate_messages_eus.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 motor/CMakeFiles/motor_generate_messages_eus.dir/rule
+.PHONY : motor/CMakeFiles/motor_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+motor_generate_messages_eus: motor/CMakeFiles/motor_generate_messages_eus.dir/rule
+
+.PHONY : motor_generate_messages_eus
+
+# fast build rule for target.
+motor_generate_messages_eus/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f motor/CMakeFiles/motor_generate_messages_eus.dir/build.make motor/CMakeFiles/motor_generate_messages_eus.dir/build
+.PHONY : motor_generate_messages_eus/fast
+
+# Convenience name for target.
+motor/CMakeFiles/motor_generate_messages_py.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 motor/CMakeFiles/motor_generate_messages_py.dir/rule
+.PHONY : motor/CMakeFiles/motor_generate_messages_py.dir/rule
+
+# Convenience name for target.
+motor_generate_messages_py: motor/CMakeFiles/motor_generate_messages_py.dir/rule
+
+.PHONY : motor_generate_messages_py
+
+# fast build rule for target.
+motor_generate_messages_py/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f motor/CMakeFiles/motor_generate_messages_py.dir/build.make motor/CMakeFiles/motor_generate_messages_py.dir/build
+.PHONY : motor_generate_messages_py/fast
+
+# Convenience name for target.
+motor/CMakeFiles/clean_test_results_motor.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 motor/CMakeFiles/clean_test_results_motor.dir/rule
+.PHONY : motor/CMakeFiles/clean_test_results_motor.dir/rule
+
+# Convenience name for target.
+clean_test_results_motor: motor/CMakeFiles/clean_test_results_motor.dir/rule
+
+.PHONY : clean_test_results_motor
+
+# fast build rule for target.
+clean_test_results_motor/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f motor/CMakeFiles/clean_test_results_motor.dir/build.make motor/CMakeFiles/clean_test_results_motor.dir/build
+.PHONY : clean_test_results_motor/fast
+
+# Convenience name for target.
+motor/CMakeFiles/motor_geneus.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 motor/CMakeFiles/motor_geneus.dir/rule
+.PHONY : motor/CMakeFiles/motor_geneus.dir/rule
+
+# Convenience name for target.
+motor_geneus: motor/CMakeFiles/motor_geneus.dir/rule
+
+.PHONY : motor_geneus
+
+# fast build rule for target.
+motor_geneus/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f motor/CMakeFiles/motor_geneus.dir/build.make motor/CMakeFiles/motor_geneus.dir/build
+.PHONY : motor_geneus/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -359,23 +475,31 @@ help:
 	@echo "... depend"
 	@echo "... install/strip"
 	@echo "... install/local"
-	@echo "... motor_gencpp"
-	@echo "... motor_generate_messages_cpp"
 	@echo "... list_install_components"
+	@echo "... edit_cache"
+	@echo "... motor_generate_messages_nodejs"
+	@echo "... _run_tests_motor_roslaunch-check_launch"
+	@echo "... test"
+	@echo "... motor_gennodejs"
+	@echo "... run_tests_motor"
+	@echo "... run_tests_motor_roslaunch-check_launch"
+	@echo "... _run_tests_motor_roslaunch-check"
+	@echo "... motor_generate_messages_lisp"
+	@echo "... run_tests_motor_roslaunch-check"
 	@echo "... _motor_generate_messages_check_deps_SentMessage"
+	@echo "... _run_tests_motor"
 	@echo "... motor_genlisp"
+	@echo "... motor_genpy"
+	@echo "... motor_generate_messages"
+	@echo "... motor_generate_messages_cpp"
+	@echo "... motor_gencpp"
+	@echo "... rebuild_cache"
+	@echo "... _motor_generate_messages_check_deps_RandomNumber"
+	@echo "... motor_generate_messages_eus"
 	@echo "... install"
 	@echo "... motor_generate_messages_py"
+	@echo "... clean_test_results_motor"
 	@echo "... motor_geneus"
-	@echo "... edit_cache"
-	@echo "... motor_generate_messages_lisp"
-	@echo "... motor_generate_messages_eus"
-	@echo "... _motor_generate_messages_check_deps_RandomNumber"
-	@echo "... rebuild_cache"
-	@echo "... motor_generate_messages_nodejs"
-	@echo "... motor_gennodejs"
-	@echo "... motor_generate_messages"
-	@echo "... motor_genpy"
 .PHONY : help
 
 

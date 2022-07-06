@@ -12,6 +12,7 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   std_msgs
   message_generation
+  roslaunch
 )
 
 ## System dependencies are found with CMake's conventions
@@ -64,6 +65,10 @@ add_service_files(
 #  FILES
 #  SetMotorParameter.action
 #)
+
+##roslaunch
+roslaunch_add_file_check(launch)
+
 
 ## Generate added messages and services with any dependencies listed here
 generate_messages(

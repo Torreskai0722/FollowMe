@@ -102,6 +102,17 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
@@ -360,8 +371,8 @@ help:
 	@echo "... install/strip"
 	@echo "... install/local"
 	@echo "... install"
-	@echo "... first_geneus"
 	@echo "... list_install_components"
+	@echo "... first_geneus"
 	@echo "... _first_generate_messages_check_deps_AddTwoInts"
 	@echo "... first_gencpp"
 	@echo "... first_genpy"
@@ -374,6 +385,7 @@ help:
 	@echo "... first_genlisp"
 	@echo "... first_generate_messages_eus"
 	@echo "... first_generate_messages_py"
+	@echo "... test"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 .PHONY : help

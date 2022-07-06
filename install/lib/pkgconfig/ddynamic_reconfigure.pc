@@ -1,8 +1,0 @@
-prefix=/home/nvidia/projects/rosproject/install
-
-Name: ddynamic_reconfigure
-Description: Description of ddynamic_reconfigure
-Version: 0.4.1
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib -lddynamic_reconfigure
-Requires: roscpp dynamic_reconfigure

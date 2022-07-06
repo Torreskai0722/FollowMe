@@ -124,6 +124,17 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # The main all target
 all: cmake_check_build_system
 	cd /home/nvidia/projects/rosproject/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/projects/rosproject/build/CMakeFiles /home/nvidia/projects/rosproject/build/lidar/CMakeFiles/progress.marks
@@ -360,13 +371,13 @@ help:
 	@echo "... install/strip"
 	@echo "... install/local"
 	@echo "... install"
+	@echo "... list_install_components"
 	@echo "... lidar_generate_messages_eus"
 	@echo "... _lidar_generate_messages_check_deps_RandomNumber"
 	@echo "... lidar_generate_messages_cpp"
 	@echo "... _lidar_generate_messages_check_deps_SentMessage"
 	@echo "... lidar_generate_messages_py"
 	@echo "... lidar_geneus"
-	@echo "... list_install_components"
 	@echo "... lidar_gencpp"
 	@echo "... lidar_generate_messages_lisp"
 	@echo "... lidar_genlisp"
@@ -376,6 +387,7 @@ help:
 	@echo "... lidar_gennodejs"
 	@echo "... rebuild_cache"
 	@echo "... lidar_genpy"
+	@echo "... test"
 .PHONY : help
 
 

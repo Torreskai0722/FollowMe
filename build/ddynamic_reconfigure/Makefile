@@ -56,6 +56,18 @@ CMAKE_BINARY_DIR = /home/nvidia/projects/rosproject/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -80,6 +92,16 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -102,27 +124,16 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
 
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
+# Special rule for the target test
+test/fast: test
 
-.PHONY : list_install_components/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
+.PHONY : test/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -157,109 +168,49 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-ddynamic_reconfigure/CMakeFiles/test_bool_dynamic_reconfigure_server.dir/rule:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 ddynamic_reconfigure/CMakeFiles/test_bool_dynamic_reconfigure_server.dir/rule
-.PHONY : ddynamic_reconfigure/CMakeFiles/test_bool_dynamic_reconfigure_server.dir/rule
+ddynamic_reconfigure/CMakeFiles/ddynamic_reconfigure_auto_update_test.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 ddynamic_reconfigure/CMakeFiles/ddynamic_reconfigure_auto_update_test.dir/rule
+.PHONY : ddynamic_reconfigure/CMakeFiles/ddynamic_reconfigure_auto_update_test.dir/rule
 
 # Convenience name for target.
-test_bool_dynamic_reconfigure_server: ddynamic_reconfigure/CMakeFiles/test_bool_dynamic_reconfigure_server.dir/rule
+ddynamic_reconfigure_auto_update_test: ddynamic_reconfigure/CMakeFiles/ddynamic_reconfigure_auto_update_test.dir/rule
 
-.PHONY : test_bool_dynamic_reconfigure_server
+.PHONY : ddynamic_reconfigure_auto_update_test
 
 # fast build rule for target.
-test_bool_dynamic_reconfigure_server/fast:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f ddynamic_reconfigure/CMakeFiles/test_bool_dynamic_reconfigure_server.dir/build.make ddynamic_reconfigure/CMakeFiles/test_bool_dynamic_reconfigure_server.dir/build
-.PHONY : test_bool_dynamic_reconfigure_server/fast
+ddynamic_reconfigure_auto_update_test/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f ddynamic_reconfigure/CMakeFiles/ddynamic_reconfigure_auto_update_test.dir/build.make ddynamic_reconfigure/CMakeFiles/ddynamic_reconfigure_auto_update_test.dir/build
+.PHONY : ddynamic_reconfigure_auto_update_test/fast
 
 # Convenience name for target.
-ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
-.PHONY : ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
+ddynamic_reconfigure/CMakeFiles/clean_test_results_ddynamic_reconfigure.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 ddynamic_reconfigure/CMakeFiles/clean_test_results_ddynamic_reconfigure.dir/rule
+.PHONY : ddynamic_reconfigure/CMakeFiles/clean_test_results_ddynamic_reconfigure.dir/rule
 
 # Convenience name for target.
-dynamic_reconfigure_generate_messages_eus: ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
+clean_test_results_ddynamic_reconfigure: ddynamic_reconfigure/CMakeFiles/clean_test_results_ddynamic_reconfigure.dir/rule
 
-.PHONY : dynamic_reconfigure_generate_messages_eus
+.PHONY : clean_test_results_ddynamic_reconfigure
 
 # fast build rule for target.
-dynamic_reconfigure_generate_messages_eus/fast:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_eus/fast
+clean_test_results_ddynamic_reconfigure/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f ddynamic_reconfigure/CMakeFiles/clean_test_results_ddynamic_reconfigure.dir/build.make ddynamic_reconfigure/CMakeFiles/clean_test_results_ddynamic_reconfigure.dir/build
+.PHONY : clean_test_results_ddynamic_reconfigure/fast
 
 # Convenience name for target.
-ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
-.PHONY : ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
+ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
+.PHONY : ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
 
 # Convenience name for target.
-dynamic_reconfigure_generate_messages_lisp: ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
+dynamic_reconfigure_gencfg: ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
 
-.PHONY : dynamic_reconfigure_generate_messages_lisp
+.PHONY : dynamic_reconfigure_gencfg
 
 # fast build rule for target.
-dynamic_reconfigure_generate_messages_lisp/fast:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_lisp/fast
-
-# Convenience name for target.
-ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-.PHONY : ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_cpp: ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_cpp
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_cpp/fast:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_cpp/fast
-
-# Convenience name for target.
-ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-.PHONY : ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_py: ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_py
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_py/fast:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_py/fast
-
-# Convenience name for target.
-ddynamic_reconfigure/CMakeFiles/fake_dynamic_reconfigure_server.dir/rule:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 ddynamic_reconfigure/CMakeFiles/fake_dynamic_reconfigure_server.dir/rule
-.PHONY : ddynamic_reconfigure/CMakeFiles/fake_dynamic_reconfigure_server.dir/rule
-
-# Convenience name for target.
-fake_dynamic_reconfigure_server: ddynamic_reconfigure/CMakeFiles/fake_dynamic_reconfigure_server.dir/rule
-
-.PHONY : fake_dynamic_reconfigure_server
-
-# fast build rule for target.
-fake_dynamic_reconfigure_server/fast:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f ddynamic_reconfigure/CMakeFiles/fake_dynamic_reconfigure_server.dir/build.make ddynamic_reconfigure/CMakeFiles/fake_dynamic_reconfigure_server.dir/build
-.PHONY : fake_dynamic_reconfigure_server/fast
-
-# Convenience name for target.
-ddynamic_reconfigure/CMakeFiles/ddynamic_reconfigure.dir/rule:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 ddynamic_reconfigure/CMakeFiles/ddynamic_reconfigure.dir/rule
-.PHONY : ddynamic_reconfigure/CMakeFiles/ddynamic_reconfigure.dir/rule
-
-# Convenience name for target.
-ddynamic_reconfigure: ddynamic_reconfigure/CMakeFiles/ddynamic_reconfigure.dir/rule
-
-.PHONY : ddynamic_reconfigure
-
-# fast build rule for target.
-ddynamic_reconfigure/fast:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f ddynamic_reconfigure/CMakeFiles/ddynamic_reconfigure.dir/build.make ddynamic_reconfigure/CMakeFiles/ddynamic_reconfigure.dir/build
-.PHONY : ddynamic_reconfigure/fast
+dynamic_reconfigure_gencfg/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_gencfg.dir/build
+.PHONY : dynamic_reconfigure_gencfg/fast
 
 # Convenience name for target.
 ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule:
@@ -277,19 +228,214 @@ dynamic_reconfigure_generate_messages_nodejs/fast:
 .PHONY : dynamic_reconfigure_generate_messages_nodejs/fast
 
 # Convenience name for target.
-ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
-.PHONY : ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
+ddynamic_reconfigure/CMakeFiles/ddynamic_reconfigure.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 ddynamic_reconfigure/CMakeFiles/ddynamic_reconfigure.dir/rule
+.PHONY : ddynamic_reconfigure/CMakeFiles/ddynamic_reconfigure.dir/rule
 
 # Convenience name for target.
-dynamic_reconfigure_gencfg: ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
+ddynamic_reconfigure: ddynamic_reconfigure/CMakeFiles/ddynamic_reconfigure.dir/rule
 
-.PHONY : dynamic_reconfigure_gencfg
+.PHONY : ddynamic_reconfigure
 
 # fast build rule for target.
-dynamic_reconfigure_gencfg/fast:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_gencfg.dir/build
-.PHONY : dynamic_reconfigure_gencfg/fast
+ddynamic_reconfigure/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f ddynamic_reconfigure/CMakeFiles/ddynamic_reconfigure.dir/build.make ddynamic_reconfigure/CMakeFiles/ddynamic_reconfigure.dir/build
+.PHONY : ddynamic_reconfigure/fast
+
+# Convenience name for target.
+ddynamic_reconfigure/CMakeFiles/_run_tests_ddynamic_reconfigure_rostest_test_ddynamic_reconfigure.test.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 ddynamic_reconfigure/CMakeFiles/_run_tests_ddynamic_reconfigure_rostest_test_ddynamic_reconfigure.test.dir/rule
+.PHONY : ddynamic_reconfigure/CMakeFiles/_run_tests_ddynamic_reconfigure_rostest_test_ddynamic_reconfigure.test.dir/rule
+
+# Convenience name for target.
+_run_tests_ddynamic_reconfigure_rostest_test_ddynamic_reconfigure.test: ddynamic_reconfigure/CMakeFiles/_run_tests_ddynamic_reconfigure_rostest_test_ddynamic_reconfigure.test.dir/rule
+
+.PHONY : _run_tests_ddynamic_reconfigure_rostest_test_ddynamic_reconfigure.test
+
+# fast build rule for target.
+_run_tests_ddynamic_reconfigure_rostest_test_ddynamic_reconfigure.test/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f ddynamic_reconfigure/CMakeFiles/_run_tests_ddynamic_reconfigure_rostest_test_ddynamic_reconfigure.test.dir/build.make ddynamic_reconfigure/CMakeFiles/_run_tests_ddynamic_reconfigure_rostest_test_ddynamic_reconfigure.test.dir/build
+.PHONY : _run_tests_ddynamic_reconfigure_rostest_test_ddynamic_reconfigure.test/fast
+
+# Convenience name for target.
+ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
+.PHONY : ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
+
+# Convenience name for target.
+dynamic_reconfigure_generate_messages_py: ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
+
+.PHONY : dynamic_reconfigure_generate_messages_py
+
+# fast build rule for target.
+dynamic_reconfigure_generate_messages_py/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_py/fast
+
+# Convenience name for target.
+ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
+.PHONY : ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+dynamic_reconfigure_generate_messages_cpp: ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
+
+.PHONY : dynamic_reconfigure_generate_messages_cpp
+
+# fast build rule for target.
+dynamic_reconfigure_generate_messages_cpp/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_cpp/fast
+
+# Convenience name for target.
+ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
+.PHONY : ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+dynamic_reconfigure_generate_messages_lisp: ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
+
+.PHONY : dynamic_reconfigure_generate_messages_lisp
+
+# fast build rule for target.
+dynamic_reconfigure_generate_messages_lisp/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_lisp/fast
+
+# Convenience name for target.
+ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
+.PHONY : ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+dynamic_reconfigure_generate_messages_eus: ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
+
+.PHONY : dynamic_reconfigure_generate_messages_eus
+
+# fast build rule for target.
+dynamic_reconfigure_generate_messages_eus/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make ddynamic_reconfigure/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_eus/fast
+
+# Convenience name for target.
+ddynamic_reconfigure/CMakeFiles/ddynamic_reconfigure-test.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 ddynamic_reconfigure/CMakeFiles/ddynamic_reconfigure-test.dir/rule
+.PHONY : ddynamic_reconfigure/CMakeFiles/ddynamic_reconfigure-test.dir/rule
+
+# Convenience name for target.
+ddynamic_reconfigure-test: ddynamic_reconfigure/CMakeFiles/ddynamic_reconfigure-test.dir/rule
+
+.PHONY : ddynamic_reconfigure-test
+
+# fast build rule for target.
+ddynamic_reconfigure-test/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f ddynamic_reconfigure/CMakeFiles/ddynamic_reconfigure-test.dir/build.make ddynamic_reconfigure/CMakeFiles/ddynamic_reconfigure-test.dir/build
+.PHONY : ddynamic_reconfigure-test/fast
+
+# Convenience name for target.
+ddynamic_reconfigure/CMakeFiles/_run_tests_ddynamic_reconfigure.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 ddynamic_reconfigure/CMakeFiles/_run_tests_ddynamic_reconfigure.dir/rule
+.PHONY : ddynamic_reconfigure/CMakeFiles/_run_tests_ddynamic_reconfigure.dir/rule
+
+# Convenience name for target.
+_run_tests_ddynamic_reconfigure: ddynamic_reconfigure/CMakeFiles/_run_tests_ddynamic_reconfigure.dir/rule
+
+.PHONY : _run_tests_ddynamic_reconfigure
+
+# fast build rule for target.
+_run_tests_ddynamic_reconfigure/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f ddynamic_reconfigure/CMakeFiles/_run_tests_ddynamic_reconfigure.dir/build.make ddynamic_reconfigure/CMakeFiles/_run_tests_ddynamic_reconfigure.dir/build
+.PHONY : _run_tests_ddynamic_reconfigure/fast
+
+# Convenience name for target.
+ddynamic_reconfigure/CMakeFiles/test_bool_dynamic_reconfigure_server.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 ddynamic_reconfigure/CMakeFiles/test_bool_dynamic_reconfigure_server.dir/rule
+.PHONY : ddynamic_reconfigure/CMakeFiles/test_bool_dynamic_reconfigure_server.dir/rule
+
+# Convenience name for target.
+test_bool_dynamic_reconfigure_server: ddynamic_reconfigure/CMakeFiles/test_bool_dynamic_reconfigure_server.dir/rule
+
+.PHONY : test_bool_dynamic_reconfigure_server
+
+# fast build rule for target.
+test_bool_dynamic_reconfigure_server/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f ddynamic_reconfigure/CMakeFiles/test_bool_dynamic_reconfigure_server.dir/build.make ddynamic_reconfigure/CMakeFiles/test_bool_dynamic_reconfigure_server.dir/build
+.PHONY : test_bool_dynamic_reconfigure_server/fast
+
+# Convenience name for target.
+ddynamic_reconfigure/CMakeFiles/run_tests_ddynamic_reconfigure.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 ddynamic_reconfigure/CMakeFiles/run_tests_ddynamic_reconfigure.dir/rule
+.PHONY : ddynamic_reconfigure/CMakeFiles/run_tests_ddynamic_reconfigure.dir/rule
+
+# Convenience name for target.
+run_tests_ddynamic_reconfigure: ddynamic_reconfigure/CMakeFiles/run_tests_ddynamic_reconfigure.dir/rule
+
+.PHONY : run_tests_ddynamic_reconfigure
+
+# fast build rule for target.
+run_tests_ddynamic_reconfigure/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f ddynamic_reconfigure/CMakeFiles/run_tests_ddynamic_reconfigure.dir/build.make ddynamic_reconfigure/CMakeFiles/run_tests_ddynamic_reconfigure.dir/build
+.PHONY : run_tests_ddynamic_reconfigure/fast
+
+# Convenience name for target.
+ddynamic_reconfigure/CMakeFiles/run_tests_ddynamic_reconfigure_rostest.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 ddynamic_reconfigure/CMakeFiles/run_tests_ddynamic_reconfigure_rostest.dir/rule
+.PHONY : ddynamic_reconfigure/CMakeFiles/run_tests_ddynamic_reconfigure_rostest.dir/rule
+
+# Convenience name for target.
+run_tests_ddynamic_reconfigure_rostest: ddynamic_reconfigure/CMakeFiles/run_tests_ddynamic_reconfigure_rostest.dir/rule
+
+.PHONY : run_tests_ddynamic_reconfigure_rostest
+
+# fast build rule for target.
+run_tests_ddynamic_reconfigure_rostest/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f ddynamic_reconfigure/CMakeFiles/run_tests_ddynamic_reconfigure_rostest.dir/build.make ddynamic_reconfigure/CMakeFiles/run_tests_ddynamic_reconfigure_rostest.dir/build
+.PHONY : run_tests_ddynamic_reconfigure_rostest/fast
+
+# Convenience name for target.
+ddynamic_reconfigure/CMakeFiles/_run_tests_ddynamic_reconfigure_rostest.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 ddynamic_reconfigure/CMakeFiles/_run_tests_ddynamic_reconfigure_rostest.dir/rule
+.PHONY : ddynamic_reconfigure/CMakeFiles/_run_tests_ddynamic_reconfigure_rostest.dir/rule
+
+# Convenience name for target.
+_run_tests_ddynamic_reconfigure_rostest: ddynamic_reconfigure/CMakeFiles/_run_tests_ddynamic_reconfigure_rostest.dir/rule
+
+.PHONY : _run_tests_ddynamic_reconfigure_rostest
+
+# fast build rule for target.
+_run_tests_ddynamic_reconfigure_rostest/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f ddynamic_reconfigure/CMakeFiles/_run_tests_ddynamic_reconfigure_rostest.dir/build.make ddynamic_reconfigure/CMakeFiles/_run_tests_ddynamic_reconfigure_rostest.dir/build
+.PHONY : _run_tests_ddynamic_reconfigure_rostest/fast
+
+# Convenience name for target.
+ddynamic_reconfigure/CMakeFiles/fake_dynamic_reconfigure_server.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 ddynamic_reconfigure/CMakeFiles/fake_dynamic_reconfigure_server.dir/rule
+.PHONY : ddynamic_reconfigure/CMakeFiles/fake_dynamic_reconfigure_server.dir/rule
+
+# Convenience name for target.
+fake_dynamic_reconfigure_server: ddynamic_reconfigure/CMakeFiles/fake_dynamic_reconfigure_server.dir/rule
+
+.PHONY : fake_dynamic_reconfigure_server
+
+# fast build rule for target.
+fake_dynamic_reconfigure_server/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f ddynamic_reconfigure/CMakeFiles/fake_dynamic_reconfigure_server.dir/build.make ddynamic_reconfigure/CMakeFiles/fake_dynamic_reconfigure_server.dir/build
+.PHONY : fake_dynamic_reconfigure_server/fast
+
+# Convenience name for target.
+ddynamic_reconfigure/CMakeFiles/run_tests_ddynamic_reconfigure_rostest_test_ddynamic_reconfigure.test.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 ddynamic_reconfigure/CMakeFiles/run_tests_ddynamic_reconfigure_rostest_test_ddynamic_reconfigure.test.dir/rule
+.PHONY : ddynamic_reconfigure/CMakeFiles/run_tests_ddynamic_reconfigure_rostest_test_ddynamic_reconfigure.test.dir/rule
+
+# Convenience name for target.
+run_tests_ddynamic_reconfigure_rostest_test_ddynamic_reconfigure.test: ddynamic_reconfigure/CMakeFiles/run_tests_ddynamic_reconfigure_rostest_test_ddynamic_reconfigure.test.dir/rule
+
+.PHONY : run_tests_ddynamic_reconfigure_rostest_test_ddynamic_reconfigure.test
+
+# fast build rule for target.
+run_tests_ddynamic_reconfigure_rostest_test_ddynamic_reconfigure.test/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f ddynamic_reconfigure/CMakeFiles/run_tests_ddynamic_reconfigure_rostest_test_ddynamic_reconfigure.test.dir/build.make ddynamic_reconfigure/CMakeFiles/run_tests_ddynamic_reconfigure_rostest_test_ddynamic_reconfigure.test.dir/build
+.PHONY : run_tests_ddynamic_reconfigure_rostest_test_ddynamic_reconfigure.test/fast
 
 src/ddynamic_reconfigure.o: src/ddynamic_reconfigure.cpp.o
 
@@ -317,6 +463,33 @@ src/ddynamic_reconfigure.s: src/ddynamic_reconfigure.cpp.s
 src/ddynamic_reconfigure.cpp.s:
 	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f ddynamic_reconfigure/CMakeFiles/ddynamic_reconfigure.dir/build.make ddynamic_reconfigure/CMakeFiles/ddynamic_reconfigure.dir/src/ddynamic_reconfigure.cpp.s
 .PHONY : src/ddynamic_reconfigure.cpp.s
+
+test/ddynamic_reconfigure_auto_update_test.o: test/ddynamic_reconfigure_auto_update_test.cpp.o
+
+.PHONY : test/ddynamic_reconfigure_auto_update_test.o
+
+# target to build an object file
+test/ddynamic_reconfigure_auto_update_test.cpp.o:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f ddynamic_reconfigure/CMakeFiles/ddynamic_reconfigure_auto_update_test.dir/build.make ddynamic_reconfigure/CMakeFiles/ddynamic_reconfigure_auto_update_test.dir/test/ddynamic_reconfigure_auto_update_test.cpp.o
+.PHONY : test/ddynamic_reconfigure_auto_update_test.cpp.o
+
+test/ddynamic_reconfigure_auto_update_test.i: test/ddynamic_reconfigure_auto_update_test.cpp.i
+
+.PHONY : test/ddynamic_reconfigure_auto_update_test.i
+
+# target to preprocess a source file
+test/ddynamic_reconfigure_auto_update_test.cpp.i:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f ddynamic_reconfigure/CMakeFiles/ddynamic_reconfigure_auto_update_test.dir/build.make ddynamic_reconfigure/CMakeFiles/ddynamic_reconfigure_auto_update_test.dir/test/ddynamic_reconfigure_auto_update_test.cpp.i
+.PHONY : test/ddynamic_reconfigure_auto_update_test.cpp.i
+
+test/ddynamic_reconfigure_auto_update_test.s: test/ddynamic_reconfigure_auto_update_test.cpp.s
+
+.PHONY : test/ddynamic_reconfigure_auto_update_test.s
+
+# target to generate assembly for a file
+test/ddynamic_reconfigure_auto_update_test.cpp.s:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f ddynamic_reconfigure/CMakeFiles/ddynamic_reconfigure_auto_update_test.dir/build.make ddynamic_reconfigure/CMakeFiles/ddynamic_reconfigure_auto_update_test.dir/test/ddynamic_reconfigure_auto_update_test.cpp.s
+.PHONY : test/ddynamic_reconfigure_auto_update_test.cpp.s
 
 test/fake_dynamic_reconfigure_server.o: test/fake_dynamic_reconfigure_server.cpp.o
 
@@ -372,36 +545,79 @@ test/test_bool_dynamic_reconfigure_server.cpp.s:
 	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f ddynamic_reconfigure/CMakeFiles/test_bool_dynamic_reconfigure_server.dir/build.make ddynamic_reconfigure/CMakeFiles/test_bool_dynamic_reconfigure_server.dir/test/test_bool_dynamic_reconfigure_server.cpp.s
 .PHONY : test/test_bool_dynamic_reconfigure_server.cpp.s
 
+test/test_ddynamic_reconfigure.o: test/test_ddynamic_reconfigure.cpp.o
+
+.PHONY : test/test_ddynamic_reconfigure.o
+
+# target to build an object file
+test/test_ddynamic_reconfigure.cpp.o:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f ddynamic_reconfigure/CMakeFiles/ddynamic_reconfigure-test.dir/build.make ddynamic_reconfigure/CMakeFiles/ddynamic_reconfigure-test.dir/test/test_ddynamic_reconfigure.cpp.o
+.PHONY : test/test_ddynamic_reconfigure.cpp.o
+
+test/test_ddynamic_reconfigure.i: test/test_ddynamic_reconfigure.cpp.i
+
+.PHONY : test/test_ddynamic_reconfigure.i
+
+# target to preprocess a source file
+test/test_ddynamic_reconfigure.cpp.i:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f ddynamic_reconfigure/CMakeFiles/ddynamic_reconfigure-test.dir/build.make ddynamic_reconfigure/CMakeFiles/ddynamic_reconfigure-test.dir/test/test_ddynamic_reconfigure.cpp.i
+.PHONY : test/test_ddynamic_reconfigure.cpp.i
+
+test/test_ddynamic_reconfigure.s: test/test_ddynamic_reconfigure.cpp.s
+
+.PHONY : test/test_ddynamic_reconfigure.s
+
+# target to generate assembly for a file
+test/test_ddynamic_reconfigure.cpp.s:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f ddynamic_reconfigure/CMakeFiles/ddynamic_reconfigure-test.dir/build.make ddynamic_reconfigure/CMakeFiles/ddynamic_reconfigure-test.dir/test/test_ddynamic_reconfigure.cpp.s
+.PHONY : test/test_ddynamic_reconfigure.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... install/strip"
 	@echo "... install/local"
 	@echo "... install"
-	@echo "... rebuild_cache"
-	@echo "... edit_cache"
 	@echo "... list_install_components"
-	@echo "... test_bool_dynamic_reconfigure_server"
-	@echo "... install/strip"
-	@echo "... dynamic_reconfigure_generate_messages_eus"
-	@echo "... dynamic_reconfigure_generate_messages_lisp"
-	@echo "... dynamic_reconfigure_generate_messages_cpp"
-	@echo "... dynamic_reconfigure_generate_messages_py"
-	@echo "... fake_dynamic_reconfigure_server"
-	@echo "... ddynamic_reconfigure"
-	@echo "... dynamic_reconfigure_generate_messages_nodejs"
+	@echo "... rebuild_cache"
+	@echo "... ddynamic_reconfigure_auto_update_test"
+	@echo "... clean_test_results_ddynamic_reconfigure"
 	@echo "... dynamic_reconfigure_gencfg"
+	@echo "... dynamic_reconfigure_generate_messages_nodejs"
+	@echo "... edit_cache"
+	@echo "... ddynamic_reconfigure"
+	@echo "... test"
+	@echo "... _run_tests_ddynamic_reconfigure_rostest_test_ddynamic_reconfigure.test"
+	@echo "... dynamic_reconfigure_generate_messages_py"
+	@echo "... dynamic_reconfigure_generate_messages_cpp"
+	@echo "... dynamic_reconfigure_generate_messages_lisp"
+	@echo "... dynamic_reconfigure_generate_messages_eus"
+	@echo "... ddynamic_reconfigure-test"
+	@echo "... _run_tests_ddynamic_reconfigure"
+	@echo "... test_bool_dynamic_reconfigure_server"
+	@echo "... run_tests_ddynamic_reconfigure"
+	@echo "... run_tests_ddynamic_reconfigure_rostest"
+	@echo "... _run_tests_ddynamic_reconfigure_rostest"
+	@echo "... fake_dynamic_reconfigure_server"
+	@echo "... run_tests_ddynamic_reconfigure_rostest_test_ddynamic_reconfigure.test"
 	@echo "... src/ddynamic_reconfigure.o"
 	@echo "... src/ddynamic_reconfigure.i"
 	@echo "... src/ddynamic_reconfigure.s"
+	@echo "... test/ddynamic_reconfigure_auto_update_test.o"
+	@echo "... test/ddynamic_reconfigure_auto_update_test.i"
+	@echo "... test/ddynamic_reconfigure_auto_update_test.s"
 	@echo "... test/fake_dynamic_reconfigure_server.o"
 	@echo "... test/fake_dynamic_reconfigure_server.i"
 	@echo "... test/fake_dynamic_reconfigure_server.s"
 	@echo "... test/test_bool_dynamic_reconfigure_server.o"
 	@echo "... test/test_bool_dynamic_reconfigure_server.i"
 	@echo "... test/test_bool_dynamic_reconfigure_server.s"
+	@echo "... test/test_ddynamic_reconfigure.o"
+	@echo "... test/test_ddynamic_reconfigure.i"
+	@echo "... test/test_ddynamic_reconfigure.s"
 .PHONY : help
 
 

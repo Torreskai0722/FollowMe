@@ -1,0 +1,17 @@
+<launch>
+	<node pkg="chip_bldc_driver" type="bldc_driver_node" name="motor_driver_0">
+		<param name="port" value="/dev/ttyUSB0" />
+	</node>
+
+	<node pkg="chip_bldc_driver" type="bldc_driver_node" name="motor_driver_1">
+		<param name="port" value="/dev/ttyUSB1" />
+	</node>
+
+	<node pkg="chip_bldc_driver" type="bldc_driver_node" name="motor_driver_2">
+		<param name="port" value="/dev/ttyUSB2" />
+	</node>
+
+	<node pkg="chip_bldc_driver" type="bldc_driver_node" name="motor_driver_3">
+		<param name="port" value="/dev/ttyUSB3" />
+	</node>
+</launch>
