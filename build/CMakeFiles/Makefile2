@@ -1176,6 +1176,24 @@ clean: serial/tests/CMakeFiles/_run_tests_serial.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Directory level rules for directory teleop_twist_keyboard
+
+# Convenience name for "all" pass in the directory.
+teleop_twist_keyboard/all:
+
+.PHONY : teleop_twist_keyboard/all
+
+# Convenience name for "clean" pass in the directory.
+teleop_twist_keyboard/clean:
+
+.PHONY : teleop_twist_keyboard/clean
+
+# Convenience name for "preinstall" pass in the directory.
+teleop_twist_keyboard/preinstall:
+
+.PHONY : teleop_twist_keyboard/preinstall
+
+#=============================================================================
 # Directory level rules for directory camera
 
 # Convenience name for "all" pass in the directory.
@@ -5525,6 +5543,24 @@ ddynamic_reconfigure/CMakeFiles/run_tests_ddynamic_reconfigure_rostest_test_ddyn
 clean: ddynamic_reconfigure/CMakeFiles/run_tests_ddynamic_reconfigure_rostest_test_ddynamic_reconfigure.test.dir/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory hydra_base
+
+# Convenience name for "all" pass in the directory.
+hydra_base/all:
+
+.PHONY : hydra_base/all
+
+# Convenience name for "clean" pass in the directory.
+hydra_base/clean:
+
+.PHONY : hydra_base/clean
+
+# Convenience name for "preinstall" pass in the directory.
+hydra_base/preinstall:
+
+.PHONY : hydra_base/preinstall
 
 #=============================================================================
 # Directory level rules for directory ros_deep_learning

@@ -3,6 +3,7 @@
 from __future__ import print_function
 from matplotlib import pyplot as plt
 import time
+import sys
 
 from chip_bldc_driver.msg import Command, Feedback
 from std_msgs.msg import Int32
@@ -10,6 +11,8 @@ from std_msgs.msg import Int32
 import rospy
 
 def motor_power(i, pub, target_pub):
+    if (rospy.is_shutdown()):
+        sys.exit(1)
     motor_request = Command()
     command = int((i/3500.0) * 1000)
     motor_request.motor_command = command

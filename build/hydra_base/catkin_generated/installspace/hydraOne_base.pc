@@ -1,0 +1,8 @@
+prefix=/home/nvidia/projects/rosproject/install
+
+Name: hydraOne_base
+Description: Description of hydraOne_base
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: chip_bldc_driver roscpp rospy std_msgs

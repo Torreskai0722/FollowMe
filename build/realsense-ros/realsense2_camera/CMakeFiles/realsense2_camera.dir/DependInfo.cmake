@@ -23,6 +23,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/nvidia/projects/rosproject/devel/include"
   "/home/nvidia/projects/rosproject/src/realsense-ros/realsense2_camera/include"
   "/usr/local/include"
+  "/home/nvidia/projects/rosproject/src/ddynamic_reconfigure/include"
   "/opt/ros/melodic/include"
   "/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   "/usr/include/opencv4"

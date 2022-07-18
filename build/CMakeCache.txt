@@ -470,6 +470,9 @@ catkin_DIR:PATH=/opt/ros/melodic/share/catkin/cmake
 //Value Computed by CMake
 chip_bldc_driver_BINARY_DIR:STATIC=/home/nvidia/projects/rosproject/build/chip_bldc_driver
 
+//The directory containing a CMake configuration file for chip_bldc_driver.
+chip_bldc_driver_DIR:PATH=/home/nvidia/projects/rosproject/devel/share/chip_bldc_driver/cmake
+
 //Value Computed by CMake
 chip_bldc_driver_SOURCE_DIR:STATIC=/home/nvidia/projects/rosproject/src/chip_bldc_driver
 
@@ -489,7 +492,7 @@ cv_bridge_DIR:PATH=/opt/ros/melodic/share/cv_bridge/cmake
 ddynamic_reconfigure_BINARY_DIR:STATIC=/home/nvidia/projects/rosproject/build/ddynamic_reconfigure
 
 //The directory containing a CMake configuration file for ddynamic_reconfigure.
-ddynamic_reconfigure_DIR:PATH=/opt/ros/melodic/share/ddynamic_reconfigure/cmake
+ddynamic_reconfigure_DIR:PATH=/home/nvidia/projects/rosproject/devel/share/ddynamic_reconfigure/cmake
 
 //Dependencies for the target
 ddynamic_reconfigure_LIB_DEPENDS:STATIC=general;/opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/melodic/lib/libroscpp.so;general;/usr/lib/aarch64-linux-gnu/libboost_filesystem.so;general;/opt/ros/melodic/lib/librosconsole.so;general;/opt/ros/melodic/lib/librosconsole_log4cxx.so;general;/opt/ros/melodic/lib/librosconsole_backend_interface.so;general;/usr/lib/aarch64-linux-gnu/liblog4cxx.so;general;/usr/lib/aarch64-linux-gnu/libboost_regex.so;general;/opt/ros/melodic/lib/libroscpp_serialization.so;general;/opt/ros/melodic/lib/libxmlrpcpp.so;general;/opt/ros/melodic/lib/librostime.so;general;/opt/ros/melodic/lib/libcpp_common.so;general;/usr/lib/aarch64-linux-gnu/libboost_system.so;general;/usr/lib/aarch64-linux-gnu/libboost_thread.so;general;/usr/lib/aarch64-linux-gnu/libboost_chrono.so;general;/usr/lib/aarch64-linux-gnu/libboost_date_time.so;general;/usr/lib/aarch64-linux-gnu/libboost_atomic.so;general;/usr/lib/aarch64-linux-gnu/libpthread.so;general;/usr/lib/aarch64-linux-gnu/libconsole_bridge.so.0.4;
@@ -581,6 +584,12 @@ gtest_hide_internal_symbols:BOOL=OFF
 
 //Dependencies for the target
 gtest_main_LIB_DEPENDS:STATIC=general;-lpthread;general;gtest;
+
+//Value Computed by CMake
+hydraOne_base_BINARY_DIR:STATIC=/home/nvidia/projects/rosproject/build/hydra_base
+
+//Value Computed by CMake
+hydraOne_base_SOURCE_DIR:STATIC=/home/nvidia/projects/rosproject/src/hydra_base
 
 //The directory containing a CMake configuration file for image_transport.
 image_transport_DIR:PATH=/opt/ros/melodic/share/image_transport/cmake
@@ -745,6 +754,12 @@ std_msgs_DIR:PATH=/opt/ros/melodic/share/std_msgs/cmake
 std_srvs_DIR:PATH=/opt/ros/melodic/share/std_srvs/cmake
 
 //Value Computed by CMake
+teleop_twist_keyboard_BINARY_DIR:STATIC=/home/nvidia/projects/rosproject/build/teleop_twist_keyboard
+
+//Value Computed by CMake
+teleop_twist_keyboard_SOURCE_DIR:STATIC=/home/nvidia/projects/rosproject/src/teleop_twist_keyboard
+
+//Value Computed by CMake
 test_BINARY_DIR:STATIC=/home/nvidia/projects/rosproject/build/test
 
 //Value Computed by CMake
@@ -889,7 +904,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=18
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=20
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
