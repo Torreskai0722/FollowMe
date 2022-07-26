@@ -1,0 +1,9 @@
+<launch>
+	<arg name="teleop" default="false"/>
+	 <include file="$(find rplidar_ros)/launch/rplidar_s1.launch"/>
+	 <include file="$(find motor)/launch/multimotor.launch"/>
+
+	<group if="$(arg teleop)">
+		<node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="teleop_keyboard" output="screen"/>
+	</group>
+</launch>
