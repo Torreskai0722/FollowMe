@@ -6,7 +6,7 @@
 	<node pkg="chip_bldc_driver" type="bldc_driver_node" name="motor_driver_1">
 		<param name="port" value="/dev/ttyMOTOR1" />
 	</node>
-
+<!--
 	<node pkg="chip_bldc_driver" type="bldc_driver_node" name="motor_driver_2">
 		<param name="port" value="/dev/ttyMOTOR2" />
 	</node>
@@ -14,4 +14,7 @@
 	<node pkg="chip_bldc_driver" type="bldc_driver_node" name="motor_driver_3">
 		<param name="port" value="/dev/ttyMOTOR3" />
 	</node>
+-->
+
+	<node pkg="hydraOne_base" type="controller.py" name="master_controller"/>
 </launch>
