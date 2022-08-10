@@ -54,3 +54,24 @@ Makefile:126: recipe for target 'cmTC_2e32b/fast' failed
 make: *** [cmTC_2e32b/fast] Error 2
 
 
+Determining if the include file pgm.h exists failed with the following output:
+Change Dir: /home/nvidia/projects/rosproject/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_79ca5/fast"
+make[1]: Entering directory '/home/nvidia/projects/rosproject/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_79ca5.dir/build.make CMakeFiles/cmTC_79ca5.dir/build
+make[2]: Entering directory '/home/nvidia/projects/rosproject/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_79ca5.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_79ca5.dir/CheckIncludeFile.cxx.o -c /home/nvidia/projects/rosproject/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+/home/nvidia/projects/rosproject/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx:1:10: fatal error: pgm.h: No such file or directory
+ #include <pgm.h>
+          ^~~~~~~
+compilation terminated.
+CMakeFiles/cmTC_79ca5.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_79ca5.dir/CheckIncludeFile.cxx.o' failed
+make[2]: *** [CMakeFiles/cmTC_79ca5.dir/CheckIncludeFile.cxx.o] Error 1
+make[2]: Leaving directory '/home/nvidia/projects/rosproject/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_79ca5/fast' failed
+make[1]: *** [cmTC_79ca5/fast] Error 2
+make[1]: Leaving directory '/home/nvidia/projects/rosproject/build/CMakeFiles/CMakeTmp'
+
+

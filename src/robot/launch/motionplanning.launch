@@ -1,0 +1,5 @@
+<launch>
+	<node pkg="robot" name="drive_controller" type="drivehandler.py"/>
+	<node pkg="robot" name="turn_controller" type="turnhandler.py"/>
+	<node pkg="robot" name="motion_handler" type="motionplanner.py" output="screen"/>
+</launch>

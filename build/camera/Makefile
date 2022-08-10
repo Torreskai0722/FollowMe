@@ -90,18 +90,6 @@ test/fast: test
 
 .PHONY : test/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
@@ -134,6 +122,18 @@ install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -258,66 +258,6 @@ camera_geneus/fast:
 .PHONY : camera_geneus/fast
 
 # Convenience name for target.
-camera/CMakeFiles/camera_gencpp.dir/rule:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 camera/CMakeFiles/camera_gencpp.dir/rule
-.PHONY : camera/CMakeFiles/camera_gencpp.dir/rule
-
-# Convenience name for target.
-camera_gencpp: camera/CMakeFiles/camera_gencpp.dir/rule
-
-.PHONY : camera_gencpp
-
-# fast build rule for target.
-camera_gencpp/fast:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f camera/CMakeFiles/camera_gencpp.dir/build.make camera/CMakeFiles/camera_gencpp.dir/build
-.PHONY : camera_gencpp/fast
-
-# Convenience name for target.
-camera/CMakeFiles/_camera_generate_messages_check_deps_RandomNumber.dir/rule:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 camera/CMakeFiles/_camera_generate_messages_check_deps_RandomNumber.dir/rule
-.PHONY : camera/CMakeFiles/_camera_generate_messages_check_deps_RandomNumber.dir/rule
-
-# Convenience name for target.
-_camera_generate_messages_check_deps_RandomNumber: camera/CMakeFiles/_camera_generate_messages_check_deps_RandomNumber.dir/rule
-
-.PHONY : _camera_generate_messages_check_deps_RandomNumber
-
-# fast build rule for target.
-_camera_generate_messages_check_deps_RandomNumber/fast:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f camera/CMakeFiles/_camera_generate_messages_check_deps_RandomNumber.dir/build.make camera/CMakeFiles/_camera_generate_messages_check_deps_RandomNumber.dir/build
-.PHONY : _camera_generate_messages_check_deps_RandomNumber/fast
-
-# Convenience name for target.
-camera/CMakeFiles/camera_genpy.dir/rule:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 camera/CMakeFiles/camera_genpy.dir/rule
-.PHONY : camera/CMakeFiles/camera_genpy.dir/rule
-
-# Convenience name for target.
-camera_genpy: camera/CMakeFiles/camera_genpy.dir/rule
-
-.PHONY : camera_genpy
-
-# fast build rule for target.
-camera_genpy/fast:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f camera/CMakeFiles/camera_genpy.dir/build.make camera/CMakeFiles/camera_genpy.dir/build
-.PHONY : camera_genpy/fast
-
-# Convenience name for target.
-camera/CMakeFiles/_camera_generate_messages_check_deps_SentMessage.dir/rule:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 camera/CMakeFiles/_camera_generate_messages_check_deps_SentMessage.dir/rule
-.PHONY : camera/CMakeFiles/_camera_generate_messages_check_deps_SentMessage.dir/rule
-
-# Convenience name for target.
-_camera_generate_messages_check_deps_SentMessage: camera/CMakeFiles/_camera_generate_messages_check_deps_SentMessage.dir/rule
-
-.PHONY : _camera_generate_messages_check_deps_SentMessage
-
-# fast build rule for target.
-_camera_generate_messages_check_deps_SentMessage/fast:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f camera/CMakeFiles/_camera_generate_messages_check_deps_SentMessage.dir/build.make camera/CMakeFiles/_camera_generate_messages_check_deps_SentMessage.dir/build
-.PHONY : _camera_generate_messages_check_deps_SentMessage/fast
-
-# Convenience name for target.
 camera/CMakeFiles/roscpp_generate_messages_py.dir/rule:
 	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 camera/CMakeFiles/roscpp_generate_messages_py.dir/rule
 .PHONY : camera/CMakeFiles/roscpp_generate_messages_py.dir/rule
@@ -346,36 +286,6 @@ roscpp_generate_messages_eus: camera/CMakeFiles/roscpp_generate_messages_eus.dir
 roscpp_generate_messages_eus/fast:
 	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f camera/CMakeFiles/roscpp_generate_messages_eus.dir/build.make camera/CMakeFiles/roscpp_generate_messages_eus.dir/build
 .PHONY : roscpp_generate_messages_eus/fast
-
-# Convenience name for target.
-camera/CMakeFiles/camera_generate_messages_eus.dir/rule:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 camera/CMakeFiles/camera_generate_messages_eus.dir/rule
-.PHONY : camera/CMakeFiles/camera_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-camera_generate_messages_eus: camera/CMakeFiles/camera_generate_messages_eus.dir/rule
-
-.PHONY : camera_generate_messages_eus
-
-# fast build rule for target.
-camera_generate_messages_eus/fast:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f camera/CMakeFiles/camera_generate_messages_eus.dir/build.make camera/CMakeFiles/camera_generate_messages_eus.dir/build
-.PHONY : camera_generate_messages_eus/fast
-
-# Convenience name for target.
-camera/CMakeFiles/camera_generate_messages.dir/rule:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 camera/CMakeFiles/camera_generate_messages.dir/rule
-.PHONY : camera/CMakeFiles/camera_generate_messages.dir/rule
-
-# Convenience name for target.
-camera_generate_messages: camera/CMakeFiles/camera_generate_messages.dir/rule
-
-.PHONY : camera_generate_messages
-
-# fast build rule for target.
-camera_generate_messages/fast:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f camera/CMakeFiles/camera_generate_messages.dir/build.make camera/CMakeFiles/camera_generate_messages.dir/build
-.PHONY : camera_generate_messages/fast
 
 # Convenience name for target.
 camera/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
@@ -408,19 +318,34 @@ rosgraph_msgs_generate_messages_cpp/fast:
 .PHONY : rosgraph_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
-camera/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 camera/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-.PHONY : camera/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
+.PHONY : camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-std_msgs_generate_messages_lisp: camera/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+roscpp_generate_messages_nodejs: camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
 
-.PHONY : std_msgs_generate_messages_lisp
+.PHONY : roscpp_generate_messages_nodejs
 
 # fast build rule for target.
-std_msgs_generate_messages_lisp/fast:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f camera/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make camera/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-.PHONY : std_msgs_generate_messages_lisp/fast
+roscpp_generate_messages_nodejs/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
+.PHONY : roscpp_generate_messages_nodejs/fast
+
+# Convenience name for target.
+camera/CMakeFiles/camera_generate_messages_cpp.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 camera/CMakeFiles/camera_generate_messages_cpp.dir/rule
+.PHONY : camera/CMakeFiles/camera_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+camera_generate_messages_cpp: camera/CMakeFiles/camera_generate_messages_cpp.dir/rule
+
+.PHONY : camera_generate_messages_cpp
+
+# fast build rule for target.
+camera_generate_messages_cpp/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f camera/CMakeFiles/camera_generate_messages_cpp.dir/build.make camera/CMakeFiles/camera_generate_messages_cpp.dir/build
+.PHONY : camera_generate_messages_cpp/fast
 
 # Convenience name for target.
 camera/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
@@ -468,21 +393,6 @@ rosgraph_msgs_generate_messages_lisp/fast:
 .PHONY : rosgraph_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
-camera/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 camera/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-.PHONY : camera/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_cpp: camera/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : std_msgs_generate_messages_cpp
-
-# fast build rule for target.
-std_msgs_generate_messages_cpp/fast:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f camera/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make camera/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-.PHONY : std_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
 camera/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule:
 	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 camera/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
 .PHONY : camera/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
@@ -513,79 +423,94 @@ rosgraph_msgs_generate_messages_py/fast:
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
 # Convenience name for target.
-camera/CMakeFiles/std_msgs_generate_messages_eus.dir/rule:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 camera/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-.PHONY : camera/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+camera/CMakeFiles/camera_genpy.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 camera/CMakeFiles/camera_genpy.dir/rule
+.PHONY : camera/CMakeFiles/camera_genpy.dir/rule
 
 # Convenience name for target.
-std_msgs_generate_messages_eus: camera/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+camera_genpy: camera/CMakeFiles/camera_genpy.dir/rule
 
-.PHONY : std_msgs_generate_messages_eus
+.PHONY : camera_genpy
 
 # fast build rule for target.
-std_msgs_generate_messages_eus/fast:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f camera/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make camera/CMakeFiles/std_msgs_generate_messages_eus.dir/build
-.PHONY : std_msgs_generate_messages_eus/fast
+camera_genpy/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f camera/CMakeFiles/camera_genpy.dir/build.make camera/CMakeFiles/camera_genpy.dir/build
+.PHONY : camera_genpy/fast
 
 # Convenience name for target.
-camera/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 camera/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-.PHONY : camera/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+camera/CMakeFiles/_camera_generate_messages_check_deps_SentMessage.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 camera/CMakeFiles/_camera_generate_messages_check_deps_SentMessage.dir/rule
+.PHONY : camera/CMakeFiles/_camera_generate_messages_check_deps_SentMessage.dir/rule
 
 # Convenience name for target.
-std_msgs_generate_messages_nodejs: camera/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+_camera_generate_messages_check_deps_SentMessage: camera/CMakeFiles/_camera_generate_messages_check_deps_SentMessage.dir/rule
 
-.PHONY : std_msgs_generate_messages_nodejs
+.PHONY : _camera_generate_messages_check_deps_SentMessage
 
 # fast build rule for target.
-std_msgs_generate_messages_nodejs/fast:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f camera/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make camera/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
-.PHONY : std_msgs_generate_messages_nodejs/fast
+_camera_generate_messages_check_deps_SentMessage/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f camera/CMakeFiles/_camera_generate_messages_check_deps_SentMessage.dir/build.make camera/CMakeFiles/_camera_generate_messages_check_deps_SentMessage.dir/build
+.PHONY : _camera_generate_messages_check_deps_SentMessage/fast
 
 # Convenience name for target.
-camera/CMakeFiles/camera_generate_messages_cpp.dir/rule:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 camera/CMakeFiles/camera_generate_messages_cpp.dir/rule
-.PHONY : camera/CMakeFiles/camera_generate_messages_cpp.dir/rule
+camera/CMakeFiles/_camera_generate_messages_check_deps_RandomNumber.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 camera/CMakeFiles/_camera_generate_messages_check_deps_RandomNumber.dir/rule
+.PHONY : camera/CMakeFiles/_camera_generate_messages_check_deps_RandomNumber.dir/rule
 
 # Convenience name for target.
-camera_generate_messages_cpp: camera/CMakeFiles/camera_generate_messages_cpp.dir/rule
+_camera_generate_messages_check_deps_RandomNumber: camera/CMakeFiles/_camera_generate_messages_check_deps_RandomNumber.dir/rule
 
-.PHONY : camera_generate_messages_cpp
+.PHONY : _camera_generate_messages_check_deps_RandomNumber
 
 # fast build rule for target.
-camera_generate_messages_cpp/fast:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f camera/CMakeFiles/camera_generate_messages_cpp.dir/build.make camera/CMakeFiles/camera_generate_messages_cpp.dir/build
-.PHONY : camera_generate_messages_cpp/fast
+_camera_generate_messages_check_deps_RandomNumber/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f camera/CMakeFiles/_camera_generate_messages_check_deps_RandomNumber.dir/build.make camera/CMakeFiles/_camera_generate_messages_check_deps_RandomNumber.dir/build
+.PHONY : _camera_generate_messages_check_deps_RandomNumber/fast
 
 # Convenience name for target.
-camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-.PHONY : camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
+camera/CMakeFiles/camera_gencpp.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 camera/CMakeFiles/camera_gencpp.dir/rule
+.PHONY : camera/CMakeFiles/camera_gencpp.dir/rule
 
 # Convenience name for target.
-roscpp_generate_messages_nodejs: camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
+camera_gencpp: camera/CMakeFiles/camera_gencpp.dir/rule
 
-.PHONY : roscpp_generate_messages_nodejs
+.PHONY : camera_gencpp
 
 # fast build rule for target.
-roscpp_generate_messages_nodejs/fast:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
-.PHONY : roscpp_generate_messages_nodejs/fast
+camera_gencpp/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f camera/CMakeFiles/camera_gencpp.dir/build.make camera/CMakeFiles/camera_gencpp.dir/build
+.PHONY : camera_gencpp/fast
 
 # Convenience name for target.
-camera/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 camera/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-.PHONY : camera/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+camera/CMakeFiles/camera_generate_messages.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 camera/CMakeFiles/camera_generate_messages.dir/rule
+.PHONY : camera/CMakeFiles/camera_generate_messages.dir/rule
 
 # Convenience name for target.
-std_msgs_generate_messages_py: camera/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+camera_generate_messages: camera/CMakeFiles/camera_generate_messages.dir/rule
 
-.PHONY : std_msgs_generate_messages_py
+.PHONY : camera_generate_messages
 
 # fast build rule for target.
-std_msgs_generate_messages_py/fast:
-	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f camera/CMakeFiles/std_msgs_generate_messages_py.dir/build.make camera/CMakeFiles/std_msgs_generate_messages_py.dir/build
-.PHONY : std_msgs_generate_messages_py/fast
+camera_generate_messages/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f camera/CMakeFiles/camera_generate_messages.dir/build.make camera/CMakeFiles/camera_generate_messages.dir/build
+.PHONY : camera_generate_messages/fast
+
+# Convenience name for target.
+camera/CMakeFiles/camera_generate_messages_eus.dir/rule:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f CMakeFiles/Makefile2 camera/CMakeFiles/camera_generate_messages_eus.dir/rule
+.PHONY : camera/CMakeFiles/camera_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+camera_generate_messages_eus: camera/CMakeFiles/camera_generate_messages_eus.dir/rule
+
+.PHONY : camera_generate_messages_eus
+
+# fast build rule for target.
+camera_generate_messages_eus/fast:
+	cd /home/nvidia/projects/rosproject/build && $(MAKE) -f camera/CMakeFiles/camera_generate_messages_eus.dir/build.make camera/CMakeFiles/camera_generate_messages_eus.dir/build
+.PHONY : camera_generate_messages_eus/fast
 
 # Help Target
 help:
@@ -602,32 +527,27 @@ help:
 	@echo "... camera_generate_messages_py"
 	@echo "... camera_generate_messages_lisp"
 	@echo "... camera_geneus"
-	@echo "... camera_gencpp"
-	@echo "... install/strip"
-	@echo "... _camera_generate_messages_check_deps_RandomNumber"
-	@echo "... camera_genpy"
-	@echo "... _camera_generate_messages_check_deps_SentMessage"
 	@echo "... list_install_components"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... roscpp_generate_messages_eus"
-	@echo "... camera_generate_messages_eus"
-	@echo "... camera_generate_messages"
 	@echo "... edit_cache"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_cpp"
-	@echo "... std_msgs_generate_messages_lisp"
+	@echo "... roscpp_generate_messages_nodejs"
+	@echo "... camera_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... install"
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
-	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... rosgraph_msgs_generate_messages_py"
-	@echo "... std_msgs_generate_messages_eus"
-	@echo "... std_msgs_generate_messages_nodejs"
-	@echo "... camera_generate_messages_cpp"
-	@echo "... roscpp_generate_messages_nodejs"
-	@echo "... std_msgs_generate_messages_py"
+	@echo "... camera_genpy"
+	@echo "... _camera_generate_messages_check_deps_SentMessage"
+	@echo "... install/strip"
+	@echo "... _camera_generate_messages_check_deps_RandomNumber"
+	@echo "... camera_gencpp"
+	@echo "... camera_generate_messages"
+	@echo "... camera_generate_messages_eus"
 .PHONY : help
 
 

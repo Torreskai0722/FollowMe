@@ -1,0 +1,15 @@
+<launch>
+
+    <group ns="follower_nav">
+        <node pkg="move_basic" type="move_basic" respawn="false" name="follower_move_basic" output="screen">
+            <param name="lateral_kp" value="1" />
+            <param name="base_frame" value="follower_footprint" />
+            <param name="alternate_driving_frame" value="follower_footprint" />
+            <param name="alternate_planning_frame" value="follower_footprint" />
+
+            <remap from="/cmd_vel" to="/follower/cmd_vel"/>
+            <remap from="/path" to="/follower/path" />
+        </node>
+    </group>
+
+</launch>

@@ -1,0 +1,8 @@
+prefix=/home/nvidia/projects/rosproject/devel
+
+Name: laser_scan_splitter
+Description: Description of laser_scan_splitter
+Version: 0.3.2
+Cflags: -I/home/nvidia/projects/rosproject/src/scan_tools/laser_scan_splitter/include
+Libs: -L${prefix}/lib -llaser_scan_splitter
+Requires: roscpp nodelet sensor_msgs

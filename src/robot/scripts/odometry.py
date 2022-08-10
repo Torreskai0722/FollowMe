@@ -42,9 +42,9 @@ def handle_slam(poseStamped):
 
         (roll, pitch, yaw) = euler_from_quaternion((dxr, dyr, dzr, dwr))
         angular = Vector3()
-        angular.x = roll
-        angular.y = pitch
-        angular.z = yaw
+        angular.x = roll/dt
+        angular.y = pitch/dt
+        angular.z = yaw/dt
 
         twist = Twist()
         twist.linear = linear
@@ -61,6 +61,7 @@ def handle_slam(poseStamped):
     odom_trans = TransformStamped()
     odom_trans.header.frame_id = "odom"
     odom_trans.child_frame_id = "base_link"
+    odom_trans.header.stamp = rospy.Time.now()
     
     odom_trans.transform.translation = poseStamped.pose.position
     odom_trans.transform.rotation = poseStamped.pose.orientation

@@ -1,7 +1,7 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
 messages_str = "/home/nvidia/projects/rosproject/src/first/msg/Num.msg"
-services_str = "/home/nvidia/projects/rosproject/src/first/srv/AddTwoInts.srv"
+services_str = "/home/nvidia/projects/rosproject/src/first/srv/AddTwoInts.srv;/home/nvidia/projects/rosproject/src/first/srv/TurnToAngle.srv"
 pkg_name = "first"
 dependencies_str = "std_msgs"
 langs = "gencpp;geneus;genlisp;gennodejs;genpy"

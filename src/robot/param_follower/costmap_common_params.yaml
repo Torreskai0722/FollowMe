@@ -1,0 +1,26 @@
+obstacle_range: 3.0     
+raytrace_range: 3.5
+
+footprint: [[-0.25, -0.25], [-0.25, 0.25], [0.25, 0.25], [0.25, -0.25]]
+#robot_radius: 0.105
+
+inflation_radius: 0.2
+transform_tolerance: 100.0
+
+
+#observation_sources: laser_scan
+#laser_scan: {sensor_frame: base_laser, data_type: LaserScan, topic: scan, marking: true, clearing: true}
+
+plugins:
+  - {name: static_layer, type: "costmap_2d::StaticLayer"}
+  - {name: obstacle_layer, type: "costmap_2d::ObstacleLayer"}
+  - {name: inflation_layer, type: "costmap_2d::InflationLayer"}
+#  - {name: social_layer, type: "social_navigation_layers::PassingLayer"}
+
+static_layer:
+  map_topic: /map
+  subscribe_to_updates: false
+
+inflation_layer:
+  inflation_radius: 0.2
+

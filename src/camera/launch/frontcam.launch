@@ -1,0 +1,17 @@
+<launch>
+
+    <!-- Front USB Camera -->
+	<node name="usb_cam" pkg="usb_cam" type="usb_cam_node">
+		<param name="video_device" value="/dev/video2" />
+		<param name="image_width" value="640" />
+		<param name="image_height" value="480" />
+		<param name="pixel_format" value="yuyv" />
+		<param name="camera_frame_id" value="usb_cam" />
+		<param name="brightness" value="100" />
+		<param name="io_method" value="mmap"/>
+		<param name="camera_info_url" value="package://camera/calibration/frontcam.yml" />
+		<!-- <param name="camera_info_url" value="package://camera/calibration/cal.yml" /> -->
+	</node>
+
+	<node pkg="tf" type="static_transform_publisher" name="front_camera_offset_publisher" args="-0.24 0.0 0.3 1.5707963268 3.1415926 1.5707963268 /base_link /usb_cam 100" />
+</launch>

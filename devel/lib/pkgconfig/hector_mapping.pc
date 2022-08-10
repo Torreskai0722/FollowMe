@@ -1,0 +1,8 @@
+prefix=/home/nvidia/projects/rosproject/devel
+
+Name: hector_mapping
+Description: Description of hector_mapping
+Version: 0.5.2
+Cflags: -I/home/nvidia/projects/rosproject/devel/include -I/home/nvidia/projects/rosproject/src/hector_slam/hector_mapping/include -I/usr/include/eigen3
+Libs: -L${prefix}/lib 
+Requires: roscpp nav_msgs visualization_msgs tf message_filters laser_geometry message_runtime

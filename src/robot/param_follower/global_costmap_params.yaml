@@ -1,0 +1,5 @@
+global_costmap:
+  global_frame: map
+  robot_base_frame: follower_footprint
+  update_frequency: 20.0
+  static_map: false 

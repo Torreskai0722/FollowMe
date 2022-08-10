@@ -655,3 +655,81 @@ Linking C executable cmTC_15190
 make[1]: Leaving directory '/home/nvidia/projects/rosproject/build/CMakeFiles/CMakeTmp'
 
 
+Determining if the include file unistd.h exists passed with the following output:
+Change Dir: /home/nvidia/projects/rosproject/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1b979/fast"
+make[1]: Entering directory '/home/nvidia/projects/rosproject/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_1b979.dir/build.make CMakeFiles/cmTC_1b979.dir/build
+make[2]: Entering directory '/home/nvidia/projects/rosproject/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1b979.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_1b979.dir/CheckIncludeFile.c.o   -c /home/nvidia/projects/rosproject/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_1b979
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1b979.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_1b979.dir/CheckIncludeFile.c.o  -o cmTC_1b979 
+make[2]: Leaving directory '/home/nvidia/projects/rosproject/build/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/nvidia/projects/rosproject/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the drand48 exist passed with the following output:
+Change Dir: /home/nvidia/projects/rosproject/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9547e/fast"
+make[1]: Entering directory '/home/nvidia/projects/rosproject/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_9547e.dir/build.make CMakeFiles/cmTC_9547e.dir/build
+make[2]: Entering directory '/home/nvidia/projects/rosproject/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9547e.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_9547e.dir/CheckSymbolExists.c.o   -c /home/nvidia/projects/rosproject/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_9547e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9547e.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_9547e.dir/CheckSymbolExists.c.o  -o cmTC_9547e 
+make[2]: Leaving directory '/home/nvidia/projects/rosproject/build/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/nvidia/projects/rosproject/build/CMakeFiles/CMakeTmp'
+
+File /home/nvidia/projects/rosproject/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef drand48
+  return ((int*)(&drand48))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the include file sys/time.h exists passed with the following output:
+Change Dir: /home/nvidia/projects/rosproject/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_82eff/fast"
+make[1]: Entering directory '/home/nvidia/projects/rosproject/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_82eff.dir/build.make CMakeFiles/cmTC_82eff.dir/build
+make[2]: Entering directory '/home/nvidia/projects/rosproject/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_82eff.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_82eff.dir/CheckIncludeFile.c.o   -c /home/nvidia/projects/rosproject/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_82eff
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_82eff.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_82eff.dir/CheckIncludeFile.c.o  -o cmTC_82eff 
+make[2]: Leaving directory '/home/nvidia/projects/rosproject/build/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/nvidia/projects/rosproject/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file FL/Fl.H exists passed with the following output:
+Change Dir: /home/nvidia/projects/rosproject/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_22b6a/fast"
+make[1]: Entering directory '/home/nvidia/projects/rosproject/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_22b6a.dir/build.make CMakeFiles/cmTC_22b6a.dir/build
+make[2]: Entering directory '/home/nvidia/projects/rosproject/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_22b6a.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_22b6a.dir/CheckIncludeFile.cxx.o -c /home/nvidia/projects/rosproject/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_22b6a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_22b6a.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_22b6a.dir/CheckIncludeFile.cxx.o  -o cmTC_22b6a 
+make[2]: Leaving directory '/home/nvidia/projects/rosproject/build/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/nvidia/projects/rosproject/build/CMakeFiles/CMakeTmp'
+
+

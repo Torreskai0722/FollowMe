@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/nvidia/projects/rosproject/src/apriltag/common/pthreads_cross.cpp
+common/pthreads_cross.h
+/home/nvidia/projects/rosproject/src/apriltag/common/common/pthreads_cross.h
+time.h
+-
+unistd.h
+-
+
+/home/nvidia/projects/rosproject/src/apriltag/common/pthreads_cross.h
+stdbool.h
+-
+windows.h
+-
+pthread.h
+-
+sched.h
+-
+

@@ -1,0 +1,1 @@
+/usr/bin/cc -O3 -DNDEBUG  -rdynamic CMakeFiles/apriltag_demo.dir/example/apriltag_demo.c.o  -o apriltag_demo -Wl,-rpath,/home/nvidia/projects/rosproject/build_isolated/apriltag/devel: libapriltag.so.3.2.0 -lpthread -lm 

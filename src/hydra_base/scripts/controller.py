@@ -7,6 +7,8 @@ import threading
 from chip_bldc_driver.msg import Command, Feedback
 from geometry_msgs.msg import Twist
 
+from std_msgs.msg import Float32 
+
 class DonkeyController:
 
     def __init__(self, rate):
@@ -14,8 +16,13 @@ class DonkeyController:
         rospy.init_node('Donkey_controller')
 
         rospy.Subscriber("cmd_vel", Twist, self.set_objective_controller_command)
-
+        rospy.Subscriber("motors/cut_power", Float32, self.cut_power)
+        
         self.rate = rospy.Rate(rate)
+        self.to_cut_power = False
+
+        self.right_feedback = rospy.Publisher("/drivebase_speeds/right", Float32, queue_size=10)
+        self.left_feedback = rospy.Publisher("/drivebase_speeds/left", Float32, queue_size=10)
 
         self.front_left = rospy.Publisher('/motor_driver_1/Command', Command, queue_size=10)
         self.back_right = rospy.Publisher('/motor_driver_2/Command', Command, queue_size=10)
@@ -28,27 +35,52 @@ class DonkeyController:
         self.obj_fr = 0
 
         #rospy.Subscriber("/motor_driver_2/feedback", Feedback, self.update_br_feedback)
-        #rospy.Subscriber("/motor_driver_1/feedback", Feedback, self.update_fl_feedback)
-        #rospy.Subscriber("/motor_driver_0/feedback", Feedback, self.update_fr_feedback)
+        rospy.Subscriber("/motor_driver_1/feedback", Feedback, self.update_fl_feedback)
+        rospy.Subscriber("/motor_driver_0/feedback", Feedback, self.update_fr_feedback)
         #rospy.Subscriber("/motor_driver_3/feedback", Feedback, self.update_bl_feedback)
 
         self.lxAddly = 0.4
-        # self.scale = 30 / 3.1415926 / 0.076
-        self.scale = 1000 / 3.1459256 / 0.076
+        self.scale = 30 / 3.1415926 / 0.076
+        #self.scale = 1000 / 3.1459256 / 0.076
 
         while not rospy.is_shutdown():
             self.publish_controller_command()
             self.rate.sleep()
 
+    def update_fr_feedback(self, msg):
+        self.right_feedback.publish((msg.motor_rpm_feedback / (60.0 * 20.0)) * (3.14 * 0.15 * 2.45))
+
+    def update_fl_feedback(self, msg):
+        self.left_feedback.publish((msg.motor_rpm_feedback / (60.0 * 20.0)) * (3.14 * 0.15 * 2.45))
+
+    def cut_power(self, msg):
+        self.to_cut_power = True
+
     def set_objective_controller_command(self, msg):
 
+        self.to_cut_power = False
         spd = msg.linear.x
         steering = msg.angular.z
 
-        self.obj_fl = int((spd - (self.lxAddly) * steering) * self.scale) // 4
-        self.obj_fr = int((spd + (self.lxAddly) * steering) * self.scale) // 4
-        self.obj_bl = int((spd - (self.lxAddly) * steering) * self.scale) // 4 
-        self.obj_br = int((spd + (self.lxAddly) * steering) * self.scale) // 4
+        # .4953 is wheelbase width and 0.15 is wheel diameter
+        r_rad = (spd + steering * (0.4953/2) * 3.14) / (0.15/2)
+        l_rad = (spd - steering * (0.4953/2) * 3.14) / (0.15/2)
+
+        max_rps = (3000 / 60)
+
+        r_percentage = r_rad / max_rps
+        l_percentage = l_rad / max_rps
+
+        r_speed = r_percentage * 1000
+        l_speed = l_percentage * 1000
+
+        self.obj_fl = l_speed
+        self.obj_fr = r_speed
+
+        #self.obj_fl = int((spd - (self.lxAddly) * steering) * self.scale) // 4
+        #self.obj_fr = int((spd + (self.lxAddly) * steering) * self.scale) // 4
+        #self.obj_bl = int((spd - (self.lxAddly) * steering) * self.scale) // 4 
+        #self.obj_br = int((spd + (self.lxAddly) * steering) * self.scale) // 4
 
 
     def publish_controller_command(self):
@@ -65,10 +97,16 @@ class DonkeyController:
         commandBL = Command()
         commandBR = Command()
 
-        commandFL.motor_command = fl * -1 if abs(fl) >= 8 else 0
-        commandBR.motor_command = br if abs(br) >= 8 else 0
-        commandBL.motor_command = bl * -1 if abs(bl) >= 8 else 0
-        commandFR.motor_command = fr if abs(fr) >= 8 else 0
+        if self.to_cut_power:
+            commandFL.motor_command = 0
+            commandBR.motor_command = 0
+            commandBL.motor_command = 0
+            commandFR.motor_command = 0
+        else:
+            commandFL.motor_command = fl * -1 if abs(fl) >= 8 else 0
+            commandBR.motor_command = br if abs(br) >= 8 else 0
+            commandBL.motor_command = bl * -1 if abs(bl) >= 8 else 0
+            commandFR.motor_command = fr if abs(fr) >= 8 else 0
         
         print("front_left : {0}, back_right : {1}, back_left : {2}, front_right : {3}".format(commandFL.motor_command, commandFR.motor_command, commandBL.motor_command, commandFR.motor_command))
 

@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "first: 1 messages, 1 services")
+message(STATUS "first: 1 messages, 2 services")
 
 set(MSG_I_FLAGS "-Ifirst:/home/nvidia/projects/rosproject/src/first/msg;-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg")
 
@@ -16,6 +16,11 @@ add_custom_target(first_generate_messages ALL)
 # verify that message/service dependencies have not changed since configure
 
 
+
+get_filename_component(_filename "/home/nvidia/projects/rosproject/src/first/srv/TurnToAngle.srv" NAME_WE)
+add_custom_target(_first_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "first" "/home/nvidia/projects/rosproject/src/first/srv/TurnToAngle.srv" ""
+)
 
 get_filename_component(_filename "/home/nvidia/projects/rosproject/src/first/msg/Num.msg" NAME_WE)
 add_custom_target(_first_generate_messages_check_deps_${_filename}
@@ -42,6 +47,12 @@ _generate_msg_cpp(first
 
 ### Generating Services
 _generate_srv_cpp(first
+  "/home/nvidia/projects/rosproject/src/first/srv/TurnToAngle.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/first
+)
+_generate_srv_cpp(first
   "/home/nvidia/projects/rosproject/src/first/srv/AddTwoInts.srv"
   "${MSG_I_FLAGS}"
   ""
@@ -60,6 +71,8 @@ add_custom_target(first_generate_messages_cpp
 add_dependencies(first_generate_messages first_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/nvidia/projects/rosproject/src/first/srv/TurnToAngle.srv" NAME_WE)
+add_dependencies(first_generate_messages_cpp _first_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/nvidia/projects/rosproject/src/first/msg/Num.msg" NAME_WE)
 add_dependencies(first_generate_messages_cpp _first_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/nvidia/projects/rosproject/src/first/srv/AddTwoInts.srv" NAME_WE)
@@ -83,6 +96,12 @@ _generate_msg_eus(first
 
 ### Generating Services
 _generate_srv_eus(first
+  "/home/nvidia/projects/rosproject/src/first/srv/TurnToAngle.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/first
+)
+_generate_srv_eus(first
   "/home/nvidia/projects/rosproject/src/first/srv/AddTwoInts.srv"
   "${MSG_I_FLAGS}"
   ""
@@ -101,6 +120,8 @@ add_custom_target(first_generate_messages_eus
 add_dependencies(first_generate_messages first_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/nvidia/projects/rosproject/src/first/srv/TurnToAngle.srv" NAME_WE)
+add_dependencies(first_generate_messages_eus _first_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/nvidia/projects/rosproject/src/first/msg/Num.msg" NAME_WE)
 add_dependencies(first_generate_messages_eus _first_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/nvidia/projects/rosproject/src/first/srv/AddTwoInts.srv" NAME_WE)
@@ -124,6 +145,12 @@ _generate_msg_lisp(first
 
 ### Generating Services
 _generate_srv_lisp(first
+  "/home/nvidia/projects/rosproject/src/first/srv/TurnToAngle.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/first
+)
+_generate_srv_lisp(first
   "/home/nvidia/projects/rosproject/src/first/srv/AddTwoInts.srv"
   "${MSG_I_FLAGS}"
   ""
@@ -142,6 +169,8 @@ add_custom_target(first_generate_messages_lisp
 add_dependencies(first_generate_messages first_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/nvidia/projects/rosproject/src/first/srv/TurnToAngle.srv" NAME_WE)
+add_dependencies(first_generate_messages_lisp _first_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/nvidia/projects/rosproject/src/first/msg/Num.msg" NAME_WE)
 add_dependencies(first_generate_messages_lisp _first_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/nvidia/projects/rosproject/src/first/srv/AddTwoInts.srv" NAME_WE)
@@ -165,6 +194,12 @@ _generate_msg_nodejs(first
 
 ### Generating Services
 _generate_srv_nodejs(first
+  "/home/nvidia/projects/rosproject/src/first/srv/TurnToAngle.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/first
+)
+_generate_srv_nodejs(first
   "/home/nvidia/projects/rosproject/src/first/srv/AddTwoInts.srv"
   "${MSG_I_FLAGS}"
   ""
@@ -183,6 +218,8 @@ add_custom_target(first_generate_messages_nodejs
 add_dependencies(first_generate_messages first_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/nvidia/projects/rosproject/src/first/srv/TurnToAngle.srv" NAME_WE)
+add_dependencies(first_generate_messages_nodejs _first_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/nvidia/projects/rosproject/src/first/msg/Num.msg" NAME_WE)
 add_dependencies(first_generate_messages_nodejs _first_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/nvidia/projects/rosproject/src/first/srv/AddTwoInts.srv" NAME_WE)
@@ -206,6 +243,12 @@ _generate_msg_py(first
 
 ### Generating Services
 _generate_srv_py(first
+  "/home/nvidia/projects/rosproject/src/first/srv/TurnToAngle.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/first
+)
+_generate_srv_py(first
   "/home/nvidia/projects/rosproject/src/first/srv/AddTwoInts.srv"
   "${MSG_I_FLAGS}"
   ""
@@ -224,6 +267,8 @@ add_custom_target(first_generate_messages_py
 add_dependencies(first_generate_messages first_generate_messages_py)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/nvidia/projects/rosproject/src/first/srv/TurnToAngle.srv" NAME_WE)
+add_dependencies(first_generate_messages_py _first_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/nvidia/projects/rosproject/src/first/msg/Num.msg" NAME_WE)
 add_dependencies(first_generate_messages_py _first_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/nvidia/projects/rosproject/src/first/srv/AddTwoInts.srv" NAME_WE)

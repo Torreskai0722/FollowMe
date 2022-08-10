@@ -1,0 +1,20 @@
+<launch>
+	 
+	<!-- Camera Handler -->
+	<node pkg="camera" name="multicam_handler" type="camera_handler.py" />
+
+	<!-- AprilTag Tracker -->
+	<include file="$(find camera)/launch/apriltag.launch"/>
+
+	<!-- Localization handler -->
+	<node pkg="robot" name="follower_location_handler" type="follower_localizer.py" />
+
+	<!-- Marker transforms to follower robot (0: front, 1: left, 2: back, 3: right) [these are handled by follower_localizer.py now, the comments are kept for reference to the numbers] -->
+	<!-- <node pkg="tf" type="static_transform_publisher" name="tag0_offset_publisher" args="0.0 -0.155 -0.2 1.5707963268 1.5707963268 0.0 /tag_0 /follower_footprint 100" /> -->
+	<!-- <node pkg="tf" type="static_transform_publisher" name="tag1_offset_publisher" args="0.03 -0.1225 -0.1825 0.0 0.0 -1.5707963268 /tag_1 /follower_footprint 100" /> -->
+	<!-- <node pkg="tf" type="static_transform_publisher" name="tag2_offset_publisher" args="0.0 -0.115 -0.253 -1.5707963268 -1.5707963268 0.0 /tag_2 /follower_footprint 100" /> -->
+	<!-- <node pkg="tf" type="static_transform_publisher" name="tag3_offset_publisher" args="0.0 -0.13 -0.19 0.0 3.1415926 -1.5707963268 /tag_3 /follower_footprint 100" /> -->
+	<!-- red, green, blue -->
+
+	<!-- <node pkg="tf" type="static_transform_publisher" name="follower_link_offset_publisher" args="0.0 0.0 0.0 3.1415926 0.0 0.0 /follower_footprint /follower_link 500" /> -->
+</launch>

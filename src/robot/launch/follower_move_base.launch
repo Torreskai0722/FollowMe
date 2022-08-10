@@ -1,0 +1,18 @@
+<launch>
+
+    <group ns="follower_nav">
+        <node pkg="move_base" type="move_base" respawn="false" name="follower_move_base">
+            <rosparam file="$(find robot)/param_follower/costmap_common_params.yaml" command="load" ns="global_costmap"/>
+            <rosparam file="$(find robot)/param_follower/costmap_common_params.yaml" command="load" ns="local_costmap"/>
+            <rosparam file="$(find robot)/param_follower/local_costmap_params.yaml" command="load"/>
+            <rosparam file="$(find robot)/param_follower/global_costmap_params.yaml" command="load"/>
+            <!-- <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS"/> -->
+            <rosparam file="$(find robot)/param_follower/base_local_planner_params.yaml" command="load"/>
+            <rosparam file="$(find robot)/param_follower/move_base_params.yaml" command="load"/>
+
+            <remap from="follower_nav/map" to="/map"/>
+            <remap from="follower_nav/cmd_vel" to="/follower/cmd_vel"/>
+        </node>
+    </group>
+
+</launch>

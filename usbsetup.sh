@@ -5,5 +5,5 @@ for f in /dev/ttyMOTOR*; do
 	echo "Set permission for $f"
 done
 
-sudo chmod 777 /dev/ttyLIDAR
+sudo chmod 666 /dev/ttyLIDAR
 echo "Set permission for /dev/ttyLIDAR"

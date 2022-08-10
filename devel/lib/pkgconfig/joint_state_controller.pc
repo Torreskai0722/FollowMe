@@ -1,0 +1,8 @@
+prefix=/home/nvidia/projects/rosproject/devel
+
+Name: joint_state_controller
+Description: Description of joint_state_controller
+Version: 0.17.2
+Cflags: -I/home/nvidia/projects/rosproject/src/ros_controllers/joint_state_controller/include
+Libs: -L${prefix}/lib -ljoint_state_controller
+Requires: realtime_tools roscpp hardware_interface pluginlib controller_interface sensor_msgs
