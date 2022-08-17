@@ -46,9 +46,9 @@ sudo chmod 777 /dev/ttyUSB0
 roslaunch chip_bldc_driver example.launch
 ```
 
-## Demos
+### Demos
 
-### Realsense Camera Demos:
+#### Realsense Camera Demos:
 Start the camera node:
 `roslaunch realsense2_camera rs_camera.launch initial_reset:=true enable_gyro:=true enable_accel:=true align_depth:=true filters:=pointcloud`
 
@@ -68,7 +68,7 @@ rosrun camera mapper.py
 rviz
 ```
 
-### RPLidar Demos:
+#### RPLidar Demos:
 Start with:
 ```sh
 roslaunch rplidar_ros rplidar_s1.launch
@@ -84,7 +84,7 @@ rosrun multi_object_tracking_lidar kf_tracker
 rviz
 ```
 
-### Any of the motor demos:
+#### Any of the motor demos:
 ```sh
 rosrun chip_bldc_driver bldc_driver_node
 rosrun motor [stepper.py, rpm.py etc.]
