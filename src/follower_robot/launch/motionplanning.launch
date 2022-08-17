@@ -1,0 +1,5 @@
+<launch>
+	<node pkg="follower_robot" name="follower_drive_controller" type="drivehandler.py"/>
+	<node pkg="follower_robot" name="follower_turn_controller" type="turnhandler.py"/>
+	<node pkg="follower_robot" name="follower_motion_handler" type="motionplanner.py" output="screen"/>
+</launch>

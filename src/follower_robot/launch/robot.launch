@@ -1,0 +1,17 @@
+<launch>
+	<arg name="teleop" default="false"/>
+
+	<!-- Drivetrain control -->
+	<include file="$(find follower_motor)/launch/multimotor.launch"/>
+	
+	<!-- Teleop control enabled or not -->
+	<group if="$(arg teleop)">
+		<node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="follower_teleop_keyboard" output="screen">
+            <remap from="/cmd_vel" to="/follower_nav/cmd_vel" />
+        </node>
+	</group>
+
+	<!-- Motion planning -->
+	<!-- <include file="$(find robot)/launch/motionplanning.launch"/> -->
+
+</launch>
