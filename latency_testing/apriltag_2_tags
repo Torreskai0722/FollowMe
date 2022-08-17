@@ -1,0 +1,25 @@
+subscribed to [/tag_detections]
+average rate: 14.680
+	min: 0.053s max: 0.088s std dev: 0.01222s window: 13
+average rate: 14.594
+	min: 0.051s max: 0.091s std dev: 0.01178s window: 28
+average rate: 15.289
+	min: 0.049s max: 0.091s std dev: 0.01102s window: 45
+average rate: 15.447
+	min: 0.049s max: 0.091s std dev: 0.00993s window: 60
+average rate: 15.687
+	min: 0.049s max: 0.091s std dev: 0.00931s window: 77
+average rate: 15.617
+	min: 0.048s max: 0.091s std dev: 0.00915s window: 92
+average rate: 15.686
+	min: 0.048s max: 0.091s std dev: 0.00877s window: 109
+average rate: 15.707
+	min: 0.048s max: 0.091s std dev: 0.00845s window: 125
+average rate: 15.854
+	min: 0.048s max: 0.091s std dev: 0.00824s window: 142
+average rate: 15.862
+	min: 0.048s max: 0.091s std dev: 0.00808s window: 158
+average rate: 15.943
+	min: 0.048s max: 0.091s std dev: 0.00792s window: 174
+average rate: 15.905
+	min: 0.048s max: 0.091s std dev: 0.00797s window: 185
