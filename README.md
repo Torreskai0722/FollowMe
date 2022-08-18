@@ -23,10 +23,10 @@ The full implementation is more thoroughly explained in the [paper](#). In short
 ### Common Setup
 1) Follow the steps in `79-robot.rules.md` to enable the correct UDEV Rules for both follower and guidance robot
     - This only needs to be done once (reboot both after doing so)
-2) Run `source usbsetup.sh` on *both* machines (run this on startup or set it as a Cron job)
+2) Run `source usbsetup.sh` on *both* machines (run this every time on startup or set it as a Cron job)
 
-**SSH Setup**
-It is recommended to not have either the Jetson or Raspberry Pi connected via HDMI while it is moving. You can use a separate computer (any OS) or a Linux one with ROS installed (melodic or noetic) to use RVIZ and other utilities. 
+**SSH Setup:**
+It is recommended to not have either the Jetson or Raspberry Pi connected via HDMI while it is moving (for obvious reasons). You can use a separate computer (any OS) or a Linux one with ROS installed (melodic or noetic) to use RVIZ and other utilities. 
 
 1) Get the IP Address of each machine and note it down by running `ifconfig` and checking the `inet` entry under `wlan0`. Ensure that each robot's computer is set to autologin, and you can disconnect and you should not have to connect again.
 2) Using the central computer (neither of the robots), edit `/etc/hosts` (or your OS's equivalent) to give a name to each computer (I used `jetson` and `raspberrypi`)
