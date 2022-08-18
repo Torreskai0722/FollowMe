@@ -1,4 +1,4 @@
-# NOTES FOR USAGE:
+# NOTES FOR USAGE: (outdated, read README)
 
 ## Setup of Devices:
 
